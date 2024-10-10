@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Open Sans';
             margin: 0;
             padding: 0;
         }
 
-        .banner {
+        .app-banner {
             width: 97%;
             display: flex;
             flex-direction: row;
@@ -25,19 +25,19 @@
             background-color: #fff;
         }
 
-        .banner h1 {
+        .app-banner h1 {
             font-size: 32px;
             font-weight: 600;
             color: #222;
         }
 
-        .banner p {
+        .app-banner p {
             font-size: 16px;
             color: #555;
             margin-bottom: 20px;
         }
 
-        .app-buttons {
+        .app-store-buttons {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -46,65 +46,66 @@
             margin-right: 402px;
         }
 
-        .app-buttons img {
+        .app-store-buttons img {
             height: 50px;
         }
 
-        .footer {
+        .site-footer {
             background-color: #0052cc;
             color: white;
             padding: 40px 0;
         }
 
-        .footer-container {
+        .footer-wrapper {
             display: flex;
             justify-content: space-around;
-            max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 70px;
         }
 
-        .footer-column {
+        .footer-section {
             width: 200px;
         }
 
-        .footer-column h3 {
+        .footer-section h3 {
+            width: 137.716px;
+            height: 21.663px;
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
         }
 
-        .footer-column ul {
+        .footer-section ul {
             list-style: none;
             padding: 0;
         }
 
-        .footer-column ul li {
+        .footer-section ul li {
             margin-bottom: 8px;
         }
 
-        .footer-column ul li a {
+        .footer-section ul li a {
             color: white;
             text-decoration: none;
             font-size: 14px;
         }
 
-        .footer-column ul li a:hover {
+        .footer-section ul li a:hover {
             text-decoration: underline;
         }
 
-        .social-icons {
+        .social-media-links {
             display: flex;
             gap: 15px;
             margin-top: 10px;
         }
 
-        .social-icons a {
+        .social-media-links a {
             color: white;
             font-size: 20px;
             text-decoration: none;
         }
 
-        .footer-bottom {
+        .footer-bottom-text {
             text-align: center;
             padding: 20px;
             background-color: #003d99;
@@ -122,60 +123,53 @@
             width: 30px;
         }
 
-        .bannerIntro {
+        .app-banner-intro {
             width: 45%;
         }
 
-        .imgPhone {
+        .app-image-phone {
             position: absolute;
             right: 229px;
-            /* margin-bottom: 200px; */
         }
 
-        .bannerIntro h1 {
+        .app-banner-intro h1 {
             margin: 0;
             color: #000;
             font-size: 40px;
             font-weight: 700 !important;
-
         }
-        .footer-logo-c{
+
+        .footer-logo-section {
             width: 496px;
         }
-        .footer-logo{
 
-        }
     </style>
 </head>
 
 <body>
 
-    <section class="banner">
-        <div class="bannerIntro">
+    <section class="app-banner">
+        <div class="app-banner-intro">
             <h1>Our mobile app is coming soon!</h1>
-            <p>Get ready to simplify your visa application process with easy access to information, real-time updates,
-                and personalized support—all in the palm of your hand.</p>
+            <p>Get ready to simplify your visa application process with easy access to information, real-time updates, and personalized support—all in the palm of your hand.</p>
         </div>
-        <div class="app-buttons">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Google Play">
+        <div class="app-store-buttons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
         </div>
-        <div class="imgPhone">
-            <img src="img/iphoneimage.png" alt="">
+        <div class="app-image-phone">
+            <img src="img/iphoneimage.png" alt="Phone Image">
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column footer-logo-c">
-                <img class="footer-logo" src="img/main-logo.svg" alt="">
+    <footer class="site-footer">
+        <div class="footer-wrapper">
+            <div class="footer-section footer-logo-section">
+                <img class="footer-logo" src="img/main-logo.svg" alt="Logo">
                 <h3>A Visa Experts</h3>
-                <p>Visa Expert helps individuals secure visas for the USA, Canada, and Australia. Our experienced team
-                    offers personalized guidance, ensuring a smooth application process for tourist, student, and work
-                    visas.</p>
+                <p>Visa Expert helps individuals secure visas for the USA, Canada, and Australia. Our experienced team offers personalized guidance, ensuring a smooth application process for tourist, student, and work visas.</p>
             </div>
-            <div class="footer-column">
+            <div class="footer-section">
                 <h3>About</h3>
                 <ul>
                     <li><a href="#">Clients</a></li>
@@ -184,7 +178,16 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
                 <h3>Help</h3>
                 <ul>
                     <li><a href="#">Clients</a></li>
@@ -193,30 +196,34 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
                 <h3>Follow Us</h3>
-                <div class="social-icons">
+                <div class="social-media-links">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
-                <div class="footer-flags">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
-                        alt="USA Flag">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_the_United_Kingdom.svg"
-                        alt="UK Flag">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Canada_%28Pantone%29.svg"
-                        alt="Canada Flag">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_the_European_Union.svg/320px-Flag_of_the_European_Union.svg.png"
-                        alt="EU Flag">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Flag_of_Australia_%28converted%29.svg"
-                        alt="Australia Flag">
-                </div>
             </div>
+        </div>
+        <div class="footer-flags">
+            <img src="img/US.jpg" alt="USA Flag">
+            <img src="img/CA.jpg" alt="Canada Flag">
+            <img src="img/GB.svg" alt="UK Flag">
+            <img src="img/EU.jpg" alt="EU Flag">
+            <img src="img/HM.svg" alt="Australia Flag">
         </div>
     </footer>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom-text">
         &copy; 2019-2020 All Rights Reserved.
     </div>
 

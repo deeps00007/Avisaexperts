@@ -5,13 +5,11 @@ body {
 
 .big-con {
     display: flex;
-    position: relative;
-    bottom: 117px;
     z-index: -1;
 }
 
 /* General Header Styles */
-header {
+/* header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,11 +17,25 @@ header {
     background: rgba(47, 47, 47, 0.20);
     backdrop-filter: blur(7px);
     z-index: 200 !important;
+} */
+header {
+    width: 100%;
+    background: rgba(47, 47, 47, 0.20); /* Ensure the header has a background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for a nice effect */
+    backdrop-filter: blur(7px);
+    z-index: 200 !important;
 }
+
 
 header .nav-links {
     display: flex;
     gap: 20px;
+    margin-right: 68px;
 }
 
 header nav a {
@@ -48,6 +60,9 @@ header nav a:hover {
     width: 30px;
     height: 24px;
     cursor: pointer;
+}
+.main-containers{
+    height: 100vh;
 }
 
 .menu-toggle span {
@@ -127,6 +142,12 @@ header nav a:hover {
 }
 
 @media (max-width:991px) {
+    .content{
+        flex-direction: column;
+    }
+    .stats{
+        margin-top: -60px !important;
+    }
     .profile-container {
         flex-direction: column-reverse;
         align-items: center;
@@ -171,7 +192,23 @@ header nav a:hover {
         height: 22px !important;
         width: 22px !important;
     }
-
+    /* .news-card-wrapper{
+        flex-direction: column;
+    } */
+}
+@media (max-width:810px) {
+    .news-card-wrapper{
+        flex-direction: column;
+    }
+    .news-card{
+        width: 80%;
+        align-self: center;
+    }
+}
+@media (max-width:750px) {
+    .destination-card:hover{
+        width: 10500px !important;
+    }
 }
 
 @media (max-width:785px) {
@@ -382,10 +419,11 @@ header nav a:hover {
     border-radius: 50%;
     text-align: center;
     font-size: 2.5rem;
+    z-index: 200 !important;
 }
 
 .arrow-button:hover {
-    background-color: white;
+    background-color: white !important;
 }
 
 
@@ -753,7 +791,7 @@ header nav a:hover {
 }
 
 .image-placeholder {
-    background: url(../img/sirpic.JPG)no-repeat center center/cover; 
+    background: url(../img/sirpic.jpg)no-repeat center center/cover; 
     width: 380px;
     height: 500px;
     border-radius: 106px;
@@ -818,21 +856,24 @@ h2 {
 button:hover {
     background-color: #ccc;
 }
+.mainstats{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 .stats {
     display: flex;
     /* justify-content: space-around; */
-    margin-top: 121px;
+    margin-top: 121px ;
     background-color: #eee;
     padding: 8px 0;
     /* padding: 2px; */
     height: 77px;
     border-radius: 32px;
     width: 1018px;
-    margin-left: 261px;
     text-align: center;
-    margin-left: 208px;
-    justify-content: center;
+ justify-self: center;
     align-items: center;
     z-index: 2;
 
@@ -879,6 +920,7 @@ button:hover {
 .reels-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 60px;
     overflow-x: auto;
 }
@@ -967,16 +1009,20 @@ button:hover {
     transition: 1s all;
     background-color: black;
   }
+  .first-card{
+    border-radius: 10px 0px 0px 10px;
+  }
 
   .image-gallery {
     display: flex;
     border-radius: 10px;
+    padding: 0px 0px 0px 50px;
     overflow: hidden;
   }
 
   .destination-card {
     position: relative;
-    width: 210px;
+    width: 300px;
     /* Initial width */
     height: 520px;
     /* Fixed height */
@@ -990,7 +1036,7 @@ button:hover {
 
   .destination-card:hover {
     transition: 1s all;
-    width: 700px;
+    width: 808px;
     /* Stretch width-wise on hover */
   }
 
@@ -1066,6 +1112,7 @@ button:hover {
 }
 
 .news-card {
+    /* width: 33%; */
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -1075,7 +1122,7 @@ button:hover {
     padding-left: 9px;
     padding-right: 9px;
     padding-top: 9px;
-    height: 505px;
+    height: 533px;
 }
 
 .favorite-icon {
@@ -1089,7 +1136,6 @@ button:hover {
 
 .news-card img {
     width: 100%;
-    height: 276px;
     border-radius: 10px;
 }
 
@@ -1292,4 +1338,255 @@ button:hover {
     font-style: normal;
     letter-spacing: 1px;
     /* 21.066px */
+  }
+
+
+  /* //Footer Section Css */
+  
+  .app-banner {
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.app-banner h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #222;
+}
+
+.app-banner p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.app-store-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-right: 402px;
+}
+
+.app-store-buttons img {
+    height: 50px;
+}
+
+.site-footer {
+    background-color: #0052cc;
+    background: linear-gradient(93deg, #0038DA 24.94%, #0C37B1 96.65%);
+    color: white;
+    padding: 70px 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 70px;
+}
+
+.footer-section {
+    width: 200px;
+}   
+
+.footer-section h3 {
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-media-links a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-bottom-text {
+    text-align: center;
+    padding: 20px;
+    background-color: #003d99;
+    background: var(--primary-deep-blue-color, #001E74);
+    color: #ddd;
+    font-size: 14px;
+}
+
+.footer-flags {
+    margin-top: 20px;
+    text-align: center;
+    gap: 5.5px;
+}
+
+.footer-flags img {
+    margin: 0 2px;
+    width: 60px;
+    height: 41px;
+    border-radius: 5px;
+}
+
+.app-banner-intro {
+    width: 45%;
+}
+
+.app-image-phone {
+    position: absolute;
+    right: 229px;
+}
+
+.app-banner-intro h1 {
+    margin: 0;
+    color: #000;
+    font-size: 40px;
+    font-weight: 700 !important;
+}
+
+.footer-logo-section {
+    width: 496px;
+}
+.app-image-phone img{
+    position: relative;
+    bottom: 155px;
+}
+
+
+
+/* //Youtube and Form Css */
+.main-appointment {
+    background-color: #f6f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .appointment-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .help-video-container {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: #000;
+  }
+
+  .help-video-container img {
+    margin: 20px;
+    margin: 0 auto;
+    width: 47px;
+  }
+
+  .appointment-heading {
+    color: #003366;
+    font-size: 48px;
+    margin: 3px 0;
+  }
+
+  .appointment-description {
+    color: #2b489e;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0;
+  }
+
+  .help-video-heading {
+    font-size: 30px;
+    margin: 5px;
+    color: #fff;
+  }
+
+  .appointment-form {
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .form-input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    width: 424px;
+    padding: 10px 27px;
+    border: 1px solid #000;
+  }
+
+  .input-icon {
+    margin-right: 10px;
+  }
+  .input-icon img{
+    mix-blend-mode: darken;
+  }
+  .help-video-subheading{
+    color: white;
+    font-size: 35px;
+    margin: 2px 0;
+  }
+
+  .form-input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    flex: 1;
+  }
+
+  .appointment-button {
+    background-color: #ff7f32;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 246px;
+    border-radius: 36px;
+    height: 52px;
+  }
+
+  .appointment-button:hover {
+    background-color: #e6691d;
   }

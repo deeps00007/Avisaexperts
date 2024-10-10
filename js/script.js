@@ -81,7 +81,8 @@ counters.forEach((counter, index) => {
 
             // Check if it's the last counter and apply color
             if (index === counters.length - 1) {
-                counter.style.color = '#FF7A00';  // Apply the orange color to the last counter
+                counter.style.color = '#FF7A00';
+                counter.innerText=target+"+";  // Apply the orange color to the last counter
             }
         }
     };

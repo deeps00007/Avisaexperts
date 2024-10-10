@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book an Appointment</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        color: #333;
+        min-height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+
+      .main-appointment {
+        background-color: #f6f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .appointment-container {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .help-video-container {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        background-color: #000;
+      }
+
+      .help-video-container img {
+        margin: 20px;
+      }
+
+      .appointment-heading {
+        color: #003366;
+        font-size: 48px;
+        margin: 3px 0;
+      }
+
+      .appointment-description {
+        color: #2b489e;
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 5px 0;
+      }
+
+      .help-video-heading {
+        font-size: 30px;
+        margin: 5px;
+        color: #fff;
+      }
+
+      .appointment-form {
+        max-width: 400px;
+        margin: 30px auto;
+        text-align: center;
+      }
+
+      .form-input-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 26px;
+        background-color: #f1f1f1;
+        border-radius: 15px;
+        width: 424px;
+        padding: 10px 27px;
+        border: 1px solid #000;
+      }
+
+      .input-icon {
+        margin-right: 10px;
+      }
+
+      .form-input {
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 16px;
+        flex: 1;
+      }
+
+      .appointment-button {
+        background-color: #ff7f32;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 246px;
+        border-radius: 36px;
+        height: 52px;
+      }
+
+      .appointment-button:hover {
+        background-color: #e6691d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-appointment">
+      <div class="appointment-container">
+        <h1 class="appointment-heading">Book an Appointment</h1>
+        <p class="appointment-description">
+          Schedule a Consultation with Our Expert Visa Advisors Today!
+        </p>
+        <form class="appointment-form">
+          <div class="form-input-group">
+            <span class="input-icon"><img src="./Images/Phone.jpg" alt="Phone Icon" /></span>
+            <input class="form-input" type="text" placeholder="Name" required />
+          </div>
+          <div class="form-input-group">
+            <span class="input-icon"><img src="./Images/Vector.jpg" alt="Phone Icon" /></span>
+            <input class="form-input" type="tel" placeholder="Phone Number" required />
+          </div>
+          <button class="appointment-button" type="submit">Book an Appointment</button>
+        </form>
+      </div>
+
+      <div class="help-video-container">
+        <h1 class="help-video-heading">Help Video</h1>
+        <h4 class="help-video-subheading">How to Apply for a Visa</h4>
+        <img src="./Images/logos_youtube-icon-removebg-preview.png" alt="YouTube Icon" />
+      </div>
+    </div>
+  </body>
+</html>
