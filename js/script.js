@@ -7,9 +7,9 @@ menuToggle.addEventListener('click', () => {
 });
 
 
-const image2 = ".././img/profile2.jpeg";
-const image3= ".././img/profile3.jpeg";
-const image4= ".././img/profile4.png";
+const image2 = "../img/profile2.jpeg";
+const image3= "../img/profile3.jpeg";
+const image4= "../img/profile4.png";
 const profiles = [
     {
       name: "Aarya Sharma",
