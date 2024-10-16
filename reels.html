@@ -1,292 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Reviews</title>
+  <title>Document</title>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f3f3f3;
-    }
 
-    .reviews-section {
-      text-align: center;
-      padding: 50px;
-      background-color: white;
-      position: relative;
-      overflow: hidden;
-    }
+.container {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
 
-    .reviews-section h2 {
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 40px;
-      color: #181818;
-    }
+.sidebar {
+    background-color: white;
+    padding: 20px;
+    width: 265px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+}
 
-    .reviews-wrapper {
-      width: 100%;
-      overflow: hidden;
-    }
+.menu-item {
+    background-color: var(--primary-deep-blue-color, #001E74);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 39px;
+    font-size: 24px;
+    text-align: center;
+}
 
-    .reviews-container {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-    }
+#menu-pdf, #menu-fees {
+    background-color: #E8E8E8;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 39px;
+    font-size: 24px;
+    text-align: center;
+}
 
-    .review-card {
-      display: flex;
-      border-radius: 10px;
-      width: 350px;
-      height: auto;
-      text-align: left;
-      position: relative;
-      margin: 0 150px;
-    }
+.main-content {
+    flex-grow: 1;
+    background-color: #e6e6e6;
+    overflow-y: auto;
+    border-radius: 10px;
+    height: 400px;
+}
 
-    .review-image {
-      width: 225.07px;
-      height: 362.45px;
-      border-radius: 20px;
-      background-size: cover;
-      background-position: center;
-    }
+.main-content h1 {
+    color: #002d72;
+    margin-bottom: -9px;
+    background-color: #d6c5c5;
+    margin-top: -2px;
+    justify-content: center;
+    padding: 24px;
+    border: 0px solid #d6c5c5;
+    position: fixed;
+    width: 73%;
+}
 
-    .review-content {
-      padding: 20px;
-      position: absolute;
-      top: 65px;
-      left: 174px;
-      width: 213px;
-      border-radius: 8px;
-      background: #FFF;
-      box-shadow: 0px 9px 28.9px 0px rgba(21, 21, 21, 0.25);
+.main-content p {
+    margin-left: 32px;
+    color: #002d72;
+    font-size: 16px;
+    margin-top: 95px;
+}
 
-    }
+ul {
+    margin-top: 0;
+    margin-left: 32px;
+    color: #002d72;
+    font-size: 16px;
+}
 
-    .review-content h3 {
-      color: #000;
+.orangebutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
 
-      font-size: 22.289px;
-      font-weight: 800;
-      margin: 0;
-    }
+.download-button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-right: 20px;
+    width: 270px;
+    height: 48px;
+}
 
-    .review-content p {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 15px;
-    }
+.download-button:hover {
+    background-color: #e65c00;
+}
 
-    .review-stars {
-      color: #FF7A00;
-    }
+.main-content::-webkit-scrollbar {
+    width: 20px;
+}
 
-    .review-tag {
-      background-color: #FF7A00;
-      width: 106px;
-      background-color: #FF7A00;
-      color: white;
-      padding: 10px 25px;
-      position: absolute;
-      top: 10px;
-      right: 268px;
-      font-size: 12px;
-      font-weight: bold;
-      border-radius: 10px;
-    }
+.main-content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
 
-    /* Background Quote and other elements */
-    .quote-background {
-      position: absolute;
-      top: 100px;
-      left: 30%;
-      font-size: 100px;
-      color: rgba(0, 0, 0, 0.05);
-    }
+.main-content::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+}
 
-    .reviews-navigation {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .nav-button {
-      background-color: #ddd;
-      border: none;
-      border-radius: 50%;
-      padding: 10px;
-      width: 60px;
-      height: 60px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .nav-button:hover {
-      background-color: #FF7A00;
-      color: white;
-    }
-
-    /* Additional background graphics */
-    .background-decor {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    .background-shape {
-      position: absolute;
-      top: 0;
-      width: 400px;
-      height: 400px;
-      background-color: #001E74;
-      border-radius: 50%;
-      opacity: 0.1;
-    }
-
-    .background-shape:nth-child(2) {
-      top: 60%;
-      left: 80%;
-      width: 300px;
-      height: 300px;
-      background-color: #FF7A00;
-      opacity: 0.15;
-    }
-
-    .firstperagraph {
-      color: #505050;
-      font-family: Manrope;
-      font-size: 8.851px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-
-    .secondreviewdiv {
-      font-weight: 600 !important;
-      color: #000;
-      color: #000;
-      font-size: 20.644px;
-      font-style: normal;
-      letter-spacing: 1px;
-      /* 21.066px */
-    }
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
   </style>
 </head>
-
 <body>
-  <section class="reviews-section">
-    <h2>Clients Reviews</h2>
-
-    <div class="reviews-wrapper">
-      <div class="reviews-container">
-        <div class="reviews-container">
-          <div class="review-card">
-            <div class="review-image" style="background-image: url('img/reviewslider.jpeg');"></div>
-            <div class="review-content">
-              <h3>Miss. Shweta Bhatt</h3>
-              <p class="firstperagraph">Digital Marketing Executive</p>
-              <p class="secondreviewdiv">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-              <div class="review-stars">★★★★☆</div>
-            </div>
-            <div class="review-tag">WHAT OUR CLIENT SAY ABOUT US?</div>
-          </div>
-
-
-          <!-- Repeat more review cards as necessary -->
-          <div class="review-card">
-            <div class="review-image" style="background-image: url('img/reviewslider.jpeg');"></div>
-            <div class="review-content">
-              <h3>Miss. Shweta Bhatt</h3>
-              <p class="firstperagraph">Digital Marketing Executive</p>
-              <p class="secondreviewdiv">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-              <div class="review-stars">★★★★☆</div>
-            </div>
-            <div class="review-tag">WHAT OUR CLIENT SAY ABOUT US?</div>
-          </div>
-
-          <!-- Add as many reviews as you need -->
-          <div class="review-card">
-            <div class="review-image" style="background-image: url('img/reviewslider.jpeg');"></div>
-            <div class="review-content">
-              <h3>Miss. Shweta Bhatt</h3>
-              <p class="firstperagraph">Digital Marketing Executive</p>
-              <p class="secondreviewdiv">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-              <div class="review-stars">★★★★☆</div>
-            </div>
-            <div class="review-tag">WHAT OUR CLIENT SAY ABOUT US?</div>
-          </div>
-          <div class="review-card">
-            <div class="review-image" style="background-image: url('img/reviewslider.jpeg');"></div>
-            <div class="review-content">
-              <h3>Miss. Shweta Bhatt</h3>
-              <p class="firstperagraph">Digital Marketing Executive</p>
-              <p class="secondreviewdiv">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-              <div class="review-stars">★★★★☆</div>
-            </div>
-            <div class="review-tag">WHAT OUR CLIENT SAY ABOUT US?</div>
-          </div>
-          <div class="review-card">
-            <div class="review-image" style="background-image: url('img/reviewslider.jpeg');"></div>
-            <div class="review-content">
-              <h3>Miss. Shweta Bhatt</h3>
-              <p class="firstperagraph">Digital Marketing Executive</p>
-              <p class="secondreviewdiv">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-              <div class="review-stars">★★★★☆</div>
-            </div>
-            <div class="review-tag">WHAT OUR CLIENT SAY ABOUT US?</div>
-          </div>
-        </div>
+  <div class="container">
+    <div class="sidebar">
+      <div class="menu-item" id="menu-docu">📄 Document File</div>
+      <div class="menu-item" id="menu-pdf">📑 Pdf Download</div>
+      <div class="menu-item" id="menu-fees">₹ Fees Structure</div>
+    </div>
+    <div class="main-content">
+      <h1>Document Requirements</h1>
+      <p>
+        A tourist visa is an official document that allows a traveler to
+        enter, stay, and travel within a country for tourism<br />
+        purposes. It usually has a limited duration and is issued for leisure
+        activities such as sightseeing, visiting friends<br />
+        or family, or attending events.
+      </p>
+      <ul>
+        <li>
+          Single-entry Visa: Allows entry into the country once; re-entry
+          requires a new visa.
+        </li>
+        <li>
+          Multiple-entry Visa: Allows the holder to enter and exit the country
+          multiple times within a specified period.
+        </li>
+        <li>
+          Transit Visa: For travelers passing through a country on their way
+          to another destination.
+        </li>
+        <li>
+          eVisa: An electronic visa that can be applied for online, often
+          simplifying the process.
+        </li>
+        <li>
+          Single-entry Visa: Allows entry into the country once; re-entry
+          requires a new visa.
+        </li>
+        <li>
+          Multiple-entry Visa: Allows the holder to enter and exit the country
+          multiple times within a specified period.
+        </li>
+        <li>
+          Transit Visa: For travelers passing through a country on their way
+          to another destination.
+        </li>
+        <li>
+          eVisa: An electronic visa that can be applied for online, often
+          simplifying the process.
+        </li>
+        <li>
+          Single-entry Visa: Allows entry into the country once; re-entry
+          requires a new visa.
+        </li>
+        <li>
+          Multiple-entry Visa: Allows the holder to enter and exit the country
+          multiple times within a specified period.
+        </li>
+        <li>
+          Transit Visa: For travelers passing through a country on their way
+          to another destination.
+        </li>
+        <li>
+          eVisa: An electronic visa that can be applied for online, often
+          simplifying the process.
+        </li>
+      </ul>
+      <div class="orangebutton">
+        <button class="download-button">Download ⬇️</button>
       </div>
-
-      <!-- Background quote -->
-      <div class="quote-background">“</div>
-
-      <!-- Navigation buttons -->
-      <div class="reviews-navigation">
-        <button class="nav-button" id="prevBtn">❮</button>
-        <button class="nav-button" id="nextBtn">❯</button>
-      </div>
-
-      <!-- Decorative background shapes -->
-      <div class="background-decor">
-        <div class="background-shape"></div>
-        <div class="background-shape"></div>
-      </div>
-  </section>
-
-  <script>
-    const reviewsContainer = document.querySelector('.reviews-container');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-
-    let currentIndex = 0;
-    const totalReviews = document.querySelectorAll('.review-card').length;
-
-    const updateCarousel = () => {
-      const cardWidth = document.querySelector('.review-card').offsetWidth + 300; // including margin
-      reviewsContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    };
-
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalReviews - 1;
-      updateCarousel();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex < totalReviews - 1) ? currentIndex + 1 : 0;
-      updateCarousel();
-    });
-  </script>
+    </div>
+  </div>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const mainContent = document.querySelector('.main-content');
+    const container = document.querySelector('.container');
 
+    function adjustContentHeight() {
+        const containerHeight = container.clientHeight;
+        mainContent.style.height = ${containerHeight - 40}px; 
+    }
+
+    adjustContentHeight();
+    window.addEventListener('resize', adjustContentHeight);
+});
+</script>
 </html>

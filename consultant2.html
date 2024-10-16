@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultant Card</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .ribbon {
+            width: 100px;
+            background: black;
+            color: #fff;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: absolute;
+            left: -25px;
+            top: 20px;
+            transform: rotate(-45deg);
+        }
+
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            position: relative;
+        }
+
+        .verification-tick {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-color: white; /* Optional: to create a background */
+            border-radius: 50%;
+            border: 2px solid green; /* Green border for verification */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .verification-tick::after {
+            content: '✔'; /* Checkmark symbol */
+            color: green;
+            font-size: 16px;
+        }
+
+        .btn-outline-success {
+            margin-right: 5px;
+        }
+
+        .stars {
+            color: gold;
+        }
+
+        .price {
+            color: green;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="ribbon">Top Choice</div>
+        <div class="profile-img">
+            <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+            <div class="verification-tick"></div>
+        </div>
+        <div>
+            <h5>Urvaskha</h5>
+            <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+            <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+            <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            <button class="btn btn-outline-success">chat</button>
+            <button class="btn btn-outline-success">Call</button>
+            <button class="btn btn-outline-success">video call</button>
+        </div>
+    </div>
+</body>
+</html>

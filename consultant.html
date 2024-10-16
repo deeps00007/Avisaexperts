@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultant Card</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        header {
+            display: flex;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+        }
+
+        .parent-card {
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        .card {
+            margin: 15px 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px 20px;
+            background-color: white;
+        }
+
+        .flex-username h5 {
+            color: #000;
+            font-family: "Open Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .ribbon {
+            width: 100px;
+            background: black;
+            color: #FFC700;
+            text-align: center;
+            font-size: 10px;
+            /* transform: scale(1.5) !important; */
+            font-weight: bold;
+            text-transform: uppercase;
+            position: absolute;
+            left: -25px;
+            top: 16px;
+            padding: 3px 0px;
+            transform: rotate(-45deg);
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        .red-btn{
+            border: 2px solid red !important;
+           z-index: 20; 
+        }
+        .btn-outline-success {
+            padding: 2px 13px;
+            margin-top: 4px;
+            margin-right: 10px;
+            border: 2px solid;
+        }
+
+        .btn-outline-success:hover {
+            cursor: pointer !important;
+            transform: translate(-1%, -1%);
+            background-color: white !important;
+            color: green;
+        }
+
+        .stars {
+            color: gold;
+        }
+
+        .price {
+            color: #028C4C;
+            text-align: center;
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #4E4B4B;
+            text-align: center;
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration-line: strikethrough;
+        }
+
+        .verification-tick::after {
+            content: '✔';
+            /* Checkmark symbol */
+            color: green;
+            font-size: 16px;
+        }
+
+        .flex-username p {
+            color: #4E4B4B;
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .flex-username {
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .peragraph-section {
+            padding: 5px 60px;
+            margin-bottom: 20px;
+        }
+
+        .peragraph-section h1 {
+            color: #000;
+            text-align: center;
+            font-family: "Open Sans";
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.12px;
+        }
+
+        .peragraph-section p {
+            color: #747474;
+            text-align: justify;
+            font-family: "Open Sans";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .margin-up-p {
+            margin-bottom: 97px;
+        }
+
+        .flex-username svg {
+            position: relative;
+            left: 43px;
+        }
+
+        .firstcardp {
+            margin-bottom: 27px;
+        }
+
+        .card-first-pera {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="MAIN-LOGO">
+            <img class="logop" src="img/main-logo.svg" alt="Visa Experts">
+            <img class="vector" src="img/Vector.png" alt="">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="touristvisa1.html">Services</a>
+            <a href="#">About us</a>
+            <a href="#">Contact us</a>
+            <a href="javascript:void(0)" class="activelink">Consultant</a>
+            <a class="countries" href="#">Countries</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Menu Toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <div class="parent-card">
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p class="card-first-pera">UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn red-btn btn-outline-success">chat</button>
+                <button class="btn red-btn btn-outline-success">Call</button>
+                <button class="btn red-btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn red-btn btn-outline-success">chat</button>
+                <button class="btn red-btn btn-outline-success">Call</button>
+                <button class="btn red-btn btn-outline-success">video call</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="peragraph-section">
+        <h1>How Connecting with an A VISA EXPERT can help you?</h1>
+        <p>Navigating the complexities of visa applications can be a daunting task. Connecting with a visa expert can
+            significantly simplify this process, providing you with invaluable assistance tailored to your specific
+            needs.
+            A visa expert offers a wealth of knowledge regarding the various visa types and requirements for different
+            countries. They stay updated on the latest immigration policies and procedures, ensuring that you receive
+            accurate and timely information. Whether you need guidance for student visas, work permits, or tourist
+            visas, their expertise can help you choose the right pathway.
+            Communication with a visa expert can be conducted via chat, call, or video call, making it convenient for
+            you to seek assistance. During these interactions, you can ask questions, clarify doubts, and receive
+            personalized advice. The expert can review your application materials, highlight any potential issues, and
+            suggest improvements to enhance your chances of approval.
+            Additionally, a visa expert provides comprehensive services, including document preparation, application
+            submission, and interview coaching. This support is especially beneficial if you are unfamiliar with the
+            process or have language barriers. They can help you compile necessary documents, ensuring that everything
+            is in order before submission.</p>
+    </div>
+    <div class="peragraph-section margin-up-p">
+        <h1>How Connecting with an A VISA EXPERT can help you?</h1>
+        <p>Navigating the complexities of visa applications can be a daunting task. Connecting with a visa expert can
+            significantly simplify this process, providing you with invaluable assistance tailored to your specific
+            needs.
+            A visa expert offers a wealth of knowledge regarding the various visa types and requirements for different
+            countries. They stay updated on the latest immigration policies and procedures, ensuring that you receive
+            accurate and timely information. Whether you need guidance for student visas, work permits, or tourist
+            visas, their expertise can help you choose the right pathway.
+            Communication with a visa expert can be conducted via chat, call, or video call, making it convenient for
+            you to seek assistance. During these interactions, you can ask questions, clarify doubts, and receive
+            personalized advice. The expert can review your application materials, highlight any potential issues, and
+            suggest improvements to enhance your chances of approval.
+            Additionally, a visa expert provides comprehensive services, including document preparation, application
+            submission, and interview coaching. This support is especially beneficial if you are unfamiliar with the
+            process or have language barriers. They can help you compile necessary documents, ensuring that everything
+            is in order before submission.</p>
+    </div>
+    <!-- //footer and phone section -->
+    <section class="app-banner">
+        <div class="app-banner-intro">
+            <h1>Our mobile app is coming soon!</h1>
+            <p>Get ready to simplify your visa application process with easy access to information, real-time updates,
+                and personalized support—all in the palm of your hand.</p>
+        </div>
+        <div class="app-store-buttons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Google Play">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+        </div>
+        <div class="app-image-phone">
+            <img src="img/iphoneimage.png" alt="Phone Image">
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-wrapper">
+            <div class="footer-section footer-logo-section">
+                <img class="footer-logo" src="img/main-logo.svg" alt="Logo">
+                <h3>A Visa Experts</h3>
+                <p>Visa Expert helps individuals secure visas for the USA, Canada, and Australia. Our experienced team
+                    offers personalized guidance, ensuring a smooth application process for tourist, student, and work
+                    visas.</p>
+            </div>
+            <div class="footer-section footer-second-clm">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-second-clm">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-second-clm">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-second-clm">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-second-clm margin-footer">
+                <h3>Follow Us</h3>
+                <div class="social-media-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-flags">
+            <img src="img/US.jpg" alt="USA Flag">
+            <img src="img/CA.jpg" alt="Canada Flag">
+            <img src="img/GB.svg" alt="UK Flag">
+            <img src="img/EU.jpg" alt="EU Flag">
+            <img src="img/HM.svg" alt="Australia Flag">
+        </div>
+    </footer>
+
+    <div class="footer-bottom-text">
+        &copy; 2019-2020 All Rights Reserved.
+    </div>
+</body>
+
+</html>

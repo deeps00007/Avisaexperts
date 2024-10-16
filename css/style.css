@@ -25,7 +25,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    padding: 20px 0;
+    padding: 12px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for a nice effect */
     backdrop-filter: blur(7px);
     z-index: 200 !important;
@@ -62,7 +62,7 @@ header nav a:hover {
     cursor: pointer;
 }
 .main-containers{
-    height: 100vh;
+    height: 110vh;
 }
 
 .menu-toggle span {
@@ -121,7 +121,14 @@ header nav a:hover {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 }
-
+@media (max-width:1300px) {
+    .app-image-phone{
+       position: relative;
+    }
+    .app-image-phone img {
+       bottom: 0;
+    }
+}
 @media (max-width:1234px) {
     .container {
         width: 61% !important;
@@ -454,7 +461,12 @@ header nav a:hover {
     font-weight: 600;
     line-height: normal;
 }
-
+.nav-links .activelink{
+    cursor: pointer;
+    background-color: #001E74;
+    color: white;
+    border-radius: 44px;
+}
 .nav-links .countries {
     z-index: 100 !important;
     color: white;
@@ -546,6 +558,7 @@ header nav a:hover {
     width: 82.115px;
     height: 12.917px;
     margin-left: 60px;
+    margin-top: 10px;
 }
 
 .visa-desc {
@@ -565,7 +578,7 @@ header nav a:hover {
 }
 
 .my-content {
-    margin-right: 350px;
+    margin-right: 486px;
     margin-top: 200px;
 }
 
@@ -791,7 +804,7 @@ header nav a:hover {
 }
 
 .image-placeholder {
-    background: url(../img/sirpic.JPG)no-repeat center center/cover; 
+    background: url(../img/sirpic.jpg)no-repeat center center/cover; 
     width: 380px;
     height: 500px;
     border-radius: 106px;
@@ -913,7 +926,7 @@ button:hover {
     margin-top: 40px;
     padding: 30px;
     margin-left: 30px;
-    padding-left: 105px;
+    padding-left: 60px;
     margin-left: 18px;
 
 }
@@ -921,7 +934,7 @@ button:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 87px;
     overflow-x: auto;
 }
 .reel {
@@ -1018,7 +1031,7 @@ button:hover {
     border-radius: 10px;
     padding: 0px 0px 0px 50px;
     overflow: hidden;
-  }
+  } 
 
   .destination-card {
     position: relative;
@@ -1207,7 +1220,7 @@ button:hover {
     height: auto;
     text-align: left;
     position: relative;
-    margin: 0 120px;
+    margin: 0 150px;
   }
 
   .review-image {
@@ -1347,6 +1360,7 @@ button:hover {
     width: 97%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
     padding: 30px 20px;
@@ -1383,18 +1397,24 @@ button:hover {
     background-color: #0052cc;
     background: linear-gradient(93deg, #0038DA 24.94%, #0C37B1 96.65%);
     color: white;
-    padding: 70px 0;
+    padding: 80px 0px 20px 0px;
 }
 
 .footer-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 70px;
 }
 
 .footer-section {
-    width: 200px;
+    width: 126px;
 }   
+.footer-second-clm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .footer-section h3 {
     font-size: 27px;
@@ -1432,10 +1452,13 @@ button:hover {
     font-size: 20px;
     text-decoration: none;
 }
+.margin-footer{
+    margin-bottom: 110px;
+}
 
 .footer-bottom-text {
     text-align: center;
-    padding: 20px;
+    padding: 3px;
     background-color: #003d99;
     background: var(--primary-deep-blue-color, #001E74);
     color: #ddd;
@@ -1450,8 +1473,8 @@ button:hover {
 
 .footer-flags img {
     margin: 0 2px;
-    width: 60px;
-    height: 41px;
+    width: 47px;
+    height: 30px;
     border-radius: 5px;
 }
 
@@ -1461,7 +1484,7 @@ button:hover {
 
 .app-image-phone {
     position: absolute;
-    right: 229px;
+    right: 168px;
 }
 
 .app-banner-intro h1 {
@@ -1492,7 +1515,7 @@ button:hover {
 
   .appointment-container {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     width: 50%;
     height: 100%;
     display: flex;
@@ -1538,7 +1561,7 @@ button:hover {
   }
 
   .appointment-form {
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: 30px auto;
     text-align: center;
   }
@@ -1590,3 +1613,290 @@ button:hover {
   .appointment-button:hover {
     background-color: #e6691d;
   }
+
+  /* //Highlighted Section Css */
+  .highlighted-heading {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+  }
+
+  /* Container for positioning */
+  .custom-row {
+    position: relative;
+  }
+
+  /* Left section for Immigration Services */
+  .immigration-services {
+    background-color: #FFFBE8;
+    border-radius: 0px 200px 200px 0px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 108%;
+    height: 380px;
+    position: relative;
+    top: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .immigration-services .icon-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #0138D9;
+    border-radius: 50%;
+    padding: 25px;
+    height: 234px;
+    width: 234px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+  }
+
+  .immigration-services .icon-section img {
+    width: 80px;
+  }
+
+  .immigration-services .text-section h3 {
+    color: var(--primary-deep-blue-color, #001E74);
+    text-align: center;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.085px;
+    text-transform: uppercase;
+    color: #173f89;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .immigration-services .text-section p {
+    color: var(--primary-deep-blue-color, #001E74);
+    text-align: center;
+
+    /* subtitle 1 */
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a4a4a;
+  }
+
+  /* Right section for process steps */
+  /* .process-step {
+    display: flex;
+    align-items: center;
+    background-color: #fffac2;
+    cursor: pointer !important;
+    border-radius: 38px 0px 0px 38px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  } */
+  .process-step {
+    display: flex;
+    align-items: center;
+    background-color: #FFFBE8;
+    cursor: pointer !important;
+    border-radius: 38px 0px 0px 38px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .highlight-step {
+    background-color: #fddc00;
+    color: white;
+  }
+
+  .process-step .step-number {
+    background-color: #0138D9;
+    color: white;
+    font-size: 25px;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  .process-step .step-text {
+    font-size: 18px;
+    color: #173f89;
+  }
+
+  /* Highlight first step in yellow */
+  /* .highlight-step {
+   background-color: #fddc00;
+    color: white;
+  }  */
+
+  /* SVG connector */
+  .svg-connector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  /* Connecting Wire Styles */
+  .connector-path {
+    stroke: #0138D9;
+    fill: none;
+    stroke-width: 2;
+  }
+
+  .icon-section h4 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.085px;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    background-color: #0138D9;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  /* Position circles as visual connection points */
+  .circle[data-number="1"] {
+    top: 45px;
+    left: 240px;
+  }
+
+  .circle[data-number="2"] {
+    top: 185px;
+    left: 240px;
+  }
+
+  .circle[data-number="4"] {
+    top: 325px;
+    left: 240px;
+  }
+
+  /* .container {
+    position: relative;
+    height: 400px;
+  } */
+
+  .circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0138D9;
+    font-weight: bold;
+  }
+
+  .circle:nth-child(2) {
+    top: 20px;
+    left: 120px;
+  }
+
+  .circle:nth-child(3) {
+    top: 150px;
+    left: 120px;
+  }
+
+  .circle:nth-child(4) {
+    top: 280px;
+    left: 120px;
+  }
+
+  .semi-container {
+    margin: 0;
+    position: relative;
+    height: 400px;
+  }
+
+  .circle::before {
+    content: attr(data-number);
+  }
+
+  .half-circle {
+    transform: rotate(90deg);
+    width: 412px;
+    height: 212px;
+    border: 5px solid gray;
+    border-radius: 1863px 2000px 0 0;
+    border-bottom: none;
+    position: relative;
+    right: 262px;
+    top: 105px;
+    /* margin: 89px auto; */
+  }
+
+  /* .linesandCurve{
+display: flex;
+flex-direction: row;
+width: 374px;
+height: 184px;
+} */
+  .ulline li {
+    width: 105px;
+    z-index: -1;
+    height: 5px;
+    background-color: gray;
+    margin: 10px 0;
+    list-style: none;
+  }
+
+  .line2 {
+    position: relative;
+    top: -80px;
+    left: 10px;
+    transform: rotate(348deg);
+  }
+
+  .line3 {
+    top: -15px;
+    position: relative;
+    left: 10px;
+    transform: rotate(0deg);
+  }
+
+  .line4 {
+    position: relative;
+    top: 43px;
+    left: -5px;
+    transform: rotate(18deg);
+  }
+
+  .line1 {
+    position: relative;
+    top: -138px;
+    left: -11px;
+    transform: rotate(330deg);
+  }
+
+  .first-info-section {
+    align-self: center;
+  }
+
+
+  /* //faq Section */
+  

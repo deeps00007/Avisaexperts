@@ -1,203 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consultant Profile</title>
-    <link rel="stylesheet" href="index.css" />
-    <style>
-     
 
-     .body {
-    background: url('.././img/Background\ for\ visa\ 1.jpg');
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:700px;
-    text-align: center;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immigration Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Main heading styling */
+    .highlighted-heading {
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 40px;
+      color: black;
+    }
 
-.container {
-    /* background: url(./img//Background\ for\ visa\ 1.jpg); */
-    display: flex;
-    /* background-color: white; */
-    /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); */
-    border-radius: 10px;
-    /* overflow: hidden; */
-    max-width: 900px;
-    
-    /* width: 100%; */
-    /* background: url(./img/noisy-gradients.jpg); */
-    
-    
-}
+    /* Container for positioning */
+    .custom-row {
+      position: relative;
+    }
 
-.profile {
-    background: url('.././img/noisy-gradients.jpg');
-    padding: 30px;
-    width: 60%;
-}
+    /* Left section for Immigration Services */
+    .immigration-services {
+      background-color: #fffbe2;
+      border-radius: 0px 200px 200px 0px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 108%;
+      height: 380px;
+      position: relative;
+      top: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-h1 {
-    font-size: 2.5rem;
-    color: #333;
-}
+    .immigration-services .icon-section {
+      display: flex;
+      flex-direction: column;
+      background-color: #0138D9;
+      border-radius: 50%;
+      padding: 25px;
+      height: 234px;
+      width: 234px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 25px;
+    }
 
-h2 {
-    font-size: 1.5rem;
-    color: #0073e6;
-    margin: 10px 0;
-}
+    .immigration-services .icon-section img {
+      width: 80px;
+    }
 
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    text-align: start;
-}
+    .immigration-services .text-section h3 {
+      color: var(--primary-deep-blue-color, #001E74);
+      text-align: center;
+      font-size: 34px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.085px;
+      text-transform: uppercase;
+      color: #173f89;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-.social-links {
-    margin-bottom: 20px;
-}
+    .immigration-services .text-section p {
+      color: var(--primary-deep-blue-color, #001E74);
+      text-align: center;
 
-.social-links a {
-    margin-right: 10px;
-}
+      /* subtitle 1 */
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #4a4a4a;
+    }
 
-.social-links img {
-    width: 30px;
-    height: 30px;
-    border: 10px;
-    border-radius: 15px;
+    /* Right section for process steps */
+    /* .process-step {
+      display: flex;
+      align-items: center;
+      background-color: #fffac2;
+      cursor: pointer !important;
+      border-radius: 38px 0px 0px 38px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    } */
+    .process-step {
+      display: flex;
+      align-items: center;
+      background-color: #fffac2;
+      cursor: pointer !important;
+      border-radius: 38px 0px 0px 38px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-}
+    .highlight-step {
+      background-color: #fddc00;
+      color: white;
+    }
 
-.btn {
-    padding: 10px 20px;
-    background-color: #0073e6;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
+    .process-step .step-number {
+      background-color: #0138D9;
+      color: white;
+      font-size: 25px;
+      width: 41px;
+      height: 41px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+    }
 
-.profile-pic {
-    width: 40%;
-    /* background-color: #f9f9f9; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background: none; */
-      /* background: url(./img/Background\ for\ visa\ 1.jpg); */
-       height: 324px;
-    width: 386px;
-    
+    .process-step .step-text {
+      font-size: 18px;
+      color: #173f89;
+    }
 
-    
-}
+    /* Highlight first step in yellow */
+    /* .highlight-step {
+     background-color: #fddc00;
+      color: white;
+    }  */
 
-.profile-pic img {
-    width: 80%;
-    border-radius: 5px;
-    margin-left: -41px;
-    /* border: 30px solid blue; */
-    margin: 31px;
-    margin-left: -115px;
-    border: 28px solid rgb(127, 127, 183);
+    /* SVG connector */
+    .svg-connector {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
 
-    
-}
+    /* Connecting Wire Styles */
+    .connector-path {
+      stroke: #0138D9;
+      fill: none;
+      stroke-width: 2;
+    }
 
-/* .arrow {
-    position: absolute; */
-    /* top: 50%;  */
-    /* transform: translateY(-50%); */
-    /* right: -20px;  */
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f27405;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    .icon-section h4 {
+      color: #FFF;
+      text-align: center;
+      font-family: "Open Sans";
+      font-size: 34px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.085px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      background-color: #0138D9;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    /* Position circles as visual connection points */
+    .circle[data-number="1"] {
+      top: 45px;
+      left: 240px;
+    }
+
+    .circle[data-number="2"] {
+      top: 185px;
+      left: 240px;
+    }
+
+    .circle[data-number="4"] {
+      top: 325px;
+      left: 240px;
+    }
+
+    /* .container {
+      position: relative;
+      height: 400px;
+    } */
+
+    .circle {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #0138D9;
+      font-weight: bold;
+    }
+
+    .circle:nth-child(2) {
+      top: 20px;
+      left: 120px;
+    }
+
+    .circle:nth-child(3) {
+      top: 150px;
+      left: 120px;
+    }
+
+    .circle:nth-child(4) {
+      top: 280px;
+      left: 120px;
+    }
+
+    .semi-container {
+      margin: 0;
+      position: relative;
+      height: 400px;
+    }
+
+    .circle::before {
+      content: attr(data-number);
+    }
+
+    .half-circle {
+      transform: rotate(90deg);
+      width: 412px;
+      height: 212px;
+      border: 5px solid gray;
+      border-radius: 1863px 2000px 0 0;
+      border-bottom: none;
+      position: relative;
+      right: 262px;
+      top: 105px;
+      /* margin: 89px auto; */
+    }
+
+    /* .linesandCurve{
+  display: flex;
+  flex-direction: row;
+  width: 374px;
+  height: 184px;
 } */
-.arrow img{
-    border: none;
-    left: 28px;
-    position: relative;
-    /* margin-left: -35px; */
-    height: 25px;
-    width: 25px;
-}
-.whowearr{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.whowearr h2{
-    color: black;
-   margin-top:32px ;
-}
-.whowearr p{
-    text-align: center;
-    /* font-size: 22px; */
-   
-}
+    .ulline li {
+      width: 105px;
+      z-index: -1;
+      height: 5px;
+      background-color: gray;
+      margin: 10px 0;
+      list-style: none;
+    }
 
-    </style>
-  </head>
-  <body>
-    <div class="body">
+    .line2 {
+      position: relative;
+      top: -80px;
+      left: 10px;
+      transform: rotate(348deg);
+    }
 
-   
-    <section>
+    .line3 {
+      top: -15px;
+      position: relative;
+      left: 10px;
+      transform: rotate(0deg);
+    }
 
-    <div class="whowearr">
+    .line4 {
+      position: relative;
+      top: 43px;
+      left: -5px;
+      transform: rotate(18deg);
+    }
 
-    
-    <h2>Expert Team</h2>
-    <p>Who we are here to help for you</p
-    >
-    <div class="container">
-      <div class="profile">
-        <h1>Aarya Sharma</h1>
-        <h2>U.S. visa consultant</h2>
-        <p>
-          Offering personalized visa consultation and assistance for multiple
-          countries, including the U.S., Canada, and Australia. We simplify your
-          visa process.
-        </p>
-        <div class="social-links">
-          <a href="#"
-            ><img src="./img/skill-icons_twitter.jpg" alt="Twitter"
-          /></a>
-          <a href="#"
-            ><img src="./img/logos_facebook.jpg" alt="Facebook"
-          /></a>
-          <a href="#"
-            ><img src="./img/skill-icons_instagram.jpg" alt="Instagram"
-          /></a>
-        </div>
-        <a href="#" class="btn">Learn More</a>
-      </div>
-      <div class="profile-pic">
-        <img src="./img/unsplash_g-Vl9Mom508.jpg" alt="Aarya Sharma" />
-        <div class="arrow">
-          <img
-            src="./img/arrow_forward_ios-removebg-preview.png"
-            alt="arrow"
-          />
+    .line1 {
+      position: relative;
+      top: -138px;
+      left: -11px;
+      transform: rotate(330deg);
+    }
+
+    .first-info-section {
+      align-self: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container my-5 pt-5 pb-5">
+    <h1 class="highlighted-heading">Work Process Under Visa Immigration Rules</h1>
+    <div class="row custom-row">
+      <!-- Immigration Services Section -->
+      <div class="col-md-6 first-info-section">
+        <div class="immigration-services">
+          <div class="text-section">
+            <h3>Immigration Services</h3>
+            <p>
+              Primarily, immigration services provide visa application assistance, helping clients apply for different
+              types of visas, such as tourist, work, student, and permanent residency visas.
+            </p>
+          </div>
+          <div class="icon-section">
+            <img src="img/support_agent.svg" alt="Immigration Icon">
+            <h4>Immigration Services</h4>
+          </div>
         </div>
       </div>
+
+      <!-- SVG Wire Connector -->
+      <div class="col-md-1 linesandCurve">
+        <div class="half-circle"></div>
+        <ul class="ulline">
+          <li class="line1"></li>
+          <li class="line2"></li>
+          <li class="line3"></li>
+          <li class="line4"></li>
+        </ul>
+      </div>
+
+      <!-- Circle Points for each step -->
+
+      <!-- Process Steps Section -->
+      <div class="col-md-5">
+        <!-- Step 1 -->
+        <div class="process-step highlight-step" id="step-1">
+          <div class="step-number">1</div>
+          <div class="step-text">Choose where you want to go abroad and sign up</div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step" id="step-2">
+          <div class="step-number">2</div>
+          <div class="step-text">Consultants will evaluate your profile and suggest</div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step" id="step-3">
+          <div class="step-number">3</div>
+          <div class="step-text">Direction all through until the point when you get</div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step" id="step-4">
+          <div class="step-number">4</div>
+          <div class="step-text">Get your documentation and stay happy</div>
+        </div>
+      </div>
+
     </div>
-</div>
-</div>
-  </body>
+  </div>
+
+
+  <!-- //scg -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+     const steps = document.querySelectorAll('.process-step');
+
+// Add click event listener to each step
+steps.forEach(step => {
+  step.addEventListener('click', function() {
+    // Remove highlight from all steps
+    steps.forEach(s => s.classList.remove('highlight-step'));
+    
+    // Add highlight to the clicked step
+    this.classList.add('highlight-step');
+  });
+});
+  </script>
+  </script>
+</body>
+
 </html>
-
-
-
-
