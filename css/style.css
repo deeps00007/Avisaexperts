@@ -218,15 +218,6 @@ header nav a:hover {
     }
 }
 
-@media (max-width: 570px) {
-    .background-img {
-        height: auto !important;  /* Avoid zooming by maintaining aspect ratio */
-        width: 100% !important;
-        object-fit: cover;        /* Fit the image without zooming */
-    }
-}
-
-
 @media (max-width:600px) {
     
 /* .background-img{
