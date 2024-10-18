@@ -237,15 +237,15 @@ header nav a:hover {
     text-shadow: none !important;
 }
 .reels-container{
-    width: 100% !important;
+    width: 600px !important;
     gap: 43px;
 }
 .main-containers{
     height: auto;
-    width: 100% !important;
+    width: 600px !important;
 }
 .news-background{
-    width: 100% !important;
+    width: 600px !important;
 }
 .news-card {
     width: 36% !important;
