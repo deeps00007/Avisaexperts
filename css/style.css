@@ -266,6 +266,56 @@ header nav a:hover {
     margin-left: 0px !important;
 }
 }
+@media (max-width:430px) {
+    
+    .background-img{
+        height: 256% !important;
+    }
+    .menu-toggle{
+        margin-right: 60px !important;
+    }
+    .visa-category{
+        right: 155PX;
+        top: 0px !important;
+    }
+    .visa-c2{
+        right: 160px !important;
+    }
+    .main-heading{
+        font-size: 34px !important;
+        text-shadow: none !important;
+    }
+    .reels-container{
+        width: 430px !important;
+        gap: 43px;
+    }
+    .main-containers{
+        height: auto;
+        width: 430px !important;
+    }
+    .news-background{
+        width: 430px !important;
+    }
+    .news-card {
+        width: 36% !important;
+    }
+    /* .news-card-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    } */
+    .page{
+        width: 100% !important;
+        padding-bottom: 26px !important;
+    }
+    .hero{
+        width: 100% !important;
+    }
+    .text{
+        margin-left: 0px !important;
+    }
+    }
+    
 
 @media (max-width:785px) {
     .big-con {
