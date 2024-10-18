@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jitsi Meet Video Chat Integration</title>
+    
+    <style>
+        
+        /* Basic styling for the container */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        #jitsi-container {
+            width: 400px;
+            height: 300px;
+            border: 2px solid #000;
+            margin-top: 20px;
+        }
+
+        /* Optional styling for buttons */
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script src='https://meet.jit.si/external_api.js'></script>
+<!-- ... -->
+<!-- const domain = 'meet.jit.si';
+const options = {
+    roomName: 'PickAnAppropriateMeetingNameHere',
+    width: 700,
+    height: 700,
+    parentNode: document.querySelector('#meet')
+};
+const api = new JitsiMeetExternalAPI(domain, options); -->
+
+    <!-- Container for Jitsi Meet -->
+    <div id="jitsi-container"></div>    
+
+    <!-- Controls to start/end the video chat -->
+    <!-- https://meet.jit.si/InstantTownsFancyAlmost -->
+    <div class="controls">
+        <button onclick="startJitsi()">Start Video Chat</button>
+        <button onclick="endJitsi()">End Video Chat</button>
+    </div>
+
+    <!-- Jitsi Meet API Script -->
+    <script src="https://meet.jit.si/external_api.js"></script>
+
+    <script>
+        let jitsiApi = null;
+
+        function startJitsi() {
+            console.log("Attempting to start Jitsi...");
+
+            // Check if the Jitsi API is loaded
+            if (typeof JitsiMeetExternalAPI === 'undefined') {
+                console.error("Jitsi API not loaded!");
+                alert("Jitsi API not loaded! Please check your internet connection or try again later.");
+                return;
+            }
+
+            const domain = "meet.jit.si";  // Using Jitsi's public server
+            const options = {
+                roomName: `Room_${Date.now()}`, // Unique room name based on timestamp
+                width: "100%",
+                height: "100%",
+                parentNode: document.querySelector('#jitsi-container'),
+                configOverwrite: {
+                    // Additional config options can be added here
+                },
+                interfaceConfigOverwrite: {
+                    // Customize the interface options here
+                },
+            };
+
+            // Create a new instance of JitsiMeetExternalAPI
+            jitsiApi = new JitsiMeetExternalAPI(domain, options);
+
+            // Optional event listeners
+            jitsiApi.addEventListener('videoConferenceJoined', () => {
+                console.log('Jitsi video conference started');
+            });
+
+            jitsiApi.addEventListener('videoConferenceLeft', () => {
+                console.log('Jitsi video conference ended');
+            });
+        }
+
+        function endJitsi() {
+            if (jitsiApi) {
+                jitsiApi.executeCommand('hangup');  // Ends the video chat
+                jitsiApi.dispose();  // Cleans up and removes the iframe
+                jitsiApi = null;  // Reset the API object
+            } else {
+                console.warn("No active Jitsi conference to end.");
+            }
+        }
+    </script>
+</body>
+</html>

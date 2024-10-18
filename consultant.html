@@ -31,7 +31,7 @@
         }
 
         .card {
-            margin: 15px 15px;
+            margin: 10px 10px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 450px;
@@ -74,12 +74,14 @@
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 15px;
+            margin: 0px 7px;
         }
-        .red-btn{
+
+        .red-btn {
             border: 2px solid red !important;
-           z-index: 20; 
+            z-index: 20;
         }
+
         .btn-outline-success {
             padding: 2px 13px;
             margin-top: 4px;
@@ -179,11 +181,30 @@
         }
 
         .firstcardp {
-            margin-bottom: 27px;
+            margin-bottom: -13px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .card-first-pera {
             margin-bottom: 0px;
+        }
+
+        header {
+            box-shadow: none !important;
+        }
+
+        .flex-stars {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .second-cls-pe {
+            position: relative;
+            bottom: 17px;
+            align-self: center;
         }
     </style>
 </head>
@@ -208,43 +229,44 @@
             <span></span>
         </button>
     </header>
+    
+    <div id="navbar">
+        <div id="main-nav">
+            <div id="search-container">
+                <input type="text" placeholder="Search consultant by name" />
+                <button id="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M11 16.5C14.0376 16.5 16.5 14.0376 16.5 11C16.5 7.96243 14.0376 5.5 11 5.5C7.96243 5.5 5.5 7.96243 5.5 11C5.5 14.0376 7.96243 16.5 11 16.5Z"
+                            stroke="black" />
+                        <path d="M15 15L19 19" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div id="balance">
+                <img src="img/noto_coin.jpg" alt="" />
+                <span>$41</span>
+            </div>
+            <div id="profile">
+                <img src="img/userprofile.png" alt="Profile Picture" />
+            </div>
+        </div>
+    </div>
+    <div class="consultant-section">
+        <h2>Our Consultant</h2>
+        <button class="filter-btn">
+          <img src="img/mage_filter.jpg" alt="Filter Icon" />
+        </button>
+      </div>
     <div class="parent-card">
+
         <div class="card">
             <div class="ribbon">Top Choice</div>
             <div class="firstcardp">
                 <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
-                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
-            </div>
-            <div>
-                <div class="flex-username">
-                    <h5>Urvaskha</h5>
-                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                            viewBox="0 0 30 30" fill="none">
-                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="30" height="30">
-                                <rect width="30" height="30" fill="#D9D9D9" />
-                            </mask>
-                            <g mask="url(#mask0_1148_2283)">
-                                <path
-                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
-                                    fill="#689A18" />
-                            </g>
-                        </svg></div>
-                </div>
-                <p class="card-first-pera">UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
-                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
-
-                <button class="btn btn-outline-success">chat</button>
-                <button class="btn btn-outline-success">Call</button>
-                <button class="btn btn-outline-success">video call</button>
-            </div>
-
-        </div>
-        <div class="card">
-            <div class="ribbon">Top Choice</div>
-            <div class="firstcardp">
-                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
-                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+                <p class="flex-stars"><span class="stars">⭐️⭐️⭐️⭐️⭐️</span>
+                <p class="second-cls-pe">2796 orders</p>
+                </p>
             </div>
             <div>
                 <div class="flex-username">
@@ -274,7 +296,9 @@
             <div class="ribbon">Top Choice</div>
             <div class="firstcardp">
                 <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
-                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+                <p class="flex-stars"><span class="stars">⭐️⭐️⭐️⭐️⭐️</span>
+                <p class="second-cls-pe">2796 orders</p>
+                </p>
             </div>
             <div>
                 <div class="flex-username">
@@ -304,7 +328,169 @@
             <div class="ribbon">Top Choice</div>
             <div class="firstcardp">
                 <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p class="flex-stars"><span class="stars">⭐️⭐️⭐️⭐️⭐️</span>
+                <p class="second-cls-pe">2796 orders</p>
+                </p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p class="flex-stars"><span class="stars">⭐️⭐️⭐️⭐️⭐️</span>
+                <p class="second-cls-pe">2796 orders</p>
+                </p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
                 <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn red-btn btn-outline-success">chat</button>
+                <button class="btn red-btn btn-outline-success">Call</button>
+                <button class="btn red-btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p class="flex-stars"><span class="stars">⭐️⭐️⭐️⭐️⭐️</span>
+                <p class="second-cls-pe">2796 orders</p>
+                </p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p class="flex-stars"><span class="stars">⭐️⭐️⭐️⭐️⭐️</span>
+                <p class="second-cls-pe">2796 orders</p>
+                </p>
+            </div>
+            <div>
+                <div class="flex-username">
+                    <h5>Urvaskha</h5>
+                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30" fill="none">
+                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1148_2283)">
+                                <path
+                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
+                                    fill="#689A18" />
+                            </g>
+                        </svg></div>
+                </div>
+                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
+                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
+
+                <button class="btn btn-outline-success">chat</button>
+                <button class="btn btn-outline-success">Call</button>
+                <button class="btn btn-outline-success">video call</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ribbon">Top Choice</div>
+            <div class="firstcardp">
+                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
+                <p class="flex-stars"><span class="stars">⭐️⭐️⭐️⭐️⭐️</span>
+                <p class="second-cls-pe">2796 orders</p>
+                </p>
             </div>
             <div>
                 <div class="flex-username">
@@ -360,126 +546,8 @@
                 <button class="btn red-btn btn-outline-success">video call</button>
             </div>
         </div>
-        <div class="card">
-            <div class="ribbon">Top Choice</div>
-            <div class="firstcardp">
-                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
-                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
-            </div>
-            <div>
-                <div class="flex-username">
-                    <h5>Urvaskha</h5>
-                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                            viewBox="0 0 30 30" fill="none">
-                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="30" height="30">
-                                <rect width="30" height="30" fill="#D9D9D9" />
-                            </mask>
-                            <g mask="url(#mask0_1148_2283)">
-                                <path
-                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
-                                    fill="#689A18" />
-                            </g>
-                        </svg></div>
-                </div>
-                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
-                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
 
-                <button class="btn btn-outline-success">chat</button>
-                <button class="btn btn-outline-success">Call</button>
-                <button class="btn btn-outline-success">video call</button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="ribbon">Top Choice</div>
-            <div class="firstcardp">
-                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
-                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
-            </div>
-            <div>
-                <div class="flex-username">
-                    <h5>Urvaskha</h5>
-                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                            viewBox="0 0 30 30" fill="none">
-                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="30" height="30">
-                                <rect width="30" height="30" fill="#D9D9D9" />
-                            </mask>
-                            <g mask="url(#mask0_1148_2283)">
-                                <path
-                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
-                                    fill="#689A18" />
-                            </g>
-                        </svg></div>
-                </div>
-                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
-                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
 
-                <button class="btn btn-outline-success">chat</button>
-                <button class="btn btn-outline-success">Call</button>
-                <button class="btn btn-outline-success">video call</button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="ribbon">Top Choice</div>
-            <div class="firstcardp">
-                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
-                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
-            </div>
-            <div>
-                <div class="flex-username">
-                    <h5>Urvaskha</h5>
-                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                            viewBox="0 0 30 30" fill="none">
-                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="30" height="30">
-                                <rect width="30" height="30" fill="#D9D9D9" />
-                            </mask>
-                            <g mask="url(#mask0_1148_2283)">
-                                <path
-                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
-                                    fill="#689A18" />
-                            </g>
-                        </svg></div>
-                </div>
-                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
-                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
-
-                <button class="btn btn-outline-success">chat</button>
-                <button class="btn btn-outline-success">Call</button>
-                <button class="btn btn-outline-success">video call</button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="ribbon">Top Choice</div>
-            <div class="firstcardp">
-                <img src="img/consultingimg1.png" alt="Consultant" class="profile-img">
-                <p><span class="stars">⭐️⭐️⭐️⭐️⭐️</span><br>2796 orders</p>
-            </div>
-            <div>
-                <div class="flex-username">
-                    <h5>Urvaskha</h5>
-                    <div class="verification-ticks"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                            viewBox="0 0 30 30" fill="none">
-                            <mask id="mask0_1148_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="30" height="30">
-                                <rect width="30" height="30" fill="#D9D9D9" />
-                            </mask>
-                            <g mask="url(#mask0_1148_2283)">
-                                <path
-                                    d="M10.75 28.125L8.375 24.125L3.875 23.125L4.3125 18.5L1.25 15L4.3125 11.5L3.875 6.875L8.375 5.875L10.75 1.875L15 3.6875L19.25 1.875L21.625 5.875L26.125 6.875L25.6875 11.5L28.75 15L25.6875 18.5L26.125 23.125L21.625 24.125L19.25 28.125L15 26.3125L10.75 28.125ZM11.8125 24.9375L15 23.5625L18.25 24.9375L20 21.9375L23.4375 21.125L23.125 17.625L25.4375 15L23.125 12.3125L23.4375 8.8125L20 8.0625L18.1875 5.0625L15 6.4375L11.75 5.0625L10 8.0625L6.5625 8.8125L6.875 12.3125L4.5625 15L6.875 17.625L6.5625 21.1875L10 21.9375L11.8125 24.9375ZM13.6875 19.4375L20.75 12.375L19 10.5625L13.6875 15.875L11 13.25L9.25 15L13.6875 19.4375Z"
-                                    fill="#689A18" />
-                            </g>
-                        </svg></div>
-                </div>
-                <p>UK visa consultants<br>English, Hindi, Punjabi<br>Exp: 5 Years</p>
-                <p><span class="price">Free</span> <span class="old-price">₹20/min</span></p>
-
-                <button class="btn red-btn btn-outline-success">chat</button>
-                <button class="btn red-btn btn-outline-success">Call</button>
-                <button class="btn red-btn btn-outline-success">video call</button>
-            </div>
-        </div>
     </div>
 
     <div class="peragraph-section">
@@ -602,5 +670,148 @@
         &copy; 2019-2020 All Rights Reserved.
     </div>
 </body>
+<script>
+    const localVideo = document.getElementById('localVideo');
+    const videoContainer = document.getElementById('video-container');
+    const startBtn = document.getElementById('startBtn');
+
+    // WebRTC peer connection configurations
+    let localStream;
+    let peerConnections = {}; // A list of peer connections indexed by peer ID
+
+    const config = {
+        iceServers: [
+            { urls: "stun:stun.l.google.com:19302" } // Public Google STUN server
+        ]
+    };
+
+    // Get access to the user's media (camera and microphone)
+    async function startVideoChat() {
+        try {
+            // Capture local video and audio
+            localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+            localVideo.srcObject = localStream;
+
+            // Connect to the signaling server
+            const socket = io.connect('http://localhost:3000');
+
+            // When connected, inform the signaling server that we joined
+            socket.emit('join-chat', { userId: socket.id });
+
+            // Handle incoming new participant signal
+            socket.on('new-participant', async (userId) => {
+                createPeerConnection(userId, socket);
+                const offer = await peerConnections[userId].createOffer();
+                await peerConnections[userId].setLocalDescription(offer);
+                socket.emit('video-offer', { userId, offer });
+            });
+
+            // Handle video offers from other participants
+            socket.on('video-offer', async (data) => {
+                const { userId, offer } = data;
+                createPeerConnection(userId, socket);
+                await peerConnections[userId].setRemoteDescription(new RTCSessionDescription(offer));
+
+                const answer = await peerConnections[userId].createAnswer();
+                await peerConnections[userId].setLocalDescription(answer);
+                socket.emit('video-answer', { userId, answer });
+            });
+
+            // Handle video answers from other participants
+            socket.on('video-answer', async (data) => {
+                const { userId, answer } = data;
+                await peerConnections[userId].setRemoteDescription(new RTCSessionDescription(answer));
+            });
+
+            // Handle new ICE candidates from other participants
+            socket.on('ice-candidate', async (data) => {
+                const { userId, candidate } = data;
+                await peerConnections[userId].addIceCandidate(new RTCIceCandidate(candidate));
+            });
+
+            // Listen for ICE candidates and send them to other participants
+            socket.on('new-ice-candidate', (event) => {
+                if (event.candidate) {
+                    socket.emit('ice-candidate', { userId: event.userId, candidate: event.candidate });
+                }
+            });
+
+        } catch (error) {
+            console.error('Error accessing media devices.', error);
+        }
+    }
+
+    // Create a new peer connection
+    function createPeerConnection(userId, socket) {
+        const peerConnection = new RTCPeerConnection(config);
+
+        // Add local stream tracks to the peer connection
+        localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+
+        // Handle the remote stream and add it to the DOM
+        peerConnection.ontrack = (event) => {
+            if (!document.getElementById(userId)) {
+                const newVideo = document.createElement('video');
+                newVideo.id = userId;
+                newVideo.autoplay = true;
+                newVideo.playsInline = true;
+                videoContainer.appendChild(newVideo);
+                newVideo.srcObject = event.streams[0];
+            }
+        };
+
+        // Handle ICE candidates and send them to the other peer
+        peerConnection.onicecandidate = (event) => {
+            if (event.candidate) {
+                socket.emit('ice-candidate', { userId, candidate: event.candidate });
+            }
+        };
+
+        // Store the peer connection
+        peerConnections[userId] = peerConnection;
+    }
+
+    // Start the video chat when the button is clicked
+    startBtn.addEventListener('click', startVideoChat);
+
+    const io = require('socket.io')(3000);
+
+    let participants = [];
+
+    io.on('connection', (socket) => {
+        console.log(`User ${socket.id} connected`);
+
+        // Notify existing participants about the new user
+        socket.broadcast.emit('new-participant', socket.id);
+
+        // Notify the new user about existing participants
+        socket.emit('existing-participants', participants);
+
+        // Add new participant to the list
+        participants.push(socket.id);
+
+        // Handle video offers
+        socket.on('video-offer', (data) => {
+            io.to(data.userId).emit('video-offer', { userId: socket.id, offer: data.offer });
+        });
+
+        // Handle video answers
+        socket.on('video-answer', (data) => {
+            io.to(data.userId).emit('video-answer', { userId: socket.id, answer: data.answer });
+        });
+
+        // Handle ICE candidates
+        socket.on('ice-candidate', (data) => {
+            io.to(data.userId).emit('ice-candidate', { userId: socket.id, candidate: data.candidate });
+        });
+
+        // Handle user disconnection
+        socket.on('disconnect', () => {
+            participants = participants.filter(id => id !== socket.id);
+            socket.broadcast.emit('participant-left', socket.id);
+            console.log(`User ${socket.id} disconnected`);
+        });
+    });
+</script>
 
 </html>

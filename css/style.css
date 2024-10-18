@@ -217,6 +217,55 @@ header nav a:hover {
         width: 10500px !important;
     }
 }
+@media (max-width:600px) {
+    
+.background-img{
+    height: 256% !important;
+}
+.menu-toggle{
+    margin-right: 60px !important;
+}
+.visa-category{
+    right: 155PX;
+    top: 0px !important;
+}
+.visa-c2{
+    right: 160px !important;
+}
+.main-heading{
+    font-size: 34px !important;
+    text-shadow: none !important;
+}
+.reels-container{
+    width: 100% !important;
+    gap: 43px;
+}
+.main-containers{
+    height: auto;
+    width: 100% !important;
+}
+.news-background{
+    width: 100% !important;
+}
+.news-card {
+    width: 36% !important;
+}
+/* .news-card-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+.page{
+    width: 100% !important;
+    padding-bottom: 26px !important;
+}
+.hero{
+    width: 100% !important;
+}
+.text{
+    margin-left: 0px !important;
+}
+}
 
 @media (max-width:785px) {
     .big-con {
@@ -1898,5 +1947,154 @@ height: 184px;
   }
 
 
-  /* //faq Section */
+/* //Second profile Navbar Section */
+ /* Styling updated for IDs */
+ #navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color:rgba(87, 87, 87, 0.20);
+    padding: 9px 80px;
+}
+
+#search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 9px;
+    padding: 5px 10px;
+    margin-right: 9px;
+    width: fit-content;
+    gap: 73px;
+    height: 46px;
+}
+
+#search-container input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+#search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 10px;
+    font-size: 21px;
+}
+
+#balance {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 46px;
+    border-radius: 9px;
+    padding: 9px 10px;
+    margin-right: 9px;
+}
+
+#balance span {
+    margin-left: 7px;
+    font-size: 21px;
+}
+
+#profile img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#main-nav {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
   
+
+/* Flex container for the section */
+.consultant-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 65px;
+    border-bottom: 0px solid lightgray;
+    background-color: #f5f5f5;
+}
+
+/* Styling for the heading */
+.consultant-section h2 {
+
+color: var(--primary-deep-blue-color, #001E74);
+font-family: "Open Sans";
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.12px;
+}
+
+/* Button styling for the filter button */
+.filter-btn {
+    background-color: #f47c21;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.filter-btn img {
+    width: 22px;
+    height: 21px;
+    mix-blend-mode: multiply;
+}
+
+/* //This Styling for Dubai Tourist */
+*{
+    font-family: "Open Sans" !important;
+}
+.image-background {
+    background: url(../img/burjkhalifa.png)no-repeat center center/cover;
+    height: 621px;
+    width: 100%;
+    position: relative;
+
+}
+
+.slider-container {
+  overflow-x: hidden;
+    position: relative;
+    top: 440px;
+    display: flex;
+    position: relative;
+    animation: slide linear infinite;
+
+    /* The duration should depend on the number of images and their width */
+    animation-duration: 15s; /* Adjust this value for speed */
+}
+.slider-container::-webkit-scrollbar{
+    display: none;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.slider-container img {
+    margin: 0px 20px;
+    height: 265px;
+    width: 372px;
+    border-radius: 10px;
+    z-index: 200;
+}
+
+/* Keyframes for sliding effect */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move left by 50% of the container width */
+    }
+}
