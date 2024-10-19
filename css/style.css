@@ -212,63 +212,181 @@ header nav a:hover {
         align-self: center;
     }
 }
-@media (max-width:750px) {
+/* @media (max-width:750px) {
     .destination-card:hover{
         width: 10500px !important;
     }
-}
-
-@media (max-width:600px) {
-    
-/* .background-img{
-    height: 256% !important;
 } */
-.menu-toggle{
-    margin-right: 60px !important;
+@media (max-width: 570px) {
+    .profile-container{
+        position: relative;
+        bottom: 134px !important;
+    }
+    .reel{
+        width: 204px !important;
+    }
+    .reels-container{
+        gap: 19px !important;
+    }
+    .background-img {
+        height: auto !important;  /* Avoid zooming by maintaining aspect ratio */
+        width: 100% !important;
+        object-fit: cover;        /* Fit the image without zooming */
+    }
+    .visa-category{
+        padding: 0px !important;
+    }
 }
-.visa-category{
-    right: 155PX;
-    top: 0px !important;
+@media (max-width:470px) {
+    .profile-picture__img{
+        width: 240px !important;
+        border: 19px solid !important;
+    }
+    .team-info__title{
+        font-size: 32px !important;
+    }
+    .team-info__description {
+        font-size: 19px !important;
+    }
+    .profile-containe{
+        position: relative !important;
+        bottom: 90px !important;
+    }
+    .profile-picture__img{
+        height: 163px !important;
+    }
 }
-.visa-c2{
-    right: 160px !important;
+@media (max-width:450px) {
+    .visa-categories{
+        padding: 30px 0px !important;
+    }
+    .business-text{
+        font-size: 12px !important;
+    }
+    .profile-picture__img{
+        width: 240px !important;
+    }
+    .visa-c2{
+        right: 196px !important;
+    }
+    .visa-category{
+        margin: 0px !important;
+        width: 318px !important;
+    }
+    .visa-categories{
+        width: 100% !important;
+    }
+    .profile-details{
+        height: auto !important;
+    }
+    .profile-details__name{
+        font-size: 30px !important;
+        text-align: center;
+        margin: 0px !important;
+    }
+    .profile-details__title{
+        font-size: 20px !important;
+        text-align: center;
+    }
+    .profile-details__description{
+        text-align: center !important;
+    }
 }
-.main-heading{
-    font-size: 34px !important;
-    text-shadow: none !important;
+@media (max-width:418px) {
+    .image-placeholder{
+        width: 250px !important;
+        height: 350px !important;
+    }
+    .profile-picture__img{
+        width: 170px !important;
+    }
+    .profile-details{
+        width: 66% !important;
+    }
 }
-.reels-container{
-    width: 600px !important;
-    gap: 43px;
-}
-.main-containers{
-    height: auto;
-    width: 600px !important;
-}
-.news-background{
-    width: 600px !important;
-}
-.news-card {
-    width: 36% !important;
-}
-/* .news-card-wrapper{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-} */
-.page{
-    width: 100% !important;
-    padding-bottom: 26px !important;
-}
-.hero{
-    width: 100% !important;
-}
-.text{
-    margin-left: 0px !important;
-}
-}
-
+@media (max-width: 600px) {
+    .review-image{
+        width: 180.07px !important;
+        height: 304.45px !important;
+    }
+    .review-content{
+        left: 120px;
+    width: 179px;
+    padding: 9px;
+    }
+    .reviews-section{
+        padding: 25px !important;
+    }
+    .review-tag {
+        width: 94px !important;
+        padding: 1px 16px !important;
+    }
+    .review-card{
+        margin: 0px 46px !important;
+    }
+    .news-card {
+        width: 66% !important;
+    }
+    .background-img {
+        height: 256% !important;
+        width: 100% !important; 
+    }
+    .stats {
+        width: 500px !important;
+    }
     
+    .cta-buttons {
+        margin-right: 0px !important;
+    }
+    .menu-toggle {
+        margin-right: 60px !important;
+    }
+    .visa-category {
+        right: 155px;
+        top: 0px !important;
+    }
+    .visa-c2 {
+        right: 160px !important;
+    }
+    .main-heading {
+        font-size: 34px !important;
+        text-shadow: none !important;
+    }
+    .reels-container {
+        min-width: 100% !important; /* Ensure the container is 100% width */
+        gap: 43px;
+    }
+    .main-containers {
+        height: auto;
+        width: 100% !important; /* Ensure the container is 100% width */
+    }
+    .news-background {
+        width: 100% !important; /* Set width to 100% */
+    }
+    .news-card {
+        width: 100% !important; /* Adjust news card to 100% width */
+    }
+    .page {
+        width: 100% !important; /* Make the page 100% */
+        padding-bottom: 26px !important;
+    }
+    .hero {
+        width: 100% !important; /* Make hero section 100% */
+    }
+    .text {
+        margin-left: 0px !important;
+    }
+    .text P{
+        font: 14px !important;
+        margin: 10px auto;
+    }
+    .raise-complaint{
+        width: 80% !important;
+    }
+}
+/* Ensure full width for screens between 570px and 600px */
+
+
 
 @media (max-width:785px) {
     .big-con {
@@ -398,6 +516,9 @@ header nav a:hover {
 .cta-buttons {
     margin-top: 50px;
     margin-right: 140px;
+}
+.main-containers{
+    width: 100%;
 }
 
 .cta-buttons a {
@@ -709,7 +830,7 @@ header nav a:hover {
     background: url('.././img/noisy-gradients.jpg');
     padding: 41px;
     width: 70%;
-    height: 297px;
+    height: 315px;
 }
 
 .profile-details__name {
@@ -856,7 +977,7 @@ header nav a:hover {
 }
 
 .image-placeholder {
-    background: url(../img/sirpic.jpg)no-repeat center center/cover; 
+    background: url(../img/sirpic.JPG)no-repeat center center/cover; 
     width: 380px;
     height: 500px;
     border-radius: 106px;
