@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   /* Container to hold the sidebar and content */
+.doc-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+/* Sidebar (Tabs) */
+.doc-sidebar {
+    background-color: white;
+    padding: 20px;
+    width: 265px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+}
+
+/* Style for individual menu items (tabs) */
+.doc-menu-item {
+    background-color: var(--primary-deep-blue-color, #001E74);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    height: auto;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.doc-menu-item.active {
+    background-color: #ff6600;
+    color: white;
+}
+
+/* Main content section */
+.doc-main-content {
+    flex-grow: 1;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+    height: 400px;
+    position: relative;
+}
+
+/* Sticky title inside main content */
+.doc-main-content h1 {
+    color: #002d72;
+    background-color: #d6c5c5;
+    padding: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content sections, only one will be visible at a time */
+.doc-content {
+    display: none;
+    color: #002d72;
+    font-size: 16px;
+}
+
+.doc-content.active {
+    display: block;
+}
+
+/* Additional styles for scrollbars (optional) */
+.doc-main-content::-webkit-scrollbar {
+    width: 20px;
+}
+
+.doc-main-content::-webkit-scrollbar-track {
+    background: red;
+     border-radius: 10px;
+}
+
+.doc-main-content::-webkit-scrollbar-thumb {
+    background:red;
+    border-radius: 10px;
+}
+
+.doc-main-content::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
+
+  </style>
+</head>
+<body>
+  <div class="doc-container">
+    <div class="doc-sidebar">
+        <div class="doc-menu-item active" id="doc-menu-docu">📄 Document File</div>
+        <div class="doc-menu-item" id="doc-menu-pdf">📑 Pdf Download</div>
+        <div class="doc-menu-item" id="doc-menu-fees">₹ Fees Structure</div>
+    </div>
+    <div class="doc-main-content">
+        <!-- Sticky Heading -->
+        <h1 id="doc-main-title">Document Requirements</h1>
+        
+        <!-- Content sections for each tab -->
+        <div id="doc-content-docu" class="doc-content active">
+            <p>A tourist visa is an official document that allows a traveler to
+                enter, stay, and travel within a country for tourism purposes.</p>
+            <ul>
+                <li>Single-entry Visa</li>
+                <li>Multiple-entry Visa</li>
+                <li>Transit Visa</li>
+                <li>eVisa</li>
+                <li>Single-entry Visa</li>
+                <li>Multiple-entry Visa</li>
+                <li>Transit Visa</li>
+                <li>eVisa</li>
+                <li>Single-entry Visa</li>
+                <li>Multiple-entry Visa</li>
+                <li>Transit Visa</li>
+                <li>eVisa</li>
+                <li>Single-entry Visa</li>
+                <li>Multiple-entry Visa</li>
+                <li>Transit Visa</li>
+                <li>eVisa</li>
+                <li>Single-entry Visa</li>
+                <li>Multiple-entry Visa</li>
+                <li>Transit Visa</li>
+                <li>eVisa</li>
+                <li>Single-entry Visa</li>
+                <li>Multiple-entry Visa</li>
+                <li>Transit Visa</li>
+                <li>eVisa</li>
+            </ul>
+        </div>
+        <div id="doc-content-pdf" class="doc-content">
+            <p>Download important PDF documents required for visa processes and applications.</p>
+            <ul>
+                <li><a href="#">Visa Application PDF</a></li>
+                <li><a href="#">Document Checklist PDF</a></li>
+                <li><a href="#">Visa Guidelines PDF</a></li>
+            </ul>
+        </div>
+        <div id="doc-content-fees" class="doc-content">
+            <p>Check the visa fee structure for different types of visas and services:</p>
+            <ul>
+                <li>Single-entry Visa: $50</li>
+                <li>Multiple-entry Visa: $100</li>
+                <li>Transit Visa: $30</li>
+                <li>eVisa: $25</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuItems = document.querySelectorAll('.doc-menu-item');
+    const contentSections = document.querySelectorAll('.doc-content');
+    const title = document.getElementById('doc-main-title');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Remove 'active' class from all menu items and content sections
+            menuItems.forEach(menu => menu.classList.remove('active'));
+            contentSections.forEach(content => content.classList.remove('active'));
+
+            // Add 'active' class to the clicked menu item
+            this.classList.add('active');
+
+            // Get the content section corresponding to the clicked menu item
+            const targetContentId = 'doc-content-' + this.id.split('-')[2];
+            const targetContent = document.getElementById(targetContentId);
+
+            // Ensure that the target content exists, then add 'active' class
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+
+            // Update the title based on the active menu item
+            if (this.id === 'doc-menu-docu') {
+                title.textContent = "Document Requirements";
+            } else if (this.id === 'doc-menu-pdf') {
+                title.textContent = "PDF Download Section";
+            } else if (this.id === 'doc-menu-fees') {
+                title.textContent = "Fees Structure";
+            }
+        });
+    });
+});
+
+</script>
+</html>

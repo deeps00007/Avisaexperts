@@ -114,5 +114,39 @@ const reviewsContainer = document.querySelector('.reviews-container');
       updateCarousel();
     });
 
+//Document js
+document.addEventListener("DOMContentLoaded", function() {
+  const menuItems = document.querySelectorAll('.doc-menu-item');
+  const contentSections = document.querySelectorAll('.doc-content');
+  const title = document.getElementById('doc-main-title');
 
-    
+  menuItems.forEach(item => {
+      item.addEventListener('click', function() {
+          // Remove 'active' class from all menu items and content sections
+          menuItems.forEach(menu => menu.classList.remove('active'));
+          contentSections.forEach(content => content.classList.remove('active'));
+
+          // Add 'active' class to the clicked menu item
+          this.classList.add('active');
+
+          // Get the content section corresponding to the clicked menu item
+          const targetContentId = 'doc-content-' + this.id.split('-')[2];
+          const targetContent = document.getElementById(targetContentId);
+
+          // Ensure that the target content exists, then add 'active' class
+          if (targetContent) {
+              targetContent.classList.add('active');
+          }
+
+          // Update the title based on the active menu item
+          if (this.id === 'doc-menu-docu') {
+              title.textContent = "Document Requirements";
+          } else if (this.id === 'doc-menu-pdf') {
+              title.textContent = "PDF Download Section";
+          } else if (this.id === 'doc-menu-fees') {
+              title.textContent = "Fees Structure";
+          }
+      });
+  });
+});
+

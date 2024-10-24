@@ -6,211 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultant Card</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/conslutant.css">
+    <link rel="stylesheet" href="css/carousel.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        header {
-            display: flex;
-            position: relative;
-        }
+     
 
         .nav-links a {
             text-decoration: none;
         }
 
-        .parent-card {
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            height: auto;
-        }
-
-        .card {
-            margin: 10px 10px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 450px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 0px 20px;
-            background-color: white;
-        }
-
-        .flex-username h5 {
-            color: #000;
-            font-family: "Open Sans";
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-        }
-
-        .ribbon {
-            width: 100px;
-            background: black;
-            color: #FFC700;
-            text-align: center;
-            font-size: 10px;
-            /* transform: scale(1.5) !important; */
-            font-weight: bold;
-            text-transform: uppercase;
-            position: absolute;
-            left: -25px;
-            top: 16px;
-            padding: 3px 0px;
-            transform: rotate(-45deg);
-        }
-
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0px 7px;
-        }
-
-        .red-btn {
-            border: 2px solid red !important;
-            z-index: 20;
-        }
-
-        .btn-outline-success {
-            padding: 2px 13px;
-            margin-top: 4px;
-            margin-right: 10px;
-            border: 2px solid;
-        }
-
-        .btn-outline-success:hover {
-            cursor: pointer !important;
-            transform: translate(-1%, -1%);
-            background-color: white !important;
-            color: green;
-        }
-
-        .stars {
-            color: gold;
-        }
-
-        .price {
-            color: #028C4C;
-            text-align: center;
-            font-family: "Open Sans";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-        }
-
-        .old-price {
-            text-decoration: line-through;
-            color: #4E4B4B;
-            text-align: center;
-            font-family: "Open Sans";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            text-decoration-line: strikethrough;
-        }
-
-        .verification-tick::after {
-            content: '✔';
-            /* Checkmark symbol */
-            color: green;
-            font-size: 16px;
-        }
-
-        .flex-username p {
-            color: #4E4B4B;
-            font-family: "Open Sans";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-        }
-
-        .flex-username {
-            padding-top: 15px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .peragraph-section {
-            padding: 5px 60px;
-            margin-bottom: 20px;
-        }
-
-        .peragraph-section h1 {
-            color: #000;
-            text-align: center;
-            font-family: "Open Sans";
-            font-size: 38px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 0.12px;
-        }
-
-        .peragraph-section p {
-            color: #747474;
-            text-align: justify;
-            font-family: "Open Sans";
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
-
-        .margin-up-p {
-            margin-bottom: 97px;
-        }
-
-        .flex-username svg {
-            position: relative;
-            left: 43px;
-        }
-
-        .firstcardp {
-            margin-bottom: -13px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .card-first-pera {
-            margin-bottom: 0px;
-        }
-
-        header {
-            box-shadow: none !important;
-        }
-
-        .flex-stars {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .second-cls-pe {
-            position: relative;
-            bottom: 17px;
-            align-self: center;
-        }
+       
     </style>
 </head>
 
 <body>
-    <header>
+    <header style="display: flex; position: relative;">
         <div class="MAIN-LOGO">
             <img class="logop" src="img/main-logo.svg" alt="Visa Experts">
             <img class="vector" src="img/Vector.png" alt="">
@@ -229,7 +43,7 @@
             <span></span>
         </button>
     </header>
-    
+
     <div id="navbar">
         <div id="main-nav">
             <div id="search-container">
@@ -252,12 +66,35 @@
             </div>
         </div>
     </div>
+    <div class="profile-card">
+        <!-- Profile Image -->
+        <div class="profile-image">
+            <img src="img/userprofile.png" alt="User Image">
+        </div>
+        <!-- Profile Name -->
+        <div class="profile-name">Urvasikha Singh</div>
+        <!-- Profile Phone -->
+        <div class="profile-phone">+91 9709250403</div>
+        <!-- View Profile Button -->
+        <button class="profile-btn">View Profile</button>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <div>Notification</div>
+            <div class="balance">
+                <div>Available Balance</div>
+                <span>₹ 125</span>
+            </div>
+            <div>Wallet Transactions</div>
+            <div>Logout</div>
+        </div>
+    </div>
     <div class="consultant-section">
         <h2>Our Consultant</h2>
         <button class="filter-btn">
-          <img src="img/mage_filter.jpg" alt="Filter Icon" />
+            <img src="img/mage_filter.jpg" alt="Filter Icon" />
         </button>
-      </div>
+    </div>
     <div class="parent-card">
 
         <div class="card">
@@ -671,6 +508,21 @@
     </div>
 </body>
 <script>
+    document.getElementById("profile").addEventListener("click", function () {
+        const profileCard = document.querySelector(".profile-card");
+        profileCard.style.display = (profileCard.style.display === "none" || profileCard.style.display === "") ? "block" : "none";
+    });
+    // Hide profile card when clicking outside of it
+    document.addEventListener("click", function (event) {
+        const profileCard = document.querySelector(".profile-card");
+        const profileButton = document.getElementById("profile");
+
+        // Check if the click was outside the profile card and the profile button
+        if (!profileCard.contains(event.target) && !profileButton.contains(event.target)) {
+            profileCard.style.display = "none";
+        }
+    });
+
     const localVideo = document.getElementById('localVideo');
     const videoContainer = document.getElementById('video-container');
     const startBtn = document.getElementById('startBtn');

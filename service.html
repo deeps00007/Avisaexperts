@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: "Open Sans" !important;
+        }
+
+        .slider {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .slide_viewer {
+            height: 600px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide_group {
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+
+        .slide {
+            display: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+
+        .slide:first-child {
+            display: block;
+        }
+
+        .slide:nth-of-type(1) {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), url(img/serviceimg1.png) no-repeat center center/cover;
+        }
+
+        .slide:nth-of-type(2) {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), url(img/serviceimg2.png) no-repeat center center/cover;
+
+        }
+
+        .slide:nth-of-type(3) {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), url(img/serviceimg3.png) no-repeat center center/cover;
+
+        }
+
+        .slide_buttons {
+
+            left: 0;
+            position: absolute;
+            bottom: 140px;
+            right: 0;
+            text-align: center;
+        }
+
+        a.slide_btn {
+            color: #474544;
+            font-size: 42px;
+            margin: 0 0.175em;
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            -ms-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .slide_btn.active,
+        .slide_btn:hover {
+            color: #428CC6;
+            cursor: pointer;
+        }
+
+        .directional_nav {
+            height: 340px;
+            margin: 0 auto;
+            max-width: 940px;
+            position: relative;
+            top: -340px;
+        }
+
+        /* General resets */
+
+
+        /* Container for the entire slider */
+        .visa-slider-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('background-image.jpg') no-repeat center center/cover;
+            height: auto;
+            padding: 20px;
+        }
+
+        /* The slider wrapper */
+        .visa-slider {
+            position: absolute;
+            bottom: 219px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Individual card style */
+        .visa-card {
+            margin: 3px 10px;
+            background-color: #1a1a1a;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 390px;
+            height: 125px;
+            position: relative;
+            color: #fff;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Styling for card image */
+        .visa-card-image {
+            background-color: white;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .visa-card-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Card content */
+        .visa-card-content h2 {
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .visa-card-content p {
+            margin-top: 6px;
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        /* Card button */
+        .visa-card-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .visa-card-button button {
+            position: absolute;
+            right: -31px;
+            bottom: -34px;
+            background-color: #F58634;
+            stroke-width: 2px;
+            stroke: #000;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .visa-card-button button:hover {
+            background-color: #ff8533;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @media (max-width:600px) {
+            .visa-box {
+                justify-content: center !important;
+                padding: 0px 10px !important;
+            }
+
+            .visa-box img {
+                width: 300px !important;
+                height: auto;
+            }
+            
+        }
+
+        .visa-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 0px 100px;
+        }
+
+        /* .image-wrapper{
+    background-color: orange;
+} */
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .visa-box img {
+            /* position: relative;
+    top: 13px;
+    left: 13px; */
+            width: 500px;
+            height: auto;
+        }
+
+        .visa-text-section {
+            flex: 1;
+            padding: 0px 29px;
+        }
+
+        .visa-text-section h2 {
+            margin: 0;
+            color: #000;
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.12px;
+        }
+
+        .visa-text-section p {
+            color: #000;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .visa-text-section button {
+            display: flex;
+            padding: 5px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 58px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="MAIN-LOGO">
+          <img class="logop" src="img/main-logo.svg" alt="Visa Experts">
+          <img class="vector" src="img/Vector.png" alt="">
+        </div>
+        <nav class="nav-links">
+          <a class="activelink" href="#">Home</a>
+          <a href="touristvisa1.html">Services</a>
+          <a href="#">About us</a>
+          <a href="contact.html">Contact us</a>
+          <a href="consultant.html">Consultant</a>
+          <a class="countries" href="#">Countries</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Menu Toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+    <div class="slider">
+        <div class="slide_viewer">
+            <div class="slide_group">
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide_buttons">
+    </div>
+
+    <!-- //Tourist Section -->
+    <div class="visa-slider-container">
+        <div class="visa-slider">
+
+            <div class="visa-card">
+                <div class="visa-card-image">
+                    <img src="img/tourist visa.png" alt="Tourist Visa">
+                </div>
+                <div class="visa-card-content">
+                    <h2>Tourist Visa</h2>
+                    <p>"Your Gateway to Global Adventures"</p>
+                </div>
+                <div class="visa-card-button">
+                    <a href="touristvisa1.html"><button ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path
+                            d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                    </svg></button></a>
+                </div>
+            </div>
+
+            <div class="visa-card">
+                <div class="visa-card-image">
+                    <img src="img/transit visa 2.png" alt="Transit Visa">
+                </div>
+                <div class="visa-card-content">
+                    <h2>Work Visa</h2>
+                    <p>"Your Path to Short-Term Stopovers"</p>
+                </div>
+                <div class="visa-card-button">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="visa-card">
+                <div class="visa-card-image">
+                    <img src="img/work visa.png" alt="Work Visa">
+                </div>
+                <div class="visa-card-content">
+                    <h2>Via-Visa</h2>
+                    <p>"Your Gateway to Global Adventures"</p>
+                </div>
+                <div class="visa-card-button">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="visa-box">
+            <div class="image-wrapper">
+                <img src="img/visa-desc-con1.jpeg" alt="Work Visa Image">
+            </div>
+            <div class="visa-text-section">
+                <h2>WORK VISA</h2>
+                <p>A work visa is a legal document that allows a foreign national to live and work in a specific
+                    country for a designated period. It typically requires sponsorship from an employer and is
+                    issued for various employment types, including skilled labor, seasonal work, or specific
+                    professions. Work visas may have different eligibility criteria, application processes, and
+                    conditions, depending on the host country’s immigration laws. They are essential for ensuring
+                    that foreign workers can contribute to the economy while complying with local regulations.</p>
+                <button>Read more</button>
+            </div>
+        </div>
+
+        <div class="visa-box">
+            <div class="visa-text-section">
+                <h2>VIA-VISA</h2>
+                <p>A transit visa is a type of visa that allows travelers to pass through a country en route to
+                    their final destination. Typically, it is required for those who have layovers or connections in
+                    a country but do not intend to leave the airport or stay for an extended period. Transit visas
+                    can vary in duration and requirements, depending on the country’s immigration policies. They are
+                    usually easier to obtain than other visas, as they are designed to facilitate short-term travel.
+                    Travelers should ensure they meet the specific conditions set by the transit country to avoid
+                    any travel disruptions.</p>
+                <button>Read more</button>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/visa-desc-con2.jpeg" alt="Via Visa Image">
+            </div>
+        </div>
+
+        <div class="visa-box">
+            <div class="image-wrapper">
+                <img src="img/visa-desc-con3.jpeg" alt="Work Visa Image">
+            </div>
+            <div class="visa-text-section">
+                <h2>WORK VISA</h2>
+                <p>A work visa is a legal document that allows a foreign national to live and work in a specific
+                    country for a designated period. It typically requires sponsorship from an employer and is
+                    issued for various employment types, including skilled labor, seasonal work, or specific
+                    professions. Work visas may have different eligibility criteria, application processes, and
+                    conditions, depending on the host country’s immigration laws. They are essential for ensuring
+                    that foreign workers can contribute to the economy while complying with local regulations.</p>
+                <button>Read more</button>
+            </div>
+        </div>
+    </div>
+    <section class="app-banner">
+        <div class="app-banner-intro">
+          <h1>Our mobile app is coming soon!</h1>
+          <p>Get ready to simplify your visa application process with easy access to information, real-time updates, and
+            personalized support—all in the palm of your hand.</p>
+        </div>
+        <div class="app-store-buttons">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+        </div>
+        <div class="app-image-phone">
+          <img src="img/iphoneimage.png" alt="Phone Image">
+        </div>
+      </section>
+    
+      <footer class="site-footer">
+        <div class="footer-wrapper">
+          <div class="footer-section footer-logo-section">
+            <img class="footer-logo" src="img/main-logo.svg" alt="Logo">
+            <h3>A Visa Experts</h3>
+            <p>Visa Expert helps individuals secure visas for the USA, Canada, and Australia. Our experienced team offers
+              personalized guidance, ensuring a smooth application process for tourist, student, and work visas.</p>
+          </div>
+          <!-- <div class="footer-section footer-second-clm">
+                  <h3>About</h3>
+                  <ul>
+                      <li><a href="#">Clients</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+              </div> -->
+          <div class="footer-section footer-second-clm">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Clients</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section footer-second-clm">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="#">Clients</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <!-- <div class="footer-section footer-second-clm">
+                  <h3>Help</h3>
+                  <ul>
+                      <li><a href="#">Clients</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+              </div> -->
+          <div class="footer-section footer-second-clm margin-footer">
+            <h3>Follow Us</h3>
+            <div class="social-media-links">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                </svg></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-flags">
+          <img src="img/US.jpg" alt="USA Flag">
+          <img src="img/CA.jpg" alt="Canada Flag">
+          <img src="img/GB.svg" alt="UK Flag">
+          <img src="img/EU.jpg" alt="EU Flag">
+          <img src="img/HM.svg" alt="Australia Flag">
+        </div>
+      </footer>
+    
+      <div class="footer-bottom-text">
+        &copy; 2019-2020 All Rights Reserved.
+      </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</body>
+<script>
+    $('.slider').each(function () {
+        var $this = $(this);
+        var $group = $this.find('.slide_group');
+        var $slides = $this.find('.slide');
+        var bulletArray = [];
+        var currentIndex = 0;
+        var timeout;
+
+        function move(newIndex) {
+            var animateLeft, slideLeft;
+
+            advance();
+
+            if ($group.is(':animated') || currentIndex === newIndex) {
+                return;
+            }
+
+            bulletArray[currentIndex].removeClass('active');
+            bulletArray[newIndex].addClass('active');
+
+            if (newIndex > currentIndex) {
+                slideLeft = '100%';
+                animateLeft = '-100%';
+            } else {
+                slideLeft = '-100%';
+                animateLeft = '100%';
+            }
+
+            $slides.eq(newIndex).css({
+                display: 'block',
+                left: slideLeft
+            });
+            $group.animate({
+                left: animateLeft
+            }, function () {
+                $slides.eq(currentIndex).css({
+                    display: 'none'
+                });
+                $slides.eq(newIndex).css({
+                    left: 0
+                });
+                $group.css({
+                    left: 0
+                });
+                currentIndex = newIndex;
+            });
+        }
+
+        function advance() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                if (currentIndex < ($slides.length - 1)) {
+                    move(currentIndex + 1);
+                } else {
+                    move(0);
+                }
+            }, 2000);
+        }
+
+        $('.next_btn').on('click', function () {
+            if (currentIndex < ($slides.length - 1)) {
+                move(currentIndex + 1);
+            } else {
+                move(0);
+            }
+        });
+
+        $('.previous_btn').on('click', function () {
+            if (currentIndex !== 0) {
+                move(currentIndex - 1);
+            } else {
+                move(3);
+            }
+        });
+
+        $.each($slides, function (index) {
+            var $button = $('<a class="slide_btn">&bull;</a>');
+
+            if (index === currentIndex) {
+                $button.addClass('active');
+            }
+            $button.on('click', function () {
+                move(index);
+            }).appendTo('.slide_buttons');
+            bulletArray.push($button);
+        });
+
+        advance();
+    });
+</script>
+
+</html>

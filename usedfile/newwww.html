@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Image Slider</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .image-background {
+            background: url(img/burjkhalifa.png)no-repeat center center/cover;
+            height: 641px;
+            width: 100%;
+            overflow: hidden; /* Hides the vertical and horizontal scrollbars */
+            position: relative;
+        }
+
+        .slider-container {
+            display: flex;
+            position: relative;
+            animation: slide linear infinite;
+            animation-duration: 20s; /* Adjust this value for speed */
+            overflow: hidden; /* Prevents scrollbars from appearing */
+            width: calc(100% * 2); /* Set width to accommodate all images */
+            position: relative;
+            top: 450px;
+        }
+
+        .slider-container img {
+            height: 265px;
+            width: 372px;
+            border-radius: 10px;
+            margin: 0px 20px;
+        }
+
+        /* Keyframes for sliding effect */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%); /* Move left by 50% of the container width */
+            }
+        }
+
+        /* Hide scrollbar for Webkit browsers */
+        .slider-container::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+        }
+
+        .slider-container {
+            -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-background">
+       
+    </div>
+    <div class="slider-container" id="slider">
+        <img src="img/carousel1img.png" alt="">
+        <img src="img/carousel2img.png" alt="">
+        <img src="img/carousel3img.png" alt="">
+        <img src="img/carousel4img.png" alt="">
+        <img src="img/carousel5img.png" alt="">
+        <img src="img/carousel6img.png" alt="">
+        <!-- Clone images for infinite effect -->
+        <img src="img/carousel1img.png" alt="">
+        <img src="img/carousel2img.png" alt="">
+        <img src="img/carousel3img.png" alt="">
+        <img src="img/carousel4img.png" alt="">
+        <img src="img/carousel5img.png" alt="">
+        <img src="img/carousel6img.png" alt="">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const slider = document.getElementById('slider');
+        const images = slider.children;
+        const totalImages = images.length;
+
+        // Set the slider width dynamically based on the number of images
+        slider.style.width = `${totalImages * 372}px`; // 372 is the width of each image
+
+        // Clone the images for continuous effect
+        for (let i = 0; i < totalImages; i++) {
+            const clone = images[i].cloneNode(true);
+            slider.appendChild(clone);
+        }
+    </script>
+</body>
+
+</html>

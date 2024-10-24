@@ -7,44 +7,8 @@
     <title>Infinite Image Slider</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carousel.css">
-<style>
-       .text-overlay {
-            position: absolute;
-            bottom: 20px; /* Position text at the bottom */
-            left: 20px; /* Position text to the left */
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-        justify-content: space-between;
-            width: 90%;
-            bottom: 0px;
-            height: 70px;
-        }
-        .text-overlay h5{
-            font-size: 24px;
-        }
-
-        .stars {
-            color: gold; /* Star color */
-        }
-      
-        .like-button {
-            background-color: transparent; /* Make the background transparent */
-            border: none; /* Remove border */
-            cursor: pointer; /* Show pointer on hover */
-            font-size: 24px; /* Size of the heart */
-            color: red; /* Color of the heart */
-            margin-left: 10px; /* Spacing between text and button */
-            transition: transform 0.2s; /* Animation for hover effect */
-        }
-
-        .like-button:hover {
-            transform: scale(1.2); /* Scale the heart on hover */
-        }
-
-</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -235,6 +199,72 @@
           </div>
         </div>
       </div>
+        <!-- //Documents Section -->
+    <div class="doc-container">
+        <div class="doc-sidebar">
+            <div class="doc-menu-item active" id="doc-menu-docu">📄 Document File</div>
+            <div class="doc-menu-item" id="doc-menu-pdf">📑 Pdf Download</div>
+            <div class="doc-menu-item" id="doc-menu-fees">₹ Fees Structure</div>
+        </div>
+        <div class="doc-main-content">
+            <!-- Sticky Heading -->
+            <h1 id="doc-main-title">Document Requirements</h1>
+            
+            <!-- Content sections for each tab -->
+            <div id="doc-content-docu" class="doc-content active">
+                <p>A tourist visa is an official document that allows a traveler to
+                    enter, stay, and travel within a country for tourism purposes.</p>
+                <ul>
+                    <li>Single-entry Visa</li>
+                    <li>Multiple-entry Visa</li>
+                    <li>Transit Visa</li>
+                    <li>eVisa</li>
+                    <li>Single-entry Visa</li>
+                    <li>Multiple-entry Visa</li>
+                    <li>Transit Visa</li>
+                    <li>eVisa</li>
+                    <li>Single-entry Visa</li>
+                    <li>Multiple-entry Visa</li>
+                    <li>Transit Visa</li>
+                    <li>eVisa</li>
+                </ul>
+            </div>
+            <div id="doc-content-pdf" class="doc-content">
+                <p>Download important PDF documents required for visa processes and applications.</p>
+                <ul>
+                    <li>Single-entry Visa</li>
+                    <li>Multiple-entry Visa</li>
+                    <li>Transit Visa</li>
+                    <li>eVisa</li>
+                    <li>Single-entry Visa</li>
+                    <li>Multiple-entry Visa</li>
+                    <li>Transit Visa</li>
+                    <li>eVisa</li>
+                    <li>Single-entry Visa</li>
+                    <li>Multiple-entry Visa</li>
+                    <li>Transit Visa</li>
+                    <li>eVisa</li>
+                </ul>
+            </div>
+            <div id="doc-content-fees" class="doc-content">
+                <p>Check the visa fee structure for different types of visas and services:</p>
+                <ul>
+                    <li>Single-entry Visa</li>
+                    <li>Multiple-entry Visa</li>
+                    <li>Transit Visa</li>
+                    <li>eVisa</li>
+                    <li>Single-entry Visa</li>
+                    <li>Multiple-entry Visa</li>
+                    <li>Transit Visa</li>
+                    <li>eVisa</li>
+                    <li>Single-entry Visa</li>
+                    <li>Multiple-entry Visa</li>
+                    <li>Transit Visa</li>
+                    <li>eVisa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
       
       <div class="bothfaqandform">
         <div class=" my-5">
@@ -420,7 +450,10 @@
     <div class="footer-bottom-text">
         &copy; 2019-2020 All Rights Reserved.
     </div>
+    <script src="js/script.js"></script>
+    <script src="js/carousel.js"></script>
     <script>
+        
         const slider = document.getElementById('slider');
         const images = slider.children;
         const totalImages = images.length;
