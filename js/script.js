@@ -61,6 +61,10 @@ const profiles = [
   
   // Initialize the first profile
   updateProfile();
+  setInterval(() => {
+    currentIndex1 = (currentIndex1 + 1) % profiles.length; // Cycle through profiles
+    updateProfile();
+    }, 2000);
   
 
 //   count js
@@ -113,6 +117,11 @@ const reviewsContainer = document.querySelector('.reviews-container');
       currentIndex = (currentIndex < totalReviews - 1) ? currentIndex + 1 : 0;
       updateCarousel();
     });
+    // setInterval(() => {
+    //   currentIndex = (currentIndex < totalReviews - 1) ? currentIndex + 1 : 0;
+    //   updateCarousel();
+    //   }, 3000);
+      
 
 //Document js
 document.addEventListener("DOMContentLoaded", function() {
