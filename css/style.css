@@ -261,8 +261,39 @@ header nav a:hover {
 
 
 @media (max-width: 600px) {
-    
-    
+    .background-img{
+        animation: none !important;
+    }
+    .main-appointment{
+        padding: 0px 16px !important;
+        background-color: white !important;
+    }
+    .input-icon input{
+        text-align: start !important;
+    }
+    .form-input{
+        text-align: start !important;
+    }
+    *{
+        text-align: center !important;
+    }
+    .margin-footer{
+        margin-bottom: 0px !important;
+    }
+    .main-heading{
+        text-align: center !important;
+    }
+    .logop{
+        width: 60px !important;
+    }
+  
+    .vector {
+        width: 60px !important;
+        height: 9.917px !important;
+    }
+    header{
+        padding: 5px 0px !important;
+    }
     .destination-card{
         margin: 10PX 0PX;
         border-radius: 10px !important;
@@ -439,14 +470,15 @@ header nav a:hover {
 @media (max-width:450px) {
 
     .cta-buttons{
-        position: relative;
-        right: 14px;
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
     }
     .main-heading{
         font-size: 39px !important;
     }
-    .my-content{
-        margin-top: 148px !important;
+    .my-content {
+        margin-top: 86px !important;
     }
     .visa-category img{
         padding-left: 12px !important;
@@ -695,7 +727,7 @@ header nav a:hover {
 
 .cta-buttons {
     margin-top: 50px;
-    margin-right: 140px;
+    margin-right: 323px;
 }
 .main-containers{
     width: 100%;
