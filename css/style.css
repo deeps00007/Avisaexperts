@@ -255,112 +255,32 @@ header nav a:hover {
         width: 10500px !important;
     }
 } */
-@media (max-width: 570px) {
-    .profile-container{
-        position: relative;
-        bottom: 134px !important;
+@media (max-width: 600px) {
+    .content {
+        margin-left: 0px !important;
     }
-    .reel{
-        width: 204px !important;
+    .review-content{
+        left: 110px !important;
+        width: 180px !important;
     }
-    .reels-container{
-        gap: 19px !important;
+    .site-footer{
+        padding: 20px 0px 20px 0px !important;
     }
-    .background-img {
-        height: auto !important;  /* Avoid zooming by maintaining aspect ratio */
-        width: 100% !important;
-        object-fit: cover;        /* Fit the image without zooming */
-    }
-    .visa-category{
-        padding: 0px !important;
-    }
-}
-@media (max-width:470px) {
-    .profile-picture__img{
-        width: 240px !important;
-        border: 19px solid !important;
-    }
-    .team-info__title{
-        font-size: 32px !important;
-    }
-    .team-info__description {
-        font-size: 19px !important;
-    }
-    .profile-containe{
-        position: relative !important;
-        bottom: 90px !important;
-    }
-    .profile-picture__img{
-        height: 163px !important;
-    }
-}
-@media (max-width:450px) {
-    .contact-container{
-        padding: 200px 28px 50px 28px !important;
-       
-    }
-    .contact-details{
-        padding: 0 !important;
-    }
-    .visa-category{
-        position: relative !important;
-        
-    }
-    .visa-categories{
-        padding: 30px 0px !important;
-    }
-    .business-text{
-        font-size: 12px !important;
-    }
-    .profile-picture__img{
-        width: 240px !important;
-    }
-    .visa-c2{
-        right: 196px !important;
-    }
-    .visa-category{
-        margin: 0px !important;
-        width: 318px !important;
-    }
-    .visa-categories{
-        width: 100% !important;
-    }
-    .profile-details{
-        height: auto !important;
-    }
-    .profile-details__name{
-        font-size: 30px !important;
-        text-align: center;
-        margin: 0px !important;
-    }
-    .profile-details__title{
-        font-size: 20px !important;
-        text-align: center;
-    }
-    .profile-details__description{
-        text-align: center !important;
-    }
+    .app-image-phone img{
+    width: 185px !important;
+    padding: 23px 0px !important;
 }
 
-@media (max-width:418px) {
-    .form-input-group {
-        width: 244px !important;
+    .footer-wrapper{
+        margin: 0px 16px !important;
     }
-    .image-placeholder{
-        width: 250px !important;
-        height: 350px !important;
+    .app-banner{
+        padding: 72px 16px 0px 16px !important;
     }
-    .profile-picture__img{
-        width: 170px !important;
+    .cta-buttons{
+        margin-top: 14px !important;
     }
-    .profile-details{
-        width: 66% !important;
-    }
-}
-/* @media (max-width:395px) {
-    
-} */
-@media (max-width: 600px) {
+ 
     .appointment-description{
         text-align: center;
         font-size: 17px;
@@ -451,6 +371,164 @@ header nav a:hover {
         width: 80% !important;
     }
 }
+@media (max-width: 570px) {
+    .profile-container{
+        position: relative;
+        bottom: 134px !important;
+    }
+    .reel{
+        width: 204px !important;
+    }
+    .reels-container{
+        gap: 19px !important;
+    }
+    .background-img {
+        width: 100% !important;
+        object-fit: cover;        /* Fit the image without zooming */
+    }
+    .visa-category{
+        padding: 0px !important;
+    }
+}
+@media (max-width:470px) {
+ 
+    .visa-category{
+        width: 360px !important;
+    }
+    .profile-picture__img{
+        width: 240px !important;
+        border: 19px solid blue !important;
+        margin-top: 182px !important;
+        height: 117px !important;
+    }
+    .team-info__title{
+        font-size: 32px !important;
+    }
+    .team-info__description {
+        font-size: 19px !important;
+    }
+    .profile-containe{
+        position: relative !important;
+        bottom: 90px !important;
+    }
+  
+}
+@media (max-width:450px) {
+
+    .cta-buttons{
+        position: relative;
+        right: 14px;
+    }
+    .main-heading{
+        font-size: 39px !important;
+    }
+    .my-content{
+        margin-top: 148px !important;
+    }
+    .visa-category img{
+        padding-left: 12px !important;
+    }
+    .arrow-button svg{
+        margin-bottom: 19px !important;
+    }
+    .visa-category {
+        right: 124px !important;
+    }
+    .visa-c2{
+        left: -125px;
+    }
+    .visa-categories{
+        margin-top: 0px !important;
+    }
+    .contact-container{
+        padding: 200px 28px 50px 28px !important;
+       
+    }
+    .contact-details{
+        padding: 0 !important;
+    }
+    .visa-category{
+        position: relative !important;
+        
+    }
+    .visa-categories{
+        padding: 30px 0px !important;
+    }
+    .business-text{
+        font-size: 12px !important;
+    }
+    .profile-picture__img{
+        width: 240px !important;
+    }
+    .visa-c2{
+        right: 196px !important;
+    }
+    .visa-category{
+        margin: 0px !important;
+        width: 318px !important;
+    }
+    .visa-categories{
+        width: 100% !important;
+    }
+    .profile-details{
+        height: auto !important;
+    }
+    .profile-details__name{
+        font-size: 30px !important;
+        text-align: center;
+        margin: 0px !important;
+    }
+    .profile-details__title{
+        font-size: 20px !important;
+        text-align: center;
+    }
+    .profile-details__description{
+        text-align: center !important;
+    }
+}
+
+@media (max-width:418px) {
+    .logop{
+        margin-left: 16px !important;
+    }
+    .vector{
+        margin-left: 16px !important;
+    }
+    .menu-toggle{
+        margin-right: 16px !important;
+    }
+    .reel{
+        width: 171px !important;
+    }
+    .profile-picture{
+        height: 271px !important;
+    }
+    #prevArrow {
+        left: -221px !important;
+        top: 58px !important;
+    }
+    #nextArrow {
+        left: -76px !important;
+        top: 58px !important;
+    }
+    .form-input-group {
+        width: 244px !important;
+    }
+    .image-placeholder{
+        width: 250px !important;
+        height: 350px !important;
+    }
+    .profile-picture__img{
+        width: 170px !important;
+    }
+    .profile-details{
+        width: 66% !important;
+    }
+}
+/* @media (max-width:395px) {
+    
+} */
+
 @media (max-width:380px) {
     .form-input-group {
         width: 244px !important;
@@ -473,7 +551,7 @@ header nav a:hover {
 
     .visa-category {
         margin-left: 250px !important;
-        width: 350px !important;
+        width: 360px !important;
         height: 118px !important;
     }
 
@@ -2309,6 +2387,7 @@ body::-webkit-scrollbar{
 /* Document Section Css */
 /* Container to hold the sidebar and content */
 .doc-container {
+    padding: 0px 50px;
     display: flex;
     width: 100%;
     height: auto;

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="services.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/conslutant.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -12,31 +17,32 @@
   </head>
   <body>
     <div class="main-containers">
-      <header>
+      <header style="position: absolute;">
         <div class="MAIN-LOGO">
-          <img
-            class="logop"
-            src="./Images/logo__1_-removebg-preview.png"
-            alt="Visa Experts"
-          />
-          <img class="vector" src="./Images/Vector.png" alt="" />
+          <img class="logop" src="img/main-logo.svg" alt="Visa Experts">
+          <img class="vector" src="img/Vector.png" alt="">
         </div>
         <nav class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Services</a>
+          <a class="activelink" href="#">Home</a>
+          <a href="service.html">Services</a>
           <a href="#">About us</a>
-          <a href="#">Contact us</a>
-          <a href="#">Consultant</a>
+          <a href="Course.html">Our Courses</a>
+          <a href="consultant.html">Consultant</a>
           <a class="countries" href="#">Countries</a>
         </nav>
+        <button class="menu-toggle" aria-label="Menu Toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </header>
       <!-- </div> -->
       <div class="hero-section">
-        <img src="./Images/Dubai work images 1.jpg" alt="Background Image" />
+        <img src="Jobs/Dubai work images 1.jpg" alt="Background Image" />
         <div class="service-cards">
           <div class="service-card">
             <div class="card-date">07 Aug 2024</div>
-            <img src="./Images/2148784051.jpg" alt="Construction Worker" />
+            <img src="Jobs/jobcard1.jpeg" alt="Construction Worker" />
 
             <h3>Web Design & Development</h3>
             <p>
@@ -60,7 +66,7 @@
           </div>
           <div class="service-card">
             <div class="card-date">07 Aug 2024</div>
-            <img src="./Images/2148784051.jpg" alt="Car Inspector" />
+            <img src="Jobs/jobcard2.jpeg" alt="Car Inspector" />
             <h3>Web Design & Development</h3>
             <p>
               Creative web design blends aesthetics and functionality <br />
@@ -82,7 +88,7 @@
           </div>
           <div class="service-card">
             <div class="card-date">07 Aug 2024</div>
-            <img src="./Images/2148784051.jpg" alt="Engineer" />
+            <img src="Jobs/jobcard3.jpeg" alt="Engineer" />
             <h3>Web Design & Development</h3>
             <p>
               Creative web design blends aesthetics and functionality <br />
@@ -106,59 +112,58 @@
       </div>
     </div>
 
-    <div class="about-container">
-      <div class="container">
-        <div class="image-section">
-          <img src="./Images/Frame 1000004070 (1).jpg" alt="Visa Application" />
-        </div>
-        <div class="content-section">
-          <h1>About Dubai work visa</h1>
-          <p>
-            A Work visa is an official document that allows a traveler to enter,
-            stay, and travel within a country for tourism purposes. It usually
-            has a limited duration and is issued for leisure activities such as
-            sightseeing, visiting friends or family, or attending events.
-          </p>
-          <h2>Types of Tourist Visas</h2>
-          <ul>
-            <li>
-              <strong>Single-entry Visa:</strong> Allows entry into the country
-              once; re-entry requires a new visa.
-            </li>
-            <li>
-              <strong>Multiple-entry Visa:</strong> Allows the holder to enter
-              and exit the country multiple times within a specified period.
-            </li>
-            <li>
-              <strong>Transit Visa:</strong> For travelers passing through a
-              country on their way to another destination.
-            </li>
-            <li>
-              <strong>eVisa:</strong> An electronic visa that can be applied for
-              online, often simplifying the process.
-            </li>
-            <li>
-              <strong>Single-entry Visa:</strong> Allows entry into the country
-              once; re-entry requires a new visa.
-            </li>
-            <li>
-              <strong>Multiple-entry Visa:</strong>
-              Allows the holder to enter and exit the country multiple times
-              within a specified period.
-            </li>
-            <li>
-              <strong>Transit Visa:</strong>
-              For travelers passing through a country on their way to another
-              destination.
-            </li>
-            <li>
-              <strong>eVisa:</strong> An electronic visa that can be applied for
-              online, often simplifying the process.
-            </li>
-          </ul>
-        </div>
-      </div>
+ <div class="about-wrapper">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="Jobs/Frame 1000004070 (1).jpg" alt="Visa Application" />
     </div>
+    <div class="about-content">
+      <h1>About Dubai Work Visa</h1>
+      <p>
+        A Work visa is an official document that allows a traveler to enter,
+        stay, and travel within a country for tourism purposes. It usually
+        has a limited duration and is issued for leisure activities such as
+        sightseeing, visiting friends or family, or attending events.
+      </p>
+     
+      <ul>
+        <li>
+          <strong>Single-entry Visa:</strong> Allows entry into the country
+          once; re-entry requires a new visa.
+        </li>
+        <li>
+          <strong>Multiple-entry Visa:</strong> Allows the holder to enter
+          and exit the country multiple times within a specified period.
+        </li>
+        <li>
+          <strong>Transit Visa:</strong> For travelers passing through a
+          country on their way to another destination.
+        </li>
+        <li>
+          <strong>eVisa:</strong> An electronic visa that can be applied for
+          online, often simplifying the process.
+        </li>
+        <li>
+          <strong>Single-entry Visa:</strong> Allows entry into the country
+          once; re-entry requires a new visa.
+        </li>
+        <li>
+          <strong>Multiple-entry Visa:</strong> Allows the holder to enter
+          and exit the country multiple times within a specified period.
+        </li>
+        <li>
+          <strong>Transit Visa:</strong> For travelers passing through a
+          country on their way to another destination.
+        </li>
+        <li>
+          <strong>eVisa:</strong> An electronic visa that can be applied for
+          online, often simplifying the process.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
     <div class="job-about-container">
       <h1>Job Description</h1>
@@ -166,7 +171,7 @@
         <!-- Job Card 1 -->
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Construction Worker" />
+          <img src="Jobs/job 5.jpg" alt="Construction Worker" />
           <h3>Construction Laborer</h3>
           <p>
             Creative web design blends aesthetics and functionality<br> 
@@ -189,7 +194,7 @@
         <!-- Repeat similar structure for other job cards -->
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Shipping Clerk" />
+          <img src="Jobs/job 5.jpg" alt="Shipping Clerk" />
           <h3>Shipping and Receiving Clerk</h3>
           <p>
             Creative web design blends aesthetics and functionality <br> 
@@ -211,7 +216,7 @@
         </div>
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Shipping Clerk" />
+          <img src="Jobs/job 5.jpg" alt="Shipping Clerk" />
           <h3>Shipping and Receiving Clerk</h3>
           <p>
             Creative web design blends aesthetics and functionality <br> 
@@ -233,7 +238,7 @@
         </div>
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Construction Worker" />
+          <img src="Jobs/job 5.jpg" alt="Construction Worker" />
           <h3>Construction Laborer</h3>
           <p>
             Creative web design blends aesthetics and functionality <br> 
@@ -256,7 +261,7 @@
         
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Shipping Clerk" />
+          <img src="Jobs/job 5.jpg" alt="Shipping Clerk" />
           <h3>Shipping and Receiving Clerk</h3>
           <p>
             Creative web design blends aesthetics and functionality <br> 
@@ -278,7 +283,7 @@
         </div>
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Shipping Clerk" />
+          <img src="Jobs/job 5.jpg" alt="Shipping Clerk" />
           <h3>Shipping and Receiving Clerk</h3>
           <p>
             Creative web design blends aesthetics and functionality <br> 
@@ -301,7 +306,7 @@
         </div>
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Shipping Clerk" />
+          <img src="Jobs/job 5.jpg" alt="Shipping Clerk" />
           <h3>Shipping and Receiving Clerk</h3>
           <p>
             Creative web design blends aesthetics and functionality <br> 
@@ -323,7 +328,7 @@
         </div>
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Shipping Clerk" />
+          <img src="Jobs/job 5.jpg" alt="Shipping Clerk" />
           <h3>Shipping and Receiving Clerk</h3>
           <p>
             Creative web design blends aesthetics and functionality <br> 
@@ -345,7 +350,7 @@
         </div>
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Shipping Clerk" />
+          <img src="Jobs/job 5.jpg" alt="Shipping Clerk" />
           <h3>Shipping and Receiving Clerk</h3>
           <p>
             Creative web design blends aesthetics and functionality <br> 
@@ -367,7 +372,7 @@
         </div>
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Shipping Clerk" />
+          <img src="Jobs/job 5.jpg" alt="Shipping Clerk" />
           <h3>Shipping and Receiving Clerk</h3>
           <p>
             Creative web design blends aesthetics and functionality <br> 
@@ -389,7 +394,7 @@
         </div>
         <div class="about-job-card">
           <div class="card-date">07 Aug 2024</div>
-          <img src="./Images/job 5.jpg" alt="Shipping Clerk" />
+          <img src="Jobs/job 5.jpg" alt="Shipping Clerk" />
           <h3>Shipping and Receiving Clerk</h3>
           <p>
             Creative web design blends aesthetics and functionality<br> 
@@ -413,4 +418,5 @@
       </div>
     </div>
   </body>
+  <script src="js/script.js"></script>
 </html>
