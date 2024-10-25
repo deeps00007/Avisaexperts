@@ -57,6 +57,7 @@ header nav a:hover {
 
 /* Menu Toggle Button */
 .menu-toggle {
+    outline: none !important;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -305,7 +306,7 @@ header nav a:hover {
         z-index: 3000 !important;
     }
 
-    
+
     .nav-links.nav-open {
         width: 269px !important;
         position: absolute !important;
