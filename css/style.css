@@ -300,6 +300,12 @@ header nav a:hover {
 
 
 @media (max-width: 600px) {
+
+    .menu-toggle{
+        z-index: 3000 !important;
+    }
+
+    
     .nav-links.nav-open {
         width: 269px !important;
         position: absolute !important;
@@ -1442,10 +1448,6 @@ h2 {
 
     /* font-family: "Open Sans"; */
     transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #ccc;
 }
 
 .mainstats {
