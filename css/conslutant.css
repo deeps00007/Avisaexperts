@@ -18,6 +18,7 @@ header {
 }
 
 .card {
+    height: 222px;
     margin: 10px 10px;
     border-radius: 15px !important;
     background: #FFF;
@@ -71,8 +72,9 @@ header {
 }
 
 .btn-outline-success {
+    margin: 0;
     padding: 2px 13px;
-    margin-top: 4px;
+    /* margin-top: 4px; */
     margin-right: 10px;
     border: 2px solid;
 }
