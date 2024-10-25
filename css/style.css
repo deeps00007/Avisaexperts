@@ -300,6 +300,12 @@ header nav a:hover {
 
 
 @media (max-width: 600px) {
+    .nav-links.nav-open {
+        width: 269px !important;
+        position: absolute !important;
+        left: 127px !important;
+        background: black !important;
+    }
     .profile-btn{
         padding: 8px 23px !important;
     }
