@@ -42,7 +42,7 @@
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="service.html">Services</a>
-            <a href="#">About us</a>
+            <a href="about.html">About us</a>
             <a href="Course.html">Our Courses</a>
             <a href="consultant.html" class="activelink">Consultant</a>
             <a class="countries" href="#">Countries</a>
@@ -617,147 +617,7 @@
         }
     });
 
-    const localVideo = document.getElementById('localVideo');
-    const videoContainer = document.getElementById('video-container');
-    const startBtn = document.getElementById('startBtn');
-
-    // WebRTC peer connection configurations
-    let localStream;
-    let peerConnections = {}; // A list of peer connections indexed by peer ID
-
-    const config = {
-        iceServers: [
-            { urls: "stun:stun.l.google.com:19302" } // Public Google STUN server
-        ]
-    };
-
-    // Get access to the user's media (camera and microphone)
-    async function startVideoChat() {
-        try {
-            // Capture local video and audio
-            localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-            localVideo.srcObject = localStream;
-
-            // Connect to the signaling server
-            const socket = io.connect('http://localhost:3000');
-
-            // When connected, inform the signaling server that we joined
-            socket.emit('join-chat', { userId: socket.id });
-
-            // Handle incoming new participant signal
-            socket.on('new-participant', async (userId) => {
-                createPeerConnection(userId, socket);
-                const offer = await peerConnections[userId].createOffer();
-                await peerConnections[userId].setLocalDescription(offer);
-                socket.emit('video-offer', { userId, offer });
-            });
-
-            // Handle video offers from other participants
-            socket.on('video-offer', async (data) => {
-                const { userId, offer } = data;
-                createPeerConnection(userId, socket);
-                await peerConnections[userId].setRemoteDescription(new RTCSessionDescription(offer));
-
-                const answer = await peerConnections[userId].createAnswer();
-                await peerConnections[userId].setLocalDescription(answer);
-                socket.emit('video-answer', { userId, answer });
-            });
-
-            // Handle video answers from other participants
-            socket.on('video-answer', async (data) => {
-                const { userId, answer } = data;
-                await peerConnections[userId].setRemoteDescription(new RTCSessionDescription(answer));
-            });
-
-            // Handle new ICE candidates from other participants
-            socket.on('ice-candidate', async (data) => {
-                const { userId, candidate } = data;
-                await peerConnections[userId].addIceCandidate(new RTCIceCandidate(candidate));
-            });
-
-            // Listen for ICE candidates and send them to other participants
-            socket.on('new-ice-candidate', (event) => {
-                if (event.candidate) {
-                    socket.emit('ice-candidate', { userId: event.userId, candidate: event.candidate });
-                }
-            });
-
-        } catch (error) {
-            console.error('Error accessing media devices.', error);
-        }
-    }
-
-    // Create a new peer connection
-    function createPeerConnection(userId, socket) {
-        const peerConnection = new RTCPeerConnection(config);
-
-        // Add local stream tracks to the peer connection
-        localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
-
-        // Handle the remote stream and add it to the DOM
-        peerConnection.ontrack = (event) => {
-            if (!document.getElementById(userId)) {
-                const newVideo = document.createElement('video');
-                newVideo.id = userId;
-                newVideo.autoplay = true;
-                newVideo.playsInline = true;
-                videoContainer.appendChild(newVideo);
-                newVideo.srcObject = event.streams[0];
-            }
-        };
-
-        // Handle ICE candidates and send them to the other peer
-        peerConnection.onicecandidate = (event) => {
-            if (event.candidate) {
-                socket.emit('ice-candidate', { userId, candidate: event.candidate });
-            }
-        };
-
-        // Store the peer connection
-        peerConnections[userId] = peerConnection;
-    }
-
-    // Start the video chat when the button is clicked
-    startBtn.addEventListener('click', startVideoChat);
-
-    const io = require('socket.io')(3000);
-
-    let participants = [];
-
-    io.on('connection', (socket) => {
-        console.log(`User ${socket.id} connected`);
-
-        // Notify existing participants about the new user
-        socket.broadcast.emit('new-participant', socket.id);
-
-        // Notify the new user about existing participants
-        socket.emit('existing-participants', participants);
-
-        // Add new participant to the list
-        participants.push(socket.id);
-
-        // Handle video offers
-        socket.on('video-offer', (data) => {
-            io.to(data.userId).emit('video-offer', { userId: socket.id, offer: data.offer });
-        });
-
-        // Handle video answers
-        socket.on('video-answer', (data) => {
-            io.to(data.userId).emit('video-answer', { userId: socket.id, answer: data.answer });
-        });
-
-        // Handle ICE candidates
-        socket.on('ice-candidate', (data) => {
-            io.to(data.userId).emit('ice-candidate', { userId: socket.id, candidate: data.candidate });
-        });
-
-        // Handle user disconnection
-        socket.on('disconnect', () => {
-            participants = participants.filter(id => id !== socket.id);
-            socket.broadcast.emit('participant-left', socket.id);
-            console.log(`User ${socket.id} disconnected`);
-        });
-    });
+   
 </script>
 
 </html>

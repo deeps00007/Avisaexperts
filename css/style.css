@@ -80,6 +80,10 @@ header nav a:hover {
 }
 
 @media (min-width:951px) {
+    
+    .achievement{
+        gap: 169px;
+    }
     .main-appointment {
         height: 70vh !important;
     }
@@ -179,6 +183,12 @@ header nav a:hover {
 }
 
 @media (max-width:991px) {
+    .section-container{
+        flex-direction: column !important;  
+    }
+    .about-content-container{
+        width: 90% !important;
+    }
     .main-appointment {
         flex-direction: column;
     }
@@ -301,12 +311,35 @@ header nav a:hover {
 
 
 @media (max-width: 600px) {
-
+    .outer-blog-section{
+        padding: 20px 0px !important;
+    }
+    .card-box{
+        width: 335px !important;
+        height: 354px !important;
+    }
+    .team-member{
+        width: 335px !important;
+        height: 354px !important;
+    }
+    .features{
+        flex-direction: column;
+    }
+    .about-content-container h1{
+        margin: 10px 0px !important;
+        font-size: 26px !important;
+    }
+    .section-container{
+        gap: 33px !important;
+        padding: 10px 0px !important;
+    }
+    .image-container svg{
+        width: 300px;
+        height: 300px;
+    }
     .menu-toggle{
         z-index: 3000 !important;
     }
-
-
     .nav-links.nav-open {
         width: 269px !important;
         position: absolute !important;
@@ -616,6 +649,9 @@ header nav a:hover {
 }
 
 @media (max-width:450px) {
+    .blog-card{
+        width: 350px !important;
+    }
     #balance{
         padding: 9px 1px !important;
     }
@@ -1450,6 +1486,8 @@ h2 {
     /* font-family: "Open Sans"; */
     transition: background-color 0.3s;
 }
+
+
 
 .mainstats {
     display: flex;
@@ -3032,3 +3070,158 @@ body::-webkit-scrollbar {
 .consult-button:hover {
     background-color: #45a049;
 }
+
+
+/* //Professionals Css */
+
+.container-professional {
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+    background: #D2D2D2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-title {
+    color: #001E74;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.19px;
+}
+
+.header-subtitle {
+    color: black;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.08px;
+}
+
+.team-gallery {
+    display: flex;
+    gap: 7.15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.team-member {
+    width: 257px;
+    height: 293px;
+    background: #9A9A9A;
+    border-radius: 14.3px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.team-member:hover .overlay{
+    bottom: 0px;
+    transition: 0.7s all;
+}
+
+.team-member img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    width: 100%;
+    padding: 9px 0;
+    background: rgba(0, 0, 0, 0.67);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -67px;
+    transition: 0.7s all;
+}
+
+.overlay-content {
+    width: 100%;
+    padding: 0 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-bottom-profile  .name {
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: start;
+}
+
+.flex-bottom-profile .role {
+text-align: start;
+    color: #FFF;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.social-icons {
+    display: flex;
+    gap: 13.5px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+/* //About us Page Css */
+.bg-about-section {
+    position: relative;
+    height: 335px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%),
+        url(../img/bg-for-image.jpeg) lightgray 0px -50.844px / 100% 286.22% no-repeat;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.bg-about-section h1 {
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 48px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+/* //About Us Setion for About */

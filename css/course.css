@@ -1,0 +1,371 @@
+.banner-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 550px;
+    background: url(../img/course-banner-Photoroom.png) no-repeat center center/cover;
+}
+
+.course-title {
+    text-align: center;
+    font-size: 65px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0px 10px 10px black;
+}
+
+.fogged-background {
+    display: flex;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    /* Wraps tightly around content */
+    padding: 20px;
+    top: 20px;
+    border-radius: 8px;
+    z-index: 1;
+    /* Ensures the text stays on top */
+}
+
+.fogged-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.70);
+    /* White fog effect */
+    filter: blur(8px);
+    /* Blurred background effect */
+    border-radius: 8px;
+    z-index: -1;
+    /* Ensures the blur stays behind the text */
+}
+
+.course-desc {
+    color: var(--primary-deep-blue-color, #001E74);
+    text-align: center;
+
+    /* headline 2 */
+    font-family: "Open Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.by-text {
+    color: var(--primary-deep-blue-color, #001E74);
+    text-align: end;
+    margin-right: 10%;
+    /* headline 2 */
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.visa-card {
+    width: 426px;
+    height: 245px;
+    margin: 10px 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
+    border: 0.5px solid #000;
+    background: #FFF;
+}
+
+.visa-card-image {
+    position: relative;
+    object-fit: cover;
+    left: -62px;
+    width: 297px;
+    border-radius: 50%;
+    height: 135%;
+    border: 11px solid #001E72;
+}
+
+.visa-card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    position: relative;
+    right: 65px;
+}
+
+.enroll-button {
+    width: fit-content;
+    border-radius: 15.3px;
+    background: var(--primary-deep-blue-color, #001E74);
+    color: white;
+    border: none;
+    padding: 8px 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px auto;
+    position: relative;
+    left: 22px;
+}
+
+.visa-card-title {
+    font-weight: bold;
+    color: #000;
+    text-align: right;
+    font-family: "Open Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.visa-logo {
+    display: flex;
+    width: 50.356px;
+    position: relative;
+    left: 109px;
+}
+
+.coursr-card-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.parent-visa-course {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thred-shadow {
+    position: relative;
+    top: 60px;
+}
+
+.aspiring-heading {
+    padding: 33px;
+    color: #000;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.12px;
+}
+
+/* Feature Section */
+.feature-section {
+    background-image: url('https://via.placeholder.com/1200x400');
+    /* Replace with actual image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    color: white;
+}
+
+.feature-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    height: auto;
+}
+
+.feature-box h4 {
+
+    color: #FFF;
+    text-align: center;
+
+    /* headline 2 */
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.feature-box p {
+    color: #FFF;
+    text-align: justify;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.testimonial-box {
+    height: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-box p {
+    font-size: 16px;
+    color: black;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.testimonial-author .author-name {
+    color: black;
+}
+
+.stars {
+    color: #ffcc00;
+}
+
+.vedio-c-parent {
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.vedio-c-parent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.70);
+    /* Black background with opacity */
+    filter: blur(5px);
+    /* Apply blur to the background */
+    z-index: 1;
+}
+
+.flex-author {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.vedio-c-parent .feature-box {
+    position: relative;
+    z-index: 2;
+    /* Keeps the text above the blurred background */
+    color: white;
+    /* Make sure text is visible over dark background */
+}
+
+.author-pic {
+    height: 40px;
+    width: 40px;
+    background-color: #000;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Grid system replacement */
+.container-fluid {
+    padding: 60px 100px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container{
+width: 100%;
+}
+.row {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-4 {
+    width: 33.3333%;
+    padding: 15px;
+}
+
+.col-md-12 {
+    width: 100%;
+}
+
+/* Custom styles for header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    /* Add custom styles for responsive menu toggle if needed */
+}
+
+/* Other custom styles for buttons, layout, etc. */
+button {
+    padding: 10px 20px;
+    background-color: #001E74;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    .col-md-4 {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+}
