@@ -93,9 +93,7 @@ header nav a:hover {
     color: white;
   }
 
-  .menu-toggle {
-    display: flex;
-  }
+
 
   /* Cross Icon for Menu */
   .menu-toggle.cross span:nth-child(1) {

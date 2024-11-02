@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E9EEFF;
+    padding: 100px;
+    position: relative;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    width: 252.71px;
+    height: 147.68px;
+    padding: 12px 20px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 27.69px;
+    height: 27.69px;
+    background: #001E74;
+}
+
+.title {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.count {
+    color: black;
+    font-size: 40.27px;
+    font-weight: 600;
+}
+
+.growth {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.growth-icon {
+    width: 8px;
+    height: 10.91px;
+}
+
+.growth-icon.green {
+    background: #028C4C;
+}
+
+.growth-icon.red {
+    background: #FF1919;
+}
+
+.growth-text {
+    font-size: 11.75px;
+    font-weight: 700;
+}
+
+.green-text {
+    color: #028C4C;
+}
+
+.red-text {
+    color: #FF1919;
+}
+
+.growth-info {
+    color: black;
+    font-size: 11.75px;
+    font-weight: 400;
+}
+
+.attendance-card {
+    width: 448px;
+    height: 305px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.attendance-title {
+    color: #F58634;
+    font-size: 22.68px;
+    font-weight: 600;
+}
+
+.attendance-rate {
+    color: black;
+    font-size: 32.13px;
+    font-weight: 700;
+}
+
+.attendance-bars {
+    display: flex;
+    gap: 5px;
+}
+
+.bar {
+    height: 17px;
+    border-radius: 4.72px;
+}
+
+.sick-leave {
+    width: 72.75px;
+    background: #FFB800;
+}
+
+.day-off {
+    width: 119.05px;
+    background: #0096FF;
+}
+
+.on-time {
+    width: 213.54px;
+    background: #0013FF;
+}
+
+.legend {
+    display: flex;
+    gap: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dot {
+    width: 11.34px;
+    height: 11.34px;
+    border-radius: 50%;
+}
+
+.sick {
+    background: #FFB800;
+}
+
+.day-off {
+    background: #0096FF;
+}
+
+.on-time {
+    background: #0013FF;
+}
+
+.total-days-title {
+    font-size: 22.68px;
+    font-weight: 600;
+}
+
+.total-days-progress {
+    width: 408.18px;
+    padding: 2.83px 11.34px;
+    background: #DCFFFB;
+    border-radius: 28.35px;
+    text-align: center;
+    font-size: 22.68px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+.calendar-header {
+    width: 317.7px;
+    height: 14.4px;
+    position: absolute;
+    left: 11.7px;
+    top: 61.2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24.19px;
+}
+
+.day-cell {
+    flex: 1 1 0;
+    align-self: stretch;
+    padding-bottom: 0.4px;
+    padding-left: 2.88px;
+    padding-right: 2.77px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-cell div {
+    text-align: center;
+    color: black;
+    font-size: 10.38px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.divider {
+    width: 211.43px;
+    height: 0px;
+    position: absolute;
+    left: 66.6px;
+    top: 86.91px;
+    border: 0.32px solid #E5E5E5;
+}
+
+.calendar-body {
+    width: 315px;
+    height: 184.5px;
+    position: absolute;
+    left: 14.4px;
+    top: 96.3px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6.55px;
+}
+
+.week-row {
+    align-self: stretch;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 23.75px;
+}
+
+.date-cell {
+    flex: 1 1 0;
+    align-self: stretch;
+    padding: 6.49px;
+    border-radius: 64.86px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6.49px;
+}
+
+.date-cell div {
+    text-align: center;
+    color: #E5E5E5;
+    font-size: 10.38px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon"></div>
+                    <div class="title">Total Clients</div>
+                </div>
+                <div class="count">1048</div>
+                <div class="growth">
+                    <div class="growth-icon green"></div>
+                    <div class="growth-text green-text">3.5%</div>
+                    <div class="growth-info">Than last month</div>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon"></div>
+                    <div class="title">Total Calls</div>
+                </div>
+                <div class="count">144</div>
+                <div class="growth">
+                    <div class="growth-icon red"></div>
+                    <div class="growth-text red-text">1.5%</div>
+                    <div class="growth-info">Than last month</div>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon"></div>
+                    <div class="title">Total Video Calls</div>
+                </div>
+                <div class="count">448</div>
+                <div class="growth">
+                    <div class="growth-icon green"></div>
+                    <div class="growth-text green-text">10.5%</div>
+                    <div class="growth-info">Than last month</div>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon"></div>
+                    <div class="title">Total Chats</div>
+                </div>
+                <div class="count">418</div>
+                <div class="growth">
+                    <div class="growth-icon green"></div>
+                    <div class="growth-text green-text">5.5%</div>
+                    <div class="growth-info">Than last month</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="attendance-card">
+            <div class="attendance-title">Attendance Rate</div>
+            <div class="attendance-rate">90%</div>
+            <div class="attendance-bars">
+                <div class="bar sick-leave"></div>
+                <div class="bar day-off"></div>
+                <div class="bar on-time"></div>
+            </div>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="dot sick"></div>
+                    <span>Sick Leave</span>
+                </div>
+                <div class="legend-item">
+                    <div class="dot day-off"></div>
+                    <span>Day Off</span>
+                </div>
+                <div class="legend-item">
+                    <div class="dot on-time"></div>
+                    <span>On Time</span>
+                </div>
+            </div>
+            <div class="total-days-title">Total Days</div>
+            <div class="total-days-progress">
+                <span>25 / 30</span>
+            </div>
+        </div>
+    </div>
+    <div class="calendar-header">
+        <div class="day-cell"><div>Sun</div></div>
+        <div class="day-cell"><div>Mon</div></div>
+        <div class="day-cell"><div>Tue</div></div>
+        <div class="day-cell"><div>Wed</div></div>
+        <div class="day-cell"><div>Thu</div></div>
+        <div class="day-cell"><div>Fri</div></div>
+        <div class="day-cell"><div>Sat</div></div>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <div class="calendar-body">
+        <div class="week-row">
+            <div class="date-cell"><div>26</div></div>
+            <div class="date-cell"><div>27</div></div>
+            <div class="date-cell"><div>28</div></div>
+            <div class="date-cell"><div>29</div></div>
+            <div class="date-cell"><div>30</div></div>
+            <div class="date-cell"><div>31</div></div>
+            <div class="date-cell"><div>01</div></div>
+        </div>
+        <!-- Add more week rows as needed -->
+    </div>
+    
+</body>
+</html>

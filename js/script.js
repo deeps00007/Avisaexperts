@@ -159,3 +159,17 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+function showTab(tabName, element) {
+  const tabs = document.querySelectorAll('.call-list-section');
+  tabs.forEach(tab => {
+      tab.classList.add('hidden-btn');
+  });
+  document.getElementById(tabName).classList.remove('hidden-btn');
+
+  const icons = document.querySelectorAll('.icon-button');
+  icons.forEach(icon => {
+      icon.classList.remove('active');
+  });
+  element.classList.add('active');
+}
+

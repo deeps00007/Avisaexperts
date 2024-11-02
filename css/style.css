@@ -311,6 +311,27 @@ header nav a:hover {
 
 
 @media (max-width: 600px) {
+    .text-exp{
+        font-size: 16px !important;
+    }
+    .slide_buttons{
+        bottom: 10px !important;
+    }
+    .visa-card-image{
+        height: 82px !important;
+    }
+    .visa-card-button button{
+        height: 54px !important;
+        width: 54px !important;
+    }
+    .visa-slider{
+        bottom: 62px !important;
+        gap: 10px !important;
+    }
+    .visa-card{
+        width: 330px !important;
+        height: 129px !important;
+    }
     .outer-blog-section{
         padding: 20px 0px !important;
     }
@@ -766,6 +787,7 @@ header nav a:hover {
 
     .menu-toggle {
         margin-right: 16px !important;
+        
     }
 
     .reel {
@@ -1315,7 +1337,7 @@ header nav a:hover {
 }
 
 .btn {
-    padding: 10px 20px;
+ 
     background-color: white;
     color: black;
     text-decoration: none;
@@ -2878,7 +2900,6 @@ body::-webkit-scrollbar {
     background-color: #f99840;
     color: white;
     border: none;
-    padding: 10px 20px;
     border-radius: 25px;
     font-size: 16px;
     font-weight: 600;

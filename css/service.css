@@ -268,9 +268,9 @@
             cursor: pointer;
         }
 
-        button:hover {
+        /* button:hover {
             background-color: #555;
-        }
+        } */
 
         .visa-text-section button {
             display: flex;
