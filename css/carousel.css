@@ -16,7 +16,7 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   /* Add shadow for a nice effect */
   backdrop-filter: blur(7px);
-  z-index: 200 !important;
+  z-index: 1000 !important;
 }
 
 

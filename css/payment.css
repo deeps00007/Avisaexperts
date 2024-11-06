@@ -1,0 +1,122 @@
+ /* Basic reset */
+
+        /* Container */
+        .payment-details-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header */
+        .payment-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Payment table */
+        .payment-summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .payment-summary-table th,
+        .payment-summary-table td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .payment-summary-table th {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+
+        .payment-summary-table td:last-child {
+            text-align: right;
+        }
+
+        .payment-summary-row td,
+        .payment-summary-row th {
+            width: 50%;
+        }
+
+        /* Payment method buttons */
+        .payment-options {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+
+        .payment-option-button {
+            padding: 10px 0px;
+            width: 120px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        .payment-option-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Icons and labels */
+        .payment-option-button img {
+            max-width: 40px;
+            margin-bottom: 8px;
+        }
+
+        .payment-option-label {
+            position: relative;
+            bottom: -10px;
+            font-size: 14px;
+            color: #333;
+            background: #E1E9FF;
+            padding: 10px 0px;
+        }
+
+        /* Extra styles for individual buttons */
+        .payment-option-upi {
+            color: #FF5722;
+        }
+
+        .payment-option-card {
+            color: #2196F3;
+        }
+
+        .payment-option-net-banking {
+            color: #FF9800;
+        }
+
+        .payment-option-wallet {
+            color: #3F51B5;
+        }
+
+        @media (min-width:991px) {
+            .payment-details-container {
+                max-width: 90%;
+            }
+
+            .payment-option-button {
+                width: 23%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .payment-option-button img {
+                align-self: center;
+            }
+
+            .payment-options {
+                justify-content: space-between;
+            }
+        }

@@ -1,0 +1,600 @@
+body {
+    margin: 0;
+    font-family: "Open Sans" !important;
+}
+
+.big-con {
+    display: flex;
+    z-index: -1;
+}
+
+
+header {
+    width: 100%;
+    background: rgba(47, 47, 47, 0.20);
+    /* Ensure the header has a background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 12px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add shadow for a nice effect */
+    backdrop-filter: blur(7px);
+    z-index: 200 !important;
+}
+
+
+header .nav-links {
+    display: flex;
+    gap: 20px;
+    margin-right: 68px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+header nav a:hover {
+    cursor: pointer;
+    background-color: #001E74;
+    color: white;
+    border-radius: 44px;
+}
+
+
+
+
+.main-heading {
+    text-align: justify;
+    font-size: 3.4rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.cta-buttons {
+    margin-top: 50px;
+    margin-right: 140px;
+}
+
+.cta-buttons a {
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #0072FF;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.nav-links .activelink {
+    cursor: pointer;
+    background-color: #001E74;
+    color: white;
+    border-radius: 44px;
+}
+
+.nav-links .countries {
+    z-index: 100 !important;
+    color: white;
+    border-radius: 30px;
+    background-color: #001E74;
+    font-size: 19px;
+    padding: 10px 30px;
+}
+
+/* .countries:hover{
+    background-color: white;
+    color: black;
+} */
+
+/* //conutry .. */
+.countries {
+    position: relative;
+    display: inline-block;
+    /* Make the link an inline-block element */
+    color: #fff;
+    /* Initial text color */
+    text-decoration: none;
+    /* Remove underline */
+    overflow: hidden;
+    /* Ensure shine effect is clipped */
+    background: linear-gradient(to right, #001E74);
+    /* Gradient background */
+    padding: 10px 20px;
+    /* Add some padding for a better appearance */
+    border-radius: 5px;
+    /* Optional: round the corners */
+}
+
+.countries::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 20px;
+    background: #f3f3f3;
+    box-shadow: 0 0 10px #fff;
+    filter: blur(1px);
+    opacity: 0.9;
+    top: 30px;
+    left: -20px;
+    /* Start off-screen on the left */
+    transition: transform 0.7s;
+    /* Smooth transition for transform */
+    transform: rotate(-20deg);
+    /* Initial rotation */
+}
+
+.countries:hover::before {
+    transform: rotate(-20deg) translate(180px, 10px);
+    /* Move the shine across on hover */
+    right: 100%;
+    /* Move to the right side of the element */
+}
+
+.countries:hover {
+    background: #006C71 !important;
+}
+
+
+/* //conutry .. */
+
+
+.logop {
+    width: 87.651px;
+    margin-left: 60px;
+    mix-blend-mode: multiply;
+}
+
+.visa-c3,
+.visa-c1 {
+    position: relative;
+    right: 160px;
+}
+
+.visa-c2 {
+    position: relative;
+    right: 60px;
+}
+
+.MAIN-LOGO {
+    display: flex;
+    flex-direction: column;
+}
+
+.vector {
+    width: 82.115px;
+    height: 12.917px;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+.hero-section {
+    position: relative;
+    height: 500px;
+}
+
+.hero-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Grid Section */
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(371px, 1fr));
+    gap: 20px;
+    padding: 20px 0px 0px 0px;
+    /* max-width: 1200px; */
+    margin: 0px 60px;
+    height: fit-content;
+}
+
+/* Region Card */
+.region-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.region-card:hover {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: relative;
+}
+
+.image-overlay img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.overlay-text h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.learn-more {
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    background-color: #f3f3f3;
+}
+
+/* Country Count Label */
+.country-count {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #f57c00;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+/* All contries */
+
+.visa-section {
+    padding: 0px 60px;
+    text-align: center;
+}
+
+.visa-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: left;
+   
+}
+
+.visa-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+   
+}
+
+.countries-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.country-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.country-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.country-item img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.country-item span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Responsive behavior for smaller screens */
+
+/* General container styling */
+
+.card-body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.coun-container {
+    background-image: url('./Images/image\ 62.png');
+    /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.coun-container h1 {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: -198px;
+    text-align: left;
+}
+
+.card-container {
+    display: flex;
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
+    width: 80%;
+    /* margin-right: -29px; */
+    margin-left: 287px;
+
+}
+
+.card {
+    background-color: white;
+    width: 20%;
+    margin: 9px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 180px;
+}
+
+.card h2 {
+    color: #0e255e;
+    /* font-size: 1.5em; */
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #333;
+    font-size: 1em;
+}
+
+/* Slider Container */
+.slider-passport {
+    padding: 20px 0px;
+    position: relative;
+    width: 100%;
+    max-width: 92%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.passport-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.passport-card {
+    width: 291px;
+    height: 433.675px;
+    background-color: #a42f2f;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.passport-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Arrow Buttons */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: linear-gradient(271deg, rgba(0, 30, 116, 0.25) 0.55%, rgba(0, 30, 116, 0.50) 99.45%), linear-gradient(0deg, rgba(0, 30, 116, 0.50) 0%, rgba(0, 30, 116, 0.50) 100%), url(../countryimages/whychoosecountry.png) lightgray 50% / cover no-repeat;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    width: 1%;
+    align-self: center;
+    color: white;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background-color: white;
+    color: #1a4a94;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.feature-card h3 {
+    margin: 0;
+    color: var(--primary-deep-blue-color, #001E74);
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.passport-header {
+    padding: 20px 0px;
+    color: #000;
+    text-align: start;
+    /* headline 1 */
+    font-family: "Open Sans";
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.085px;
+}
+
+.country-offering-visa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 10px 10px var(--Number, 0px) var(--Number, 0px);
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(28.5px);
+}
+
+.country-offering-visa h3 {
+    padding: 10px 40px;
+    width: fit-content;
+    border-radius: 10px 10px var(--Number, 0px) var(--Number, 0px);
+    background: gold;
+}
+  /* Center the container */
+  .search-country-container {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  /* Search bar styling */
+  .search-country-bar {
+   
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 15px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Search input */
+  .search-country-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #666;
+  }
+
+  /* Placeholder text color */
+  .search-country-input::placeholder {
+    color: #aaa;
+  }
+
+  /* Search icon styling */
+  .search-country-icon {
+    width: 18px;
+    height: 18px;
+    color: #666;
+    cursor: pointer;
+  }
+@media (min-width:991px) {
+    .flex-collumn-f{
+        display: flex;
+        flex-direction: row !important;
+    }
+    .countries-container{
+        justify-content: start;
+        gap: 420px;
+    }
+    
+}
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

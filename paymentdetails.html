@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/consultant.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header style="position: relative;">
+        <a href="index.html">    <div class="MAIN-LOGO">
+          <img class="logop" src="img/main-logo.svg" alt="Visa Experts">
+          <img class="vector" src="img/Vector.png" alt="">
+        </div></a>
+            <nav class="nav-links">
+              <a  href="#">Home</a>
+              <a href="service.html">Services</a>
+              <a href="about.html">About us</a>
+              <a href="Course.html">Our Courses</a>
+              <a href="consultant.html">Consultant</a>
+              <a class="countries" href="#">Countries</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu Toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            
+          </header>
+        
+          <div id="navbar">
+            <div id="main-nav">
+                <div id="search-container">
+                    <input type="text" placeholder="Search consultant by name" />
+                    <button id="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M11 16.5C14.0376 16.5 16.5 14.0376 16.5 11C16.5 7.96243 14.0376 5.5 11 5.5C7.96243 5.5 5.5 7.96243 5.5 11C5.5 14.0376 7.96243 16.5 11 16.5Z"
+                                stroke="black" />
+                            <path d="M15 15L19 19" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="balance">
+                    <img src="img/noto_coin.jpg" alt="" />
+                    <span>$41</span>
+                </div>
+                <div id="profile">
+                    <img src="img/userprofile.png" alt="Profile Picture" />
+                </div>
+            </div>
+        </div>
+        <div class="profile-card">
+            <!-- Profile Image -->
+            <div class="profile-image">
+                <img src="img/userprofile.png" alt="User Image">
+            </div>
+            <!-- Profile Name -->
+            <div class="profile-name">Urvasikha Singh</div>
+            <!-- Profile Phone -->
+            <div class="profile-phone">+91 9709250403</div>
+            <!-- View Profile Button -->
+            <button class="profile-btn">View Profile</button>
+
+            <!-- Info Section -->
+            <div class="info-section">
+              <div><a href="notification.html">Notification</a></div>
+              <div class="balance">
+                  <div><a href="awailablebalance.html">Available Balance</a></div>
+                  <span>₹ 125</span>
+              </div>
+              <div><a href="wallet.html">Wallet Transactions</a></div>
+              <div><a href="#">Logout</a></div>
+          </div>
+   
+          </div>
+    <div class="payment-details-container">
+        <div class="payment-header">Payment Details</div>
+
+        <!-- Payment details table -->
+        <table class="payment-summary-table">
+            <tr class="payment-summary-row">
+                <th>Recharge Amount</th>
+                <td>₹ 25.0</td>
+            </tr>
+            <tr class="payment-summary-row">
+                <th>GST@18%</th>
+                <td>₹ 4.5</td>
+            </tr>
+            <tr class="payment-summary-row">
+                <th>Sub Total</th>
+                <td>₹ 29.5</td>
+            </tr>
+        </table>
+
+        <!-- Payment method buttons -->
+        <div class="payment-options">
+            <div class="payment-option-button payment-option-upi">
+                <img src="img/upipay.png" alt="UPI">
+                <div class="payment-option-label">Pay By UPI</div>
+            </div>
+
+            <div class="payment-option-button payment-option-card">
+                <img src="img/credit.jpg" alt="Credit Card">
+                <div class="payment-option-label">Pay By Credit / Debit Card</div>
+            </div>
+
+            <div class="payment-option-button payment-option-net-banking">
+                <img src="img/mdibank.jpg" alt="Net Banking">
+                <div class="payment-option-label">Pay By Net Banking</div>
+            </div>
+
+            <div class="payment-option-button payment-option-wallet">
+                <img src="img/wallet.jpg" alt="Wallet">
+                <div class="payment-option-label">Pay By Other Wallet</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/consultant.js"></script>
+
+</html>

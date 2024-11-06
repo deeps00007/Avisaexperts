@@ -48,10 +48,10 @@ const profiles = [
   }
   
   // Next Arrow Click Event
-  document.getElementById("nextArrow").addEventListener("click", () => {
-    currentIndex1 = (currentIndex1 + 1) % profiles.length; // Cycle through profiles
-    updateProfile();
-  });
+  // document.getElementById("nextArrow").addEventListener("click", () => {
+  //   currentIndex1 = (currentIndex1 + 1) % profiles.length; // Cycle through profiles
+  //   updateProfile();
+  // });
   
   // Previous Arrow Click Event
   document.getElementById("prevArrow").addEventListener("click", () => {
@@ -159,17 +159,17 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-function showTab(tabName, element) {
-  const tabs = document.querySelectorAll('.call-list-section');
-  tabs.forEach(tab => {
-      tab.classList.add('hidden-btn');
-  });
-  document.getElementById(tabName).classList.remove('hidden-btn');
+// function showTab(tabName, element) {
+//   const tabs = document.querySelectorAll('.call-list-section');
+//   tabs.forEach(tab => {
+//       tab.classList.add('hidden-btn');
+//   });
+//   document.getElementById(tabName).classList.remove('hidden-btn');
 
-  const icons = document.querySelectorAll('.icon-button');
-  icons.forEach(icon => {
-      icon.classList.remove('active');
-  });
-  element.classList.add('active');
-}
+//   const icons = document.querySelectorAll('.icon-button');
+//   icons.forEach(icon => {
+//       icon.classList.remove('active');
+//   });
+//   element.classList.add('active');
+// }
 

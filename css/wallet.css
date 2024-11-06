@@ -1,0 +1,100 @@
+.outer-wallet-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* Table Styling */
+.transaction-table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+
+.transaction-table caption {
+    margin: 20px 0px;
+    color: #000;
+    text-align: center;
+    /* headline 1 */
+    font-family: "Open Sans";
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.085px;
+}
+
+.transaction-table th,
+.transaction-table td {
+
+    padding: 12px;
+    text-align: center;
+}
+
+.transaction-table th {
+    background-color: #f96c00;
+    color: white;
+    font-weight: bold;
+}
+
+.transaction-table td {
+    color: #333;
+}
+
+/* Status Styling */
+.status-pending {
+    color: red;
+    font-weight: bold;
+}
+
+.status-done {
+    color: green;
+    font-weight: bold;
+}
+
+.red-clr {
+    color: red !important;
+    color: #F00;
+    text-align: center;
+
+    /* subtitle 1 */
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: normal;
+}
+.green-clr{
+    color: green !important;
+    color: #F00;
+    text-align: center;
+
+    /* subtitle 1 */
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: normal;
+}
+.t-body{
+    height: 400px ;
+    overflow-y: scroll;
+}
+@media (max-width:600px) {
+    .transaction-table{
+        width: 98%;
+        font-size: 12px;
+    }
+    .red-clr{
+        font-size: 12px;
+    }
+    .green-clr{
+        font-size: 12px;
+    }
+    #balance{
+        padding: 0px !important;
+    }
+}

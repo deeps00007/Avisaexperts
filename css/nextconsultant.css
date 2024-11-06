@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+}
+
+.final-call-con {
+    width: 90%;
+    margin: 20px auto;
+    margin-top: 140px;
+    margin-top: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.outeriprofilesec {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 20%;
+    border: 1px solid;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.status-active {
+    color: green;
+    font-size: 0.9em;
+}
+
+.job-title,
+.languages,
+.experience {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.verified {
+    padding: 10px 0px;
+    display: flex;
+    color: green;
+    font-size: 0.9em;
+}
+
+.verified span {
+    align-self: center;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    color: #555;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* .action-btn {
+padding: 5px 10px;
+border: 1px solid #007bff;
+color: #007bff;
+border-radius: 5px;
+cursor: pointer;
+font-size: 0.9em;
+} */
+
+.action-btn.chat {
+    background-color: #dff0ff;
+}
+
+.action-btn.call {
+    background-color: #e6f7e9;
+}
+
+.action-btn.video {
+    background-color: #fff0e5;
+}
+
+.info-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.about-me,
+.user-reviews {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.about-me h3,
+.user-reviews h3 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.about-me p,
+.user-reviews p {
+    font-size: 0.9em;
+    color: #555;
+}
+.about-me p, .user-reviews p {
+    display: flex;
+    align-items: center;
+}
+.about-me p, .user-reviews strong{
+    margin-left: 5px;
+}
+/* Responsive styles */
+@media (min-width:991px) {
+    .info-section{
+        padding-bottom: 80px;
+    }
+    .profile-info {
+        margin-left: 20px;
+        line-height: 24px;
+    }
+    .about-me h3,
+    .user-reviews h3{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .label{
+        font-size: 14px !important;
+    }
+    .profile-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-image {
+        margin-bottom: 10px;
+    }
+
+    .actions {
+        justify-content: flex-start;
+    }
+
+    .info-section {
+        flex-direction: column;
+    }
+}
+
+.services-final-call-con {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.service-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.price-info {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.price-current {
+    color: #028C4C;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.price-original {
+    color: #4E4B4B;
+    font-size: 16px;
+    text-decoration: line-through;
+}
+
+.button {
+    height: 43px;
+    padding: 5px 20px;
+    border: 2px solid #028C4C;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.vediolabel{
+    padding: 5px 30px;
+}
+
+.button .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.button.chat .icon {
+    width: 20px;
+}
+
+.button.call .icon {
+    width: 18px;
+}
+
+.button.video .icon {
+    width: 20px;
+}
+
+.label {
+    color: #028C4C;
+    text-align: center;
+
+    /* headline 2 */
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

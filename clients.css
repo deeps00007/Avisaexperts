@@ -1,0 +1,265 @@
+
+
+/* Background */
+.outer-client-sec {
+  position: relative;
+  bottom: 20px;
+  padding-right: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #D8E0FC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Container Styling */
+.header-container {
+  padding-left: 13px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(img/client-bg.png) lightgray -80px -241.64px / 105.674% 319.673% no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+
+.new-a-icon{
+  text-decoration: none;
+  color: #001E74 !important;
+  background: #D8E0FC;
+}
+.for-border{
+  border-bottom: 2px solid #c8bebe;
+}
+.table-container {
+  position: relative;
+  top: 16px;
+width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+
+.checkbox-container {
+      display: inline-block;
+      position: relative;
+  }
+
+  /* Dropdown menu styling */
+  .dropdown-menu {
+    display: none;
+position: absolute;
+top: 20px;
+left: 26px;
+background-color: white;
+border: 3px solid #ccc;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+z-index: 1;
+font-size: 24px;
+      
+  }
+
+  /* Table-like styling for options */
+  .dropdown-menu div {
+      padding: 10px;
+      cursor: pointer;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+  }
+
+  /* Last option should not have a bottom border */
+  .dropdown-menu div:last-child {
+      border-bottom: none;
+  }
+
+  /* Hover effect for each option */
+  .dropdown-menu div:hover {
+      background-color: #f0f0f0;
+  }
+
+
+
+
+/* Date Styling */
+.date {
+  font-size: 47px;
+  font-weight: bold;
+}
+
+.date .day {
+  color: #ffffff;
+  position: relative;
+  top: 12px;
+}
+
+.date .month {
+  color: #ff6600;
+}
+
+.date .year {
+  color: #ffffff;
+}
+
+/* Greeting Message */
+.greeting {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/* Calendar Icon */
+.calendar-icon {
+  display: inline-block;
+/* background-color: #ff6600; */
+color: #fff;
+padding: 2px 6px;
+border-radius: 3px;
+font-size: 1.2em;
+
+}
+
+/* Table Styling */
+.client-container {
+  display: flex;
+justify-content: center;
+width: 100%;
+/* max-width: 1200px; */
+margin-top: 23px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+.calendar-icon svg{
+  border: 2px solid #F58634;
+background-color: #F58634;
+height: 28px;
+width: 35px;
+border-radius: 7px;
+background: var(--primary-orange-color, #F58634);
+}
+
+th {
+  /* background-color: #f0f0f0; */
+  font-weight: bold;
+}
+
+td img {
+  /* width: 20px;
+  height: auto; */
+  margin-right: 5px;
+}
+
+/* Action Button Styling */
+.action-button {
+  padding: 8px 26px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  border: 3px solid green;
+}
+
+.action-call {
+  background-color: white;
+  color: green;
+  text-align: center;
+}
+
+.action-video {
+  background-color: white;
+  color: green;
+  text-align: center;
+  position: relative;
+  right: 16px;
+  width: fit-content;
+}
+
+/* Status Label Styling */
+.status {
+  /* padding: 5px 10px; */
+  border-radius: 15px;
+  color: #fff;
+  font-size: 0.9em;
+  padding: 7px 15px;
+}
+.client_name {
+  text-align: CENTER;
+  /* padding-bottom: 2px; */
+  padding-top: -29px;
+  /* margin-bottom: -42px; */
+  position: relative;
+
+  left: 5px;
+}
+
+.location_name {
+  text-align: center;
+  padding-bottom: -23px;
+  padding-top: -29px;
+  margin-bottom: -44px;
+  position: relative;
+  left: 0px;
+}
+
+.flag_name {
+  position: relative;
+}
+
+.status-waiting {
+  color: #ffc107;
+  background-color: #f7e82e8a;
+}
+
+.status-ongoing {
+  background-color: lightgreen;
+  color: darkgreen;
+}
+.status-payment {
+  background-color: lightblue;
+  color: darkblue;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 200px) and (max-width:900px) {
+  .client_name{
+    text-align: CENTER;
+
+padding-top: -29px;  /* margin-bottom: -42px; */
+position: relative;
+bottom: 0px;
+left: 5px;
+  }
+
+.date{
+font-size: 40px;
+
+}
+
+}

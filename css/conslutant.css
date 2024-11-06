@@ -16,7 +16,25 @@ header {
     align-items: center;
     height: auto;
 }
-
+.waiting-time{
+    position: relative;
+    bottom: 20px;
+}
+.waiting-time  .old-prices{
+    color: red;
+}
+.waiting-time .price{
+    font-weight: 500;
+    color: red;
+}
+.parent-card a{
+    text-decoration: none;
+    color: black;
+}
+.parent-card a:hover{
+    color: black;
+    text-decoration: none;
+}
 .card {
     height: 222px;
     margin: 10px 10px;
@@ -73,12 +91,30 @@ header {
 
 .btn-outline-success {
     margin: 0;
-    padding: 2px 13px;
+    padding: 2px 13px !important;
     /* margin-top: 4px; */
     margin-right: 10px;
     border: 2px solid;
 }
-
+.offline-btn{
+    color:#808080 !important;
+border: 2px solid #808080 !important;
+}
+.offline-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 32px;
+    gap: 2px;
+}
+.offline-line p{
+    margin: 0;
+}
+.offline-line p{
+    color:#808080 !important;
+}
 .btn-outline-success:hover {
     cursor: pointer !important;
     transform: translate(-1%, -1%);
@@ -227,12 +263,12 @@ cursor: pointer;
 }
 
 /* //tabs Css */
-.vedio-c-container {
-    display: none;
-    position: absolute;
-    right: 281px;
-    top: 80px;
+.tabs-con-container {
     z-index: 300;
+    position: absolute;
+    right: 280px;
+    top: 80px;
+    display: none;
     font-family: Arial, sans-serif;
     background-color: #f5f8ff;
     margin: 0;
@@ -240,11 +276,11 @@ cursor: pointer;
     width: 630px;
     height: auto;
 }
-.hidden {
-    display: block !important;
+.hidden-vedio-con{
+    display: block;
 }
 
-.header-section {
+.tabs-con-header {
     background-color: #f7a266;
     padding: 10px;
     display: flex;
@@ -252,7 +288,7 @@ cursor: pointer;
     align-items: center;
 }
 
-.header-section h2 {
+.tabs-con-header h2 {
     color: #000;
     font-family: "Open Sans";
     font-size: 16px;
@@ -261,12 +297,12 @@ cursor: pointer;
     line-height: normal;
 }
 
-.icon-group {
+.tabs-con-icon-group {
     display: flex;
     gap: 10px;
 }
 
-.icon-button {
+.tabs-con-icon-button {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -278,29 +314,29 @@ cursor: pointer;
     cursor: pointer;
 }
 
-.icon-button.video {
+.tabs-con-icon-button.video {
     background-color: #ccc;
 }
 
-.icon-button.phone {
+.tabs-con-icon-button.phone {
     background-color: #ccc;
 }
 
-.icon-button.message {
+.tabs-con-icon-button.message {
     background-color: #ccc;
 }
 
-.icon-button.active {
+.tabs-con-icon-button.active {
     background-color: #028C4C !important;
     border: 2px solid #fff;
 }
 
-
-.call-list-section {
+.tabs-con-list {
+    height: 500px;
     padding: 10px;
 }
 
-.call-item {
+.tabs-con-item {
     display: flex;
     align-items: center;
     background-color: white;
@@ -310,33 +346,33 @@ cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.call-item img {
+.tabs-con-item img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
 }
 
-.call-details-section {
+.tabs-con-details {
     flex-grow: 1;
     padding-left: 2px;
 }
 
-.call-details-section h4 {
+.tabs-con-details h4 {
     margin: 0;
     font-size: 16px;
 }
 
-.call-details-section p {
+.tabs-con-details p {
     margin: 0;
     color: #28a745;
 }
 
-.call-time {
+.tabs-con-time {
     font-size: 14px;
     color: #999;
 }
 
-.hidden {
+.tabs-con-hidden {
     display: none;
 }

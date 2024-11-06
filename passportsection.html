@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powerful Passport Template</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* General Styles */
+     
+
+        /* Slider Container */
+        .slider-passport {
+            padding: 20px 0px;
+            position: relative;
+            width: 100%;
+            max-width: 82%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .passport-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .passport-card {
+            width: 291px;
+            height: 433.675px;
+            background-color: #a42f2f;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+
+        .passport-card img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        /* Arrow Buttons */
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: #1a4a94;
+            padding: 40px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .why-choose-us h2 {
+            color: white;
+        }
+
+        .feature-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background-color: white;
+            color: #1a4a94;
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .feature-card h3 {
+            margin: 0;
+            color: var(--primary-deep-blue-color, #001E74);
+            text-align: center;
+            font-family: "Open Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: #000;
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .passport-header {
+            color: #000;
+            text-align: start;
+            /* headline 1 */
+            font-family: "Open Sans";
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.085px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Powerful Passport Section -->
+    <div class="slider-passport">
+        <h2 class="passport-header">Top Powerful Passports</h2>
+
+        <!-- <button class="slider-button prev" onclick="moveSlide(-1)">❮</button> -->
+        <div class="passport-container">
+            <div class="passport-card">
+                <img src="countryimages/passport1.jpg" alt="Germany Passport">
+            </div>
+            <div class="passport-card">
+                <img src="countryimages/passport2.jpg" alt="Sweden Passport">
+            </div>
+            <div class="passport-card">
+                <img src="countryimages/passport3.jpg" alt="Finland Passport">
+            </div>
+            <div class="passport-card">
+                <img src="countryimages/passport4.jpg" alt="Netherlands Passport">
+            </div>
+            <!-- Cloned elements for continuous sliding -->
+            <div class="passport-card">
+                <img src="countryimages/passport5.jpg" alt="Germany Passport">
+            </div>
+            <div class="passport-card">
+                <img src="countryimages/passport6.jpg" alt="Germany Passport">
+            </div>
+            <div class="passport-card">
+                <img src="countryimages/passport7.jpg" alt="Germany Passport">
+            </div>
+            <div class="passport-card">
+                <img src="countryimages/passport8.jpg" alt="Germany Passport">
+            </div>
+            <div class="passport-card">
+                <img src="countryimages/passport1.jpg" alt="Germany Passport">
+            </div>
+            <div class="passport-card">
+                <img src="countryimages/passport2.jpg" alt="Sweden Passport">
+            </div>
+            <div class="passport-card">
+                <img src="countryimages/passport3.jpg" alt="Finland Passport">
+            </div>
+            <div class="passport-card">
+                <img src="countryimages/passport4.jpg" alt="Netherlands Passport">
+            </div>
+        </div>
+        <!-- <button class="slider-button next" onclick="moveSlide(1)">❯</button> -->
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h3>INNOVATION</h3>
+                <p>Visa Experts lets you know if you need a tourism/business visa. The application process is quick and
+                    easy.</p>
+            </div>
+            <div class="feature-card">
+                <h3>SIMPLICITY</h3>
+                <p>One central place to process all your visas online. Your data can be used for recurring applications
+                    with one click.</p>
+            </div>
+            <div class="feature-card">
+                <h3>SECURITY</h3>
+                <p>World-class data centers and methods for securing accounts. Your credit card data is not exposed to
+                    government websites.</p>
+            </div>
+            <div class="feature-card">
+                <h3>ACCESSIBLE</h3>
+                <p>Use from any device. Get last-minute visas with our user-friendly website.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 1; // Start at the first slide (not the cloned one)
+        const slideInterval = 3000; // Time in milliseconds (3 seconds)
+        let interval;
+
+        function moveSlide(direction) {
+            const container = document.querySelector('.passport-container');
+            const totalCards = container.children.length;
+            const cardWidth = 311; // width of .passport-card + margin-right
+
+            // Calculate new index
+            currentIndex += direction;
+
+            // Wrap around if at the end
+            if (currentIndex < 0) {
+                currentIndex = totalCards - 2; // Go to the second last slide
+                setTimeout(() => {
+                    container.style.transition = 'none'; // Disable transition for instant move
+                    container.style.transform = `translateX(-${currentIndex * cardWidth}px)`; // Move instantly
+                }, 500); // Wait for transition time
+            } else if (currentIndex >= totalCards - 1) {
+                currentIndex = 1; // Go to the first slide
+                setTimeout(() => {
+                    container.style.transition = 'none'; // Disable transition for instant move
+                    container.style.transform = `translateX(-${currentIndex * cardWidth}px)`; // Move instantly
+                }, 500); // Wait for transition time
+            } else {
+                container.style.transition = 'transform 0.5s ease'; // Enable transition for normal slides
+            }
+
+            // Slide the container
+            container.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+            // Reset interval on manual slide
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(interval);
+            interval = setInterval(() => moveSlide(1), slideInterval);
+        }
+
+        // Start the automatic sliding
+        interval = setInterval(() => moveSlide(1), slideInterval);
+    </script>
+
+</body>
+
+</html>

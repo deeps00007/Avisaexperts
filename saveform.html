@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Application Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .saveform-container {
+            gap: 10px;
+            width: 90%;
+            margin: 10px auto;
+            display: flex;
+            height: 95vh;
+        }
+
+        .form-container {
+            height: 100%;
+            border: var(--Number, 1.151px) solid #D9D9D9;
+            background: #FFF;
+            width: 50%;
+            padding: 20px;
+            overflow-y: auto;
+            /* Enable scrolling */
+        }
+
+        .form-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            display: flex;
+            width: 49.064px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3.099px;
+        }
+
+        .form-header h1 {
+            color: #000;
+            font-family: "Open Sans";
+            font-size: 36.84px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .close-button {
+            width: 43px;
+            height: 43px;
+            color: white;
+            background: black;
+            font-size: 42px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+        }
+
+        .visa-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .visa-form label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .visa-form input {
+            padding: 8px;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid;
+        }
+
+        .visa-form .right {
+            float: right;
+        }
+
+        .contact-container {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.90) 100%), url(img/contact-bg.jpeg) lightgray 50% / cover no-repeat;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-size: cover;
+            overflow-y: auto;
+            /* Allow scrolling */
+            position: relative;
+        }
+
+
+        .contact-header {
+            padding: 10px;
+            background: #E9E9E9;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .contact-info h2 {
+            color: #000;
+            font-family: "Open Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .contact-info p {
+            color: #000;
+            font-family: "Open Sans";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .chat-window {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-right: 20px;
+            padding: 10px;
+            align-items: flex-start;
+            border-radius: 10px;
+            border: 1px solid #D9D9D9;
+            background: #E9EEFF;
+            position: sticky;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .chat-window input {
+            padding-left: 10px;
+            background-color: transparent;
+            line-height: 50px;
+            border: none;
+            width: 90%;
+        }
+
+        .chat-window p {
+            flex-grow: 1;
+            color: #999;
+        }
+
+        .send-button {
+            border-radius: 8px;
+            width: 10%;
+        }
+
+        .send-button {
+            width: fit-content;
+            background-color: #ff7e00;
+            border: none;
+            color: white;
+            font-size: 20px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .flex-form {
+            display: flex;
+        }
+
+        .flex-icon-form {
+            display: flex;
+        }
+
+        .button-container {
+            margin-top: 10px;
+            align-self: flex-end;
+            width: fit-content;
+            height: 100%;
+            padding: 11.51px 23.03px;
+            background: #3A82FF;
+            border-radius: 65.62px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4.61px;
+        }
+
+        .button-text {
+            color: white;
+            font-size: 16.12px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .icon-container {
+            width: 27.63px;
+            height: 27.63px;
+            position: relative;
+        }
+
+        .icon-square {
+            width: 19px;
+            height: 19px;
+            position: absolute;
+            top: 4.32px;
+            left: 4.31px;
+
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent overlay */
+            display: none;
+            /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            /* Ensure it appears above other content */
+        }
+
+        .modal {
+            background: black;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+            z-index: 101;
+            /* Ensure it appears above the overlay */
+        }
+
+        .modal-button {
+            margin: 10px;
+            padding: 8px 12px;
+            background: #3A82FF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .modal-button:hover {
+            background: #2b65d3;
+        }
+
+        .pera-form {
+            color: #000;
+            font-family: "Open Sans";
+            font-size: 16.118px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 20px 0px;
+        }
+
+        .chat-window svg {
+            align-self: center;
+            margin: 0px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="saveform-container">
+        <!-- Left Side Form -->
+        <div class="form-container">
+            <div class="form-header">
+                <img src="img/main-logo.svg" alt="A VISA EXPERTS Logo" class="logo">
+                <h1>A VISA EXPERTS</h1>
+                <button class="close-button">&times;</button>
+                <div class="modal-overlay" id="modalOverlay">
+                    <div class="modal">
+                        <p>Confirm ?</p>
+                        <button id="confirmClose" class="modal-button">Save</button>
+                        <button id="cancelClose" class="modal-button">Discard</button>
+                    </div>
+                </div>
+            </div>
+            <form class="visa-form">
+                <div class="flex-form">
+                    <label>DATE:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label>DATE:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label>DATE:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label>DATE:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label>DATE:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label>DATE:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label>DATE:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label>DATE:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label>DATE:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label>DATE:</label><input type="text">
+                </div>
+                <div class="flex-form">
+                    <label class="right">GENDER:</label><input type="text">
+                </div>
+                <p class="pera-form">B-37, TOP FLOOR, SEC-2, NOIDA U.P. - 201301, NEAR SEC-15 METRO STATION</p>
+                <div class="button-container">
+                    <div class="button-text">Save & Continue</div>
+                    <div class="icon-container">
+                        <div class="icon-square"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 28 28" fill="none">
+                                <path
+                                    d="M8.92306 4.55078H8.56847C7.49981 4.55078 6.47491 4.97531 5.71925 5.73097C4.96359 6.48663 4.53906 7.51153 4.53906 8.58019V19.8936C4.53906 20.8625 4.92393 21.7916 5.60899 22.4767C6.29405 23.1617 7.22319 23.5466 8.19201 23.5466M8.92306 4.55078V7.36216C8.92306 7.97283 9.16565 8.55848 9.59746 8.99029C10.0293 9.42209 10.6149 9.66468 11.2256 9.66468H13.9264C14.5371 9.66468 15.1228 9.42209 15.5546 8.99029C15.9864 8.55848 16.229 7.97283 16.229 7.36216V4.55078M8.92306 4.55078H16.229M8.19201 23.5466V17.5025C8.19201 16.5865 8.55589 15.708 9.2036 15.0603C9.85131 14.4126 10.7298 14.0487 11.6458 14.0487H16.4281C17.3441 14.0487 18.2226 14.4126 18.8703 15.0603C19.518 15.708 19.8819 16.5865 19.8819 17.5025V23.5466M8.19201 23.5466H19.8819M16.229 4.55078H16.2589C16.7126 4.55073 17.1619 4.64007 17.5811 4.81371C18.0002 4.98734 18.3811 5.24187 18.7019 5.56274L22.3548 9.21569C22.729 9.58988 23.0258 10.0341 23.2282 10.523C23.4307 11.0119 23.5349 11.5359 23.5349 12.0651V19.8936C23.5349 20.8625 23.15 21.7916 22.4649 22.4767C21.7799 23.1617 20.8507 23.5466 19.8819 23.5466"
+                                    stroke="white" stroke-width="1.72689" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Side Chat Contact -->
+        <div class="contact-container">
+            <div class="contact-header">
+                <img src="img/profile4.png" alt="User Profile" class="profile-pic">
+                <div class="contact-info">
+                    <h2>Saurav</h2>
+                    <p>+91 23234456664</p>
+                    <div class="flex-icon-form">
+                        <p>sauravprajapati08@gmail.com</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M15.24 2H11.346C9.582 2 8.184 2 7.091 2.148C5.965 2.3 5.054 2.62 4.336 3.341C3.617 4.062 3.298 4.977 3.147 6.107C3 7.205 3 8.608 3 10.379V16.217C3 17.725 3.92 19.017 5.227 19.559C5.16 18.649 5.16 17.374 5.16 16.312V11.302C5.16 10.021 5.16 8.916 5.278 8.032C5.405 7.084 5.691 6.176 6.425 5.439C7.159 4.702 8.064 4.415 9.008 4.287C9.888 4.169 10.988 4.169 12.265 4.169H15.335C16.611 4.169 17.709 4.169 18.59 4.287C18.3261 3.61329 17.8653 3.03474 17.2678 2.62678C16.6702 2.21883 15.9635 2.00041 15.24 2Z"
+                                fill="#F58634" />
+                            <path
+                                d="M6.60156 11.3963C6.60156 8.67028 6.60156 7.30728 7.44556 6.46028C8.28856 5.61328 9.64556 5.61328 12.3616 5.61328H15.2416C17.9566 5.61328 19.3146 5.61328 20.1586 6.46028C21.0026 7.30728 21.0016 8.67028 21.0016 11.3963V16.2163C21.0016 18.9423 21.0016 20.3053 20.1586 21.1523C19.3146 21.9993 17.9566 21.9993 15.2416 21.9993H12.3616C9.64656 21.9993 8.28856 21.9993 7.44556 21.1523C6.60156 20.3053 6.60156 18.9423 6.60156 16.2163V11.3963Z"
+                                fill="#F58634" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-window">
+                <input type="text" placeholder="Write your messages..">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2ZM12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM14.8 13.857C14.8933 13.7629 15.0044 13.6882 15.1268 13.6374C15.2492 13.5866 15.3804 13.5606 15.513 13.561C15.6455 13.5614 15.7766 13.5881 15.8987 13.6396C16.0208 13.6911 16.1315 13.7663 16.2243 13.8609C16.317 13.9556 16.3901 14.0677 16.4391 14.1908C16.4882 14.3139 16.5123 14.4455 16.5101 14.578C16.5078 14.7105 16.4792 14.8413 16.426 14.9626C16.3728 15.084 16.2959 15.1936 16.2 15.285C15.0796 16.3861 13.5709 17.0022 12 17C10.4291 17.0022 8.92039 16.3861 7.8 15.285C7.61503 15.0984 7.51093 14.8465 7.5102 14.5838C7.50948 14.321 7.61219 14.0685 7.79613 13.8809C7.98006 13.6933 8.23045 13.5856 8.49316 13.5811C8.75586 13.5767 9.00977 13.6758 9.2 13.857C9.94658 14.5916 10.9526 15.0023 12 15C13.09 15 14.077 14.565 14.8 13.857ZM8.5 8C8.89782 8 9.27936 8.15804 9.56066 8.43934C9.84196 8.72064 10 9.10218 10 9.5C10 9.89782 9.84196 10.2794 9.56066 10.5607C9.27936 10.842 8.89782 11 8.5 11C8.10218 11 7.72064 10.842 7.43934 10.5607C7.15804 10.2794 7 9.89782 7 9.5C7 9.10218 7.15804 8.72064 7.43934 8.43934C7.72064 8.15804 8.10218 8 8.5 8ZM15.5 8C15.8978 8 16.2794 8.15804 16.5607 8.43934C16.842 8.72064 17 9.10218 17 9.5C17 9.89782 16.842 10.2794 16.5607 10.5607C16.2794 10.842 15.8978 11 15.5 11C15.1022 11 14.7206 10.842 14.4393 10.5607C14.158 10.2794 14 9.89782 14 9.5C14 9.10218 14.158 8.72064 14.4393 8.43934C14.7206 8.15804 15.1022 8 15.5 8Z"
+                        fill="black" fill-opacity="0.4" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M18.89 4.69185C18.4916 4.29247 18.0184 3.97549 17.4975 3.75903C16.9765 3.54257 16.418 3.43087 15.8539 3.43032C15.2898 3.42976 14.7311 3.54036 14.2097 3.75578C13.6884 3.97121 13.2146 4.28726 12.8154 4.68585L3.17425 14.3201C3.09462 14.3997 3.00008 14.4628 2.89605 14.5059C2.79203 14.5489 2.68054 14.5711 2.56795 14.571C2.45537 14.571 2.34389 14.5488 2.23989 14.5057C2.13589 14.4625 2.04141 14.3993 1.96183 14.3197C1.88224 14.2401 1.81913 14.1455 1.77608 14.0415C1.73303 13.9375 1.7109 13.826 1.71094 13.7134C1.71098 13.6008 1.73319 13.4893 1.77631 13.3853C1.81943 13.2814 1.88262 13.1869 1.96225 13.1073L11.6043 3.473C12.1611 2.90935 12.8239 2.46142 13.5546 2.15499C14.2853 1.84856 15.0693 1.68969 15.8616 1.68752C16.654 1.68536 17.4389 1.83994 18.1712 2.14237C18.9035 2.44479 19.5688 2.8891 20.1287 3.44969C20.6887 4.01028 21.1321 4.6761 21.4337 5.40879C21.7352 6.14149 21.8889 6.9266 21.8857 7.71891C21.8826 8.51123 21.7228 9.2951 21.4155 10.0254C21.1082 10.7557 20.6594 11.418 20.0951 11.9741L10.8165 21.2407C10.1436 21.9062 9.23448 22.2782 8.28802 22.2755C7.34155 22.2727 6.43467 21.8954 5.76559 21.226C5.0965 20.5565 4.71963 19.6495 4.71735 18.703C4.71506 17.7565 5.08755 16.8476 5.7534 16.175L15.0337 6.893C15.1953 6.73686 15.4119 6.65047 15.6366 6.65242C15.8613 6.65437 16.0763 6.74452 16.2352 6.90344C16.3942 7.06236 16.4843 7.27734 16.4863 7.50208C16.4882 7.72682 16.4018 7.94334 16.2457 8.105L6.9654 17.3879C6.62113 17.7391 6.42941 18.2121 6.4319 18.7039C6.43438 19.1958 6.63087 19.6668 6.97866 20.0146C7.32646 20.3624 7.79745 20.5589 8.2893 20.5614C8.78115 20.5638 9.25411 20.3721 9.6054 20.0279L18.884 10.7613C19.689 9.95689 20.1418 8.86584 20.1429 7.72781C20.1441 6.58978 19.6934 5.49784 18.89 4.69185Z"
+                        fill="black" fill-opacity="0.4" />
+                </svg>
+                <button class="send-button">➤</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Get the modal elements
+    const modalOverlay = document.getElementById("modalOverlay");
+    const closeButton = document.querySelector(".close-button");
+    const confirmClose = document.getElementById("confirmClose");
+    const cancelClose = document.getElementById("cancelClose");
+
+    // Show the modal with dimmed background when the close button is clicked
+    closeButton.addEventListener("click", () => {
+        modalOverlay.style.display = "flex";
+    });
+
+    // Close the form when "Yes" is clicked
+    confirmClose.addEventListener("click", () => {
+        modalOverlay.style.display = "none";
+        // Additional logic to handle form closure
+        alert("Form closed.");
+    });
+
+    // Hide the modal and overlay when "No" is clicked
+    cancelClose.addEventListener("click", () => {
+        modalOverlay.style.display = "none";
+    });
+</script>
+
+
+
+</html>

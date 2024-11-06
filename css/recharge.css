@@ -1,0 +1,130 @@
+   /* Basic reset */
+
+        /* Container */
+        .recgange-container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Header section */
+        .header {
+            color: var(--primary-orange-color, #F58634);
+
+            /* headline 1 */
+            font-family: "Open Sans";
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.085px;
+        }
+
+        .balance {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            margin: 2px 0px;
+        }
+
+        /* Title section */
+        .title {
+            text-align: start;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Grid for recharge options */
+        .recharge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+        }
+
+        /* Individual recharge box */
+        .recharge-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #ccc;
+            padding: 15px 0px 0px 0px;
+            border-radius: 8px;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+
+        .recharge-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Most Popular Tag */
+        .most-popular {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: #ff6a00;
+            color: #fff;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 5px 13px;
+            border-radius: 3px;
+        }
+
+
+        /* Recharge amount */
+        .amount {
+            position: relative;
+            top: 10px;
+            color: #000;
+            text-align: center;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.085px;
+        }
+
+        /* Extra amount */
+        .extra {
+            font-size: 14px;
+            color: #666;
+            background-color: #f2f6ff;
+            display: flex;
+            padding: 10px 74px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            font-size: 12px;
+            font-weight: 600;
+            font-style: normal;
+
+        }
+
+        @media (min-width:991px) {
+            .amount {
+                font-size: 34px;
+            }
+
+            .recharge-box {
+                width: 238px;
+                height: 110px;
+                flex-shrink: 0;
+            }
+
+            .recharge-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(233px, 1fr));
+                /* gap: 15px; */
+            }
+        }
