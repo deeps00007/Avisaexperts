@@ -1,0 +1,353 @@
+.chat-fixing {
+    width: auto;
+}
+
+main {
+    height: 100vh;
+}
+
+.icon-button {
+    background: var(--primary-orange-color, #F58634);
+    color: white;
+}
+
+.info-item {
+    width: 100%;
+}
+
+.button-containers {
+    display: flex;
+    gap: 10px;
+}
+
+.call-description-con {
+    height: 100vh;
+    width: 75%;
+    overflow-y: scroll;
+}
+
+.call-left-right {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.call-right-history {
+    align-items: center;
+    width: 60%;
+    background-color: white
+}
+
+.outervoicecall {
+    height: 100%;
+}
+
+.flex-heading-detail {
+    justify-content: center;
+}
+
+.calls-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: auto;
+    background-color: #fff;
+    padding: 15px;
+    overflow-y: auto;
+    border-left: 1px solid #ddd;
+}
+
+.calls-detail h3 {
+    display: flex;
+    width: 236px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #E9E9E9;
+}
+
+.calls-detail .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calls-detail .profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.calls-detail .profile-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.calls-detail .info p {
+    margin-bottom: 10px;
+}
+
+.calls-detail .action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* //call history container */
+.outer-audio-history {
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    padding: 20px;
+}
+
+.call-history-container {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.call-history-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.call-history-header .icon {
+    font-size: 1.2rem;
+}
+
+.call-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.call-item:last-child {
+    border-bottom: none;
+}
+
+.call-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.call-time {
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.call-number {
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.call-number .call-icon {
+    font-size: 1rem;
+    color: green;
+}
+
+.call-number .call-icon.missed {
+    color: red;
+}
+
+.audio-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.animated-audio-bar {
+    display: flex;
+    gap: 2px;
+    margin-left: 5px;
+}
+
+.bar {
+    width: 3px;
+    background-color: #4caf50;
+    animation: pulse 0.5s infinite;
+}
+
+/* Individual bar animation delays to create wave effect */
+.bar:nth-child(1) {
+    height: 10px;
+    animation-delay: 0.1s;
+}
+
+.bar:nth-child(2) {
+    height: 15px;
+    animation-delay: 0.2s;
+}
+
+.bar:nth-child(3) {
+    height: 8px;
+    animation-delay: 0.3s;
+}
+
+.bar:nth-child(4) {
+    height: 18px;
+    animation-delay: 0.4s;
+}
+
+.bar:nth-child(5) {
+    height: 12px;
+    animation-delay: 0.5s;
+}
+
+.bar:nth-child(6) {
+    height: 20px;
+    animation-delay: 0.3s;
+}
+
+.bar:nth-child(7) {
+    height: 14px;
+    animation-delay: 0.4s;
+}
+
+/* Animation for the audio bars */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.5);
+    }
+}
+
+.audio-duration {
+    font-size: 0.8rem;
+    color: #555;
+    margin-left: 5px;
+}
+
+.call-status {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.call-status .status-icon {
+    color: red;
+    font-size: 1.2rem;
+}
+
+.call-status.outgoing {
+    color: #333;
+}
+
+.call-status span {
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
+@media (max-width:991px) {
+    .chat-section-con {
+        flex-direction: row;
+        display: flex;
+    }
+
+
+}
+
+@media (max-width:991px) {
+    .call-description-con {
+        width: 85%;
+    }
+
+    .chat-fixing {
+        width: 18%;
+    }
+
+    .chat-sidebar {
+        display: block;
+
+        overflow-x: scroll;
+    }
+
+    .client-for-chat-n-msg {
+        display: none;
+    }
+
+    .client-for-chat {
+        flex-direction: column;
+    }
+
+    /* .client-for-chats-information{
+        display: none;
+    } */
+}
+
+@media (max-width:767px) {
+    .call-left-right {
+        flex-direction: column-reverse;
+
+    }
+
+    .calls-detail {
+        width: 100%;
+    }
+
+    .call-right-history {
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .outer-chat-interface{
+    height: 100vh;
+}
+    .chat-section-con {
+        flex-direction: column;
+    }
+
+    /* .client-for-chat-list {
+        flex-direction: row;
+    } */
+     .call-description-con{
+        width: 100%;
+     }
+     .chat-fixing{
+        width: 100%;
+     }
+    .chat-sidebar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+    }
+   
+    .client-for-chat{
+        flex-direction: row;
+    }
+}

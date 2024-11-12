@@ -1,0 +1,347 @@
+  * {
+            font-family: "Open Sans";
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+
+        .hero {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('background.jpg') center/cover no-repeat;
+        }
+
+        .overlay {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), url(../adminimg/adminimgbg.png) lightgray 50% / cover no-repeat;
+            filter: blur(6.75px);
+        }
+
+        .hero-content {
+            height: 100vh;
+            padding: 0px 60px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            color: white;
+            z-index: 1;
+        }
+
+        .hero-text {
+            height: 100vh !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+
+        .hero-text button {
+            width: fit-content;
+        }
+
+        /* .hero-text {
+    flex: 1;
+    max-width: 500px;
+} */
+
+        .hero-text .logo-contaimer {
+            display: flex;
+            flex-direction: column;
+            width: 276px;
+            height: 119px;
+            position: relative;
+            bottom: 100px;
+        }
+
+        .hero-text .logo-contaimer img {
+            width: 127.854px;
+            height: 92.862px;
+        }
+
+        .hero-text .logo-contaimer::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border-radius: var(--Number, 508px);
+            opacity: 0.1;
+            background: #FFF;
+            mix-blend-mode: plus-lighter;
+            filter: blur(25px);
+        }
+
+        .hero-text h1 {
+            color: #FFF;
+            -webkit-text-stroke-width: 1;
+            -webkit-text-stroke-color: #A19C9C;
+            font-family: "Open Sans";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            letter-spacing: 0.1px;
+        }
+
+        .hero-text span {
+            color: var(--primary-deep-blue-color, #001E74);
+            font-family: "Open Sans";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            letter-spacing: 0.1px;
+        }
+
+        .hero-text p {
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .login-btn {
+            cursor: pointer;
+            display: flex;
+            padding: 6.343px 25.37px;
+            justify-content: center;
+            align-items: center;
+            gap: 6.343px;
+            border-radius: 41.227px;
+            color: white;
+            font-size: 22.199px;
+            background: var(--primary-deep-blue-color, #001E74);
+        }
+
+        .gallery-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-left: 30px;
+            flex: 1;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            overflow: hidden;
+            height: 100vh;
+            /* Set a height for the gallery */
+            width: 258px;
+            /* Adjust width as needed */
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 280px;
+            border-radius: 10px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-bottom-to-top {
+            height: 100vh;
+            animation: scroll-bottom-to-top 10s linear infinite;
+        }
+
+
+
+        .gallery-top-to-bottom {
+            animation: scroll-top-to-bottom 10s linear infinite;
+        }
+
+
+        @media (max-width:1200px) {
+            .logo-contaimer {
+                bottom: 50px !important;
+            }
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .gallery {
+                display: none;
+            }
+
+            .logo-contaimer {
+                bottom: 0px !important;
+            }
+
+            .hero-content {
+                padding: 0px 16px;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .hero-text {
+                align-items: center;
+            }
+
+            .logo-contaimer {
+                width: auto !important;
+            }
+
+            .hero-text p {
+                font-size: 13px;
+            }
+
+            .gallery-wrapper {
+                flex-direction: row;
+                margin-top: 20px;
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2em;
+            }
+
+            .gallery-wrapper {
+                flex-direction: column;
+            }
+        }
+
+
+      
+        /* //Pop Up Css */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            width: 400px;
+            height: auto;
+            line-height: 50px;
+            flex-shrink: 0;
+            padding:30px 20px;
+            border-radius: 10px;
+            position: relative;
+            text-align: center;
+            border-radius: 15px;
+            border: 0.75px solid #FFF;
+            background: rgba(217, 217, 217, 0.50);
+            backdrop-filter: blur(18.75px);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        h2 {
+            padding-bottom: 10px;
+            color: var(--primary-deep-blue-color, #001E74);
+text-align: center;
+font-family: "Open Sans";
+font-size: 25.5px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.064px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .show-hide-icon {
+            position: absolute;
+            right: 32px;
+            cursor: pointer;
+            font-size: 12px;
+            align-self: center;
+        }
+
+        .forgot-password {
+            align-self: flex-end;
+            font-size: 12px;
+            color: #0A58CA;
+            text-decoration: none;
+        }
+
+        .continue-btn {
+            padding: 10px;
+            background-color: #FFA500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .popup p {
+            font-size: 14px;
+        }
+
+        .popup a {
+            color: #0A58CA;
+            text-decoration: none;
+        }
+        .userid{
+            border: none;
+        }
+        .hidepassword{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .hidepassword input{
+            width: 100%;
+        }
+        .hideusername{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .hideusername input{
+            width: 100%;
+        }
+        .show-hide-icon {
+    cursor: pointer;
+}

@@ -47,7 +47,13 @@ main {
 .logo {
     display: none;
 }
-
+.allmenutabs{
+    height: 65vh;
+}
+.logoutmenu{
+    position: relative;
+    top: 40px !important;
+}
 .nav-item {
     padding-left: 5px;
     position: relative;
@@ -55,7 +61,7 @@ main {
 }
 
 .nav-item a {
-    height: 70px;
+    height: 53px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -142,6 +148,7 @@ main {
     display: block;
     width: 120px;
     height: 20px;
+    padding-left: 12px;
 }
 
 /* CONTENT */
@@ -546,9 +553,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+   
 }
-
+.newlogo svg{
+    width: 70px;
+    height: 74px;
+}
 .newlogo svg,
 h5 {
     align-self: center;
@@ -1982,4 +1992,222 @@ input:checked+.slider {
 
 .search-dash{
     border: none;
+}
+
+@media (max-width:1280px) {
+    .main-menu{
+        width: 80px;
+    }
+    .nav-text{
+        display: none;
+    }
+    .newlogo svg, h5{
+        text-align: center;
+        font-size: 10px;
+    }
+    .for-padding-left{
+        padding-left: 90px;
+    }
+    .dashboard-container{
+        padding-left: 80px;
+     height: auto;
+    }
+    .dashboard-title{
+        font-size: 20px;
+    }
+    .dashboard-subtitle{
+        font-size: 22px;
+    }
+    .control-container{
+        flex-wrap: nowrap;
+    }
+    .container{
+        top: 0px;
+        width: 100%;
+      
+    }
+    .for-padding-left{
+        padding-top: 52px;
+    }
+    .dash-flex-grid{
+        flex-wrap: wrap;
+    }
+    .total-client{
+        font-size: 15px;
+    }
+    .count-client {
+        font-size: 30px;
+    }
+    .one-section div{
+        line-height: 16px;
+    }
+}
+
+@media (max-width:980px) {
+    
+    .for-padding-left{
+        top: 30px;
+    }
+    .container{
+        display: flex ;
+        padding: 0px;
+        flex-direction: column ;
+    }
+    .dashboard-info{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .control-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+    .dash-flex-grid{
+        flex-direction: column;
+    }
+    .big-sec-dash{
+        width: 100%;
+    }
+    .calender-section{
+        width: 100%;
+    }
+    .calendar{
+        width: 100%;
+    }
+    .flex-max-box{
+        flex-direction: column;
+    }
+    .big-schedule{
+        width: 100%;
+    }
+    .schedule-container{
+        width: 100%;
+    }
+}
+@media (max-width:767px) {
+    .flex-collumn-fours{
+        gap: 10px;
+    }
+        .container-list{
+            overflow-x: scroll;
+        }
+    .dash-flex-grid{
+        padding: 1px;
+
+    }
+    .flex-collumn-fours{
+        flex-direction: column;
+    }
+    .one-section{
+        width: 100%;
+    }
+}
+@media (max-width:600px) {
+    .control-container{
+        overflow-x: scroll;
+        justify-content: start;
+        gap: 20px;
+        padding-left: 40px;
+    }
+    .toggle-button{
+        width: 37px;
+        height: 12px;
+
+    }
+    .newlogo svg{
+        height: 50px;
+        width: 50px;
+    }
+    .newlogo h5{
+        display: none;
+    }
+    .dashboard-info{
+        padding-right: 12%;
+    }
+    .slider{
+        width: 15px;
+        height: 15px;
+        top: 3px;
+    }
+    .golden-card-container{
+        flex-direction: column;
+
+    }
+    .big-sec-dash{
+        display: inline;
+        padding: 10px;
+    }
+    .big-schedule{
+        padding: 10px;
+    }
+    .card{
+        width: 100%;
+    }
+    .container{
+        padding: 0px;
+    }
+}
+@media (max-width:500px) {
+
+    .four-section{
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+    }
+    .big-sec-dash .client-count{
+        width: 100%;
+        height: auto;
+    }
+    .profile-img{
+        width: 30px;
+        height: 30px;
+    }
+    .form-text{
+        font-size: 10px;
+    }
+    .control-container{
+        padding: 10px 10px;
+    }
+    .dashboard-title{
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    .dashboard-subtitle{
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    .form-icon{
+        height: 32px;
+    }
+    .form-button-inner {
+        gap: 0px;
+    }
+    .notification-icon {
+        width: 22px;
+        height: 22px;
+    }
+    .notification-icon img{
+        height: 100%;
+        width: 100%;
+    }
+    .form-icon img{
+        height: 100%;
+    }
+    .options.visible{
+        position: absolute ;
+        top: 76px;
+        /* left: -8px; */
+    }
+    .option{
+        z-index: 200000;
+    }
+}
+@media (max-width:400px) {
+    .control-container{
+        gap: 10px;
+    }
 }

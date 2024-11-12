@@ -45,7 +45,9 @@
             grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             gap: 15px;
         }
-
+        .recharge-grid a{
+            text-decoration: none;
+        }
         /* Individual recharge box */
         .recharge-box {
             display: flex;

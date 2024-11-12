@@ -1,0 +1,90 @@
+    /* General styling */
+    .outervoicecall {
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        margin: 0;
+      }
+  
+      /* Container styling */
+      .call-container {
+          /* background: url(img/contact-bg.jpeg) no-repeat center center/cover; */
+        text-align: center;
+        width: 250px;
+        padding: 20px;
+        border-radius: 20px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* background: #ffffff; */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+  
+      /* Profile image styling */
+      .profile-image {
+        align-self: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+  
+      /* Text styling */
+      .call-status {
+        font-size: 1rem;
+        color: #333;
+        margin: 0;
+      }
+  
+      .call-timer {
+        font-size: 1rem;
+        color: #888;
+        margin: 5px 0;
+      }
+  
+      .username {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+      }
+  
+      /* Button container styling */
+      .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+  
+      /* Button styling */
+      .action-button {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: #fff;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+  
+      .action-button:active {
+        transform: scale(0.9);
+      }
+  
+      .mute-button,
+      .speaker-button {
+        background-color: #e0e0ff;
+        color: #333;
+      }
+  
+      .end-call-button {
+        background-color: red;
+      }

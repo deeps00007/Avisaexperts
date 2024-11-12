@@ -1,0 +1,149 @@
+.outer-chat-bx {
+    font-family: "Open Sans";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 30px 0px;
+}
+
+.chat-container {
+    background: url(img/nextconslutantbg.png) no-repeat center center/cover;
+    width: 60%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-next-chat {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #f8d5ba;
+    position: relative;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.header-info span {
+    font-size: 12px;
+    color: #666;
+}
+
+.status {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    color: #666;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.50);
+}
+
+.chat-messages {
+    padding: 10px;
+    height: 400px;
+    overflow-y: auto;
+    background: url('background.png') no-repeat center center;
+    background-size: cover;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.message.left {
+    flex-direction: row;
+}
+
+.message.right {
+    flex-direction: row-reverse;
+}
+
+.message-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.message-text {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 15px;
+    background: #e0e7ff;
+    font-size: 14px;
+    color: #333;
+}
+
+.message.right .message-text {
+    background: #cce5ff;
+    color: #333;
+}
+
+.message-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+.message-input .svg{
+    padding: 0px 5px;
+    align-self: center;
+}
+.message-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-right: 10px;
+}
+
+.message-input button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--primary-deep-blue-color, #001E74);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 32px;
+    font-size: 16px;
+    cursor: pointer;
+}  
+.outer-chat-bx{
+    position: relative;
+    top: 140px;
+    }
+  .message-input button svg{
+    align-self: center;
+}
+@media (max-width:767px) {
+    .chat-container{
+        width: 80%;
+    }
+}
+@media (max-width:450px) {
+    .chat-container{
+        width: 95%;
+    }
+}

@@ -1,0 +1,173 @@
+.outer-travel-container {
+    font-family: "Open Sans";
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f5f7fa;
+}
+
+*{
+    font-family: "Open Sans" !important;
+}
+.travel-section {
+    margin-top: 64px;
+    height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 60px 60px 0px 60px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.text-content {
+  max-width: 500px;
+}
+
+.text-content h1 {
+    color: #333;
+font-family: "Open Sans";
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.24px;
+}
+
+.text-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.transit-consult {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.transit-consult:hover {
+  background-color: #333;
+}
+
+.image-content {
+  position: relative;
+  width: 50%;
+  height: 580px;
+}
+
+.location-tag {
+  position: absolute;
+  background-color: #f0f4ff;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 18px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.location-tag::before {
+  content: "✈️";
+  margin-right: 8px;
+}
+
+.image-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.image-content img{
+    height: 100%;
+    width: 100%;
+}
+.image-card p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.content-section {
+    background-color: #ffffff;
+    padding: 0px 60px 60px 60px;
+    border-radius: 8px;
+  }
+  
+  .intro h1 {
+    font-size: 2rem;
+    color: #1a3c8b;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .intro p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .features, .usage {
+    margin-bottom: 2rem;
+  }
+  
+  .features h2, .usage h2 {
+    font-size: 1.5rem;
+    color: #1a3c8b;
+    margin-bottom: 1rem;
+  }
+  
+  .features p, .usage p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .features p strong, .usage p strong {
+    font-weight: bold;
+    color: #1a3c8b;
+  }
+  .doc-container{
+    padding: 60px;
+  }
+  @media (max-width:600px) {
+    .image-content{
+        width: 100%;
+        height: auto;
+    }
+    .travel-section{
+        padding: 16px;
+    }
+    .content-section{
+        padding: 16px;
+    }
+  }
+  @media (max-width:1100px) {
+    .text-content{
+      max-width: 100%;
+    }
+    .image-content{
+        width: 100%;
+    }
+
+  }
+  

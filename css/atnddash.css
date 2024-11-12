@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.outer-atnd-con {
+    /* background-color: #e6e9f5; */
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.atnd-container {
+    width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.atnd-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.atnd-header h2 {
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.leave-request-btn {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background-color: #002878;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.overview {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.overview-card {
+    flex: 1;
+    border-radius: 5px;
+    min-width: 180px;
+    border-radius: 8px;
+    text-align: center;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.overview-card h3 {
+    padding: 10px 0px;
+    border-radius: 5px;
+    background: linear-gradient(106deg, #FCE9B1 21.1%, #F7B4AD 86.45%);
+    height: 125px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    color: #000;
+font-family: "Open Sans";
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.overview-card h3 .icon-atnd {
+    height: 95px;
+    background: white;
+    width: 95px;
+    border-radius: 50%;
+}
+
+.overview-card h3 .icon-atnd svg {
+    position: relative;
+    top: 21px;
+}
+
+.overview-card .value {
+    height: 50px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.attendance-logs {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.container{
+    top: 0px;
+}
+.atnd-title{
+    color: #000;
+    /* headline 1 */
+    font-family: "Open Sans";
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.085px;
+}
+.atnd-sub-title{
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.table-header h3 {
+    font-size: 1.2rem;
+}
+
+.atnd-logs {
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.075px;
+}
+
+.dropdowns {
+    display: flex;
+    gap: 10px;
+}
+
+.dropdowns select {
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.attendance-table th {
+    background-color: #ff5722;
+    color: white;
+}
+
+.attendance-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.present {
+    background-color: #4caf50;
+}
+
+.on-leave {
+    background-color: #ff9800;
+}
+
+.holiday {
+    background-color: #ff5722;
+}
+
+.responsive-table {
+    overflow-x: auto;
+}
+
+/* .leave-request-btn svg{
+    position: relative;
+    top: 5px;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overview {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .overview-card {
+        width: 100%;
+    }
+
+    .dropdowns {
+        flex-direction: column;
+    }
+
+    .leave-request-btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}

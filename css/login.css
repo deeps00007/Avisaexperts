@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #414345, #232526);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 40px;
+    width: 90%;
+    max-width: 450px;
+    max-height: 687px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.number-place input{
+    width: 281px;
+}
+.phone-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 13px;
+    position: relative;
+    /* right: 13px; */
+    margin: 0px 0px 0px -14px;
+
+}
+/* .phone-detail button{
+    position: relative;
+    left: 13px;
+} */
+
+.country-code input{
+    width: 80%;
+    height: auto;
+    margin-left: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #555;
+}
+.otp-main{
+    display: flex;
+    justify-content: space-between;
+    gap: 13px;
+}
+.otp-main button{
+    width: 30%;
+    height: 36px;
+    text-align: center;
+    padding-bottom: 13px;
+}
+.otp-main input{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 36px;
+    width: 70%;
+}
+.resend{
+    display: flex;
+    gap: 13px;
+}
+.resend p{
+    font-size: 12px;
+}
+
+.resend a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+
+
+.resend a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    form input, button {
+        font-size: 0.9rem;
+    }
+    .phone-detail{
+        flex-wrap: wrap;
+    }
+    .number-place input {
+        width: auto;
+
+    }
+
+}

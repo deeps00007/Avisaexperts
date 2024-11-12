@@ -100,10 +100,8 @@
         }
 
         @media (min-width:991px) {
-            .payment-details-container {
-                max-width: 90%;
-            }
-
+           
+        
             .payment-option-button {
                 width: 23%;
                 height: auto;
