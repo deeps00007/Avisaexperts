@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f4fa;
+    padding: 20px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card, .attendance, .rewards, .reviews, .earnings, .calendar, .schedule, .client-table, .employee-recognition {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+.card {
+    text-align: center;
+}
+
+.number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.change {
+    color: green;
+}
+
+.change.red {
+    color: red;
+}
+
+/* Attendance */
+.attendance .rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rate-graph {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    display: flex;
+}
+
+.sick-leave { background: yellow; flex: 1; }
+.day-off { background: blue; flex: 1; }
+.on-time { background: navy; flex: 2; }
+
+.total-days {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-days div {
+    text-align: center;
+}
+
+/* Client Table */
+.client-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.client-table th, .client-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.client-table th {
+    background-color: #f9fafc;
+}
+
+.client-table button {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Employee Recognition */
+.employee-recognition {
+    text-align: center;
+}
+
+.employee-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.employee img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.employee p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Top Cards -->
+        <div class="card">
+            <h4>Total Clients</h4>
+            <p class="number">1048</p>
+            <p class="change">↑ 3.5% Than last month</p>
+        </div>
+
+        <div class="card">
+            <h4>Total Calls</h4>
+            <p class="number">144</p>
+            <p class="change red">↓ 1.5% Than last month</p>
+        </div>
+
+        <div class="card">
+            <h4>Total Video Calls</h4>
+            <p class="number">448</p>
+            <p class="change">↑ 10.5% Than last month</p>
+        </div>
+
+        <div class="card">
+            <h4>Total Chats</h4>
+            <p class="number">418</p>
+            <p class="change">↑ 5.5% Than last month</p>
+        </div>
+
+        <!-- Attendance & Days -->
+        <div class="attendance">
+            <h4>Attendance Rate</h4>
+            <div class="rate">
+                <p>90%</p>
+                <div class="rate-graph">
+                    <span class="sick-leave"></span>
+                    <span class="day-off"></span>
+                    <span class="on-time"></span>
+                </div>
+            </div>
+            <div class="total-days">
+                <div class="working-days">
+                    <span>25 / 30</span>
+                    <p>Total Working Days</p>
+                </div>
+                <div class="leave-days">
+                    <span>5 / 5</span>
+                    <p>Total Leave Days</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rewards, Reviews, and Daily Earnings -->
+        <div class="rewards">
+            <h4>Rewards</h4>
+            <p>25%</p>
+            <p>Bronze</p>
+        </div>
+
+        <div class="reviews">
+            <h4>Client Reviews</h4>
+            <p>985 ★★★★★</p>
+            <p>"Great experience with the team, step by step assistance!"</p>
+        </div>
+
+        <div class="earnings">
+            <h4>Daily Earnings</h4>
+            <p>₹ 5632</p>
+            <p>Working Hours: 225 hr</p>
+            <p>Revenue per hour: ₹ 25</p>
+        </div>
+
+        <!-- Calendar & Schedule -->
+        <div class="calendar">
+            <div class="calendar-header">
+                <span>January 2022</span>
+                <button>&lt;</button>
+                <button>&gt;</button>
+            </div>
+            <table>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+                <tr>
+                    <td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+                </tr>
+                <!-- More rows for dates -->
+            </table>
+        </div>
+
+        <div class="schedule">
+            <h4>Schedule / Notes</h4>
+            <ul>
+                <li>Meeting with Jemi - 10:30 AM</li>
+                <!-- Repeat for other meetings -->
+            </ul>
+        </div>
+
+        <!-- Client Table -->
+        <div class="client-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Client Profile</th>
+                        <th>Location</th>
+                        <th>Consult For</th>
+                        <th>Opened At</th>
+                        <th>Consult ID</th>
+                        <th>Action</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cody Fisher</td>
+                        <td>2972 Westminster</td>
+                        <td>UK Visa</td>
+                        <td>13/06/2004</td>
+                        <td>Con58</td>
+                        <td><button>Call</button></td>
+                        <td>Waiting</td>
+                    </tr>
+                    <!-- Repeat for other rows -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Employee Recognition -->
+        <div class="employee-recognition">
+            <h4>Employee Recognition</h4>
+            <div class="employee-list">
+                <div class="employee">
+                    <img src="employee1.jpg" alt="Employee 1">
+                    <p>Sherni 1</p>
+                </div>
+                <!-- Repeat for other employees -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

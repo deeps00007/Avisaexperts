@@ -149,13 +149,42 @@ letter-spacing: 0.24px;
   .doc-container{
     padding: 60px;
   }
+  .transiit-image{
+    height: 700px;
+    width: 100%;
+  }
+  .transiit-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .feature-box{
+    border-radius: 20px !important;
+  }
+  
+  
   @media (max-width:600px) {
+    .doc-container{
+      flex-direction: column;
+      padding: 16px !important;
+    }
+    .doc-sidebar{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+    .doc-menu-item{
+      height: fit-content;
+      width: fit-content;
+      padding: 0px;font-size: 19px;
+    }
     .image-content{
         width: 100%;
         height: auto;
     }
     .travel-section{
-        padding: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
     }
     .content-section{
         padding: 16px;
@@ -169,5 +198,14 @@ letter-spacing: 0.24px;
         width: 100%;
     }
 
+  }
+  .doc-main-content{
+    padding: 0px;
+  }
+  .pera-document{
+    padding-left: 25px;
+  }
+  .ul-detaill{
+    padding-left: 41px !important;
   }
   

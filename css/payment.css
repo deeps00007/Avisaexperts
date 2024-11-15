@@ -81,7 +81,10 @@
             background: #E1E9FF;
             padding: 10px 0px;
         }
-
+        .payment-option-label a{
+            text-decoration: none;
+            color: black;
+        }
         /* Extra styles for individual buttons */
         .payment-option-upi {
             color: #FF5722;
@@ -116,5 +119,22 @@
 
             .payment-options {
                 justify-content: space-between;
+            }
+        }
+        @media (max-width:600px) {
+            .payment-options{
+                flex-wrap: wrap;
+            }
+            .payment-option-button{
+                width: 46%;
+            }
+            .payment-option-label{
+                font-size: 11px;
+            }
+            .payment-option-button{
+                padding: 10px 0px 0px 0px;
+            }
+            #balance{
+                height: auto;
             }
         }

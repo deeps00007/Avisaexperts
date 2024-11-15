@@ -95,6 +95,7 @@
      line-height: 1.6;
    }
    @media (max-width:767px) {
+   
   .appointment-section{
       padding: 0px !important;
       width: 100% !important;

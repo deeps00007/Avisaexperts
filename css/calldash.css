@@ -226,7 +226,10 @@ main {
     height: 14px;
     animation-delay: 0.4s;
 }
-
+.profile-image{
+    width: auto !important;
+    margin-bottom: 20px !important;
+}
 /* Animation for the audio bars */
 @keyframes pulse {
 
@@ -324,16 +327,30 @@ main {
 }
 
 @media (max-width:600px) {
+.chat-fixing{
+    width: 74% !important;
+}
+    /* this is for call history */
+    .call-description-con {
+        display: none;
+ 
+    }
+
+    .call-description-con.visible {
+        display: block;
+    }
+        /* this is for call history */
+
     .outer-chat-interface{
     height: 100vh;
 }
     .chat-section-con {
         flex-direction: column;
     }
-
-    /* .client-for-chat-list {
-        flex-direction: row;
-    } */
+    .chat-section-con {
+        width: 100%;
+    }
+  
      .call-description-con{
         width: 100%;
      }
@@ -344,7 +361,7 @@ main {
         width: 100%;
         display: flex;
         flex-direction: column;
-        height: 200px;
+        height: 100vh;
     }
    
     .client-for-chat{

@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="css/chatdash.css">
     <link rel="stylesheet" href="css/chatdashboard.css">
     <link rel="stylesheet" href="css/voicecall.css">
     <link rel="stylesheet" href="css/calldash.css">
+    <link rel="stylesheet" href="dashboard.css">
+
     <!-- <link rel="stylesheet" href="clients.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
@@ -36,6 +37,7 @@
                 </div>
             </div>
 
+              
             <ul class="allmenutabs">
                 <li class="nav-item " data-tab="home">
                     <b></b>
@@ -45,7 +47,7 @@
                         <span class="nav-text">Profile</span>
                     </a>
                 </li>
-                <li class="nav-item" data-tab="profile">
+                <li class="nav-item " data-tab="profile">
                     <b></b>
                     <b></b>
                     <a href="dashboard.html">
@@ -64,7 +66,7 @@
                 <li class="nav-item active" data-tab="activities">
                     <b></b>
                     <b></b>
-                    <a href="#">
+                    <a href="calldashboard.html">
                         <i class="fa fa-person-running nav-icon"></i>
                         <span class="nav-text">Calls</span>
                     </a>
@@ -72,7 +74,7 @@
                 <li class="nav-item " data-tab="settings">
                     <b></b>
                     <b></b>
-                    <a href="#">
+                    <a href="chatdashboard.html">
                         <i class="fa fa-sliders nav-icon"></i>
                         <span class="nav-text">Chats</span>
                     </a>
@@ -88,7 +90,7 @@
                 <li class="nav-item" data-tab="schedule">
                     <b></b>
                     <b></b>
-                    <a href="#">
+                    <a href="Attandancedash.html">
                         <i class="fa fa-calendar-check nav-icon"></i>
                         <span class="nav-text">Attendance</span>
                     </a>
@@ -157,7 +159,25 @@
                                 <div class="search-text">Search for Anything</div>
                             </div>
                         </div> -->
-                        <img class="profile-img" src="img/userprofile.png" />
+                        <img class="profile-img" id="profile" src="img/userprofile.png" />
+                    </div>
+                    <div class="profile-card">
+                        <!-- Profile Image -->
+                        <div class="profile-image">
+                            <img src="img/userprofile.png" alt="User Image">
+                        </div>
+                        <!-- Profile Name -->
+                        <div class="profile-name">Urvasikha Singh</div>
+                        <!-- Profile Phone -->
+                        <div class="profile-phone">+91 9709250403</div>
+                        <!-- View Profile Button -->
+                        <button class="profile-btn">View Profile</button>
+            
+                        <!-- Info Section -->
+                        <div class="info-section-consultant">
+                          
+                            <div style="text-align: center;"><a href="#">Logout</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -872,5 +892,18 @@
   
     <!-- <script src="dashboard.js"></script> -->
 </body>
+<script>
+//         const chatBtn = document.querySelector('.client-for-chat');
+// const descriptionCon = document.querySelector('.call-description-con');
+// const hidechatid=document.querySelector('.chat-sidebar');
 
+// chatBtn.addEventListener('click', () => {
+//   chatBtn.style.display = 'none';
+//   hidechatid.style.display="none";
+//   descriptionCon.style.display = 'block';
+// });
+
+</script>
+<script src="dashboard.js"></script>
+<script src="js/consultant.js"></script>
 </html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Accordion</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+.ouetr-address-sec {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin: 0;
+}
+
+.accordion {
+    width: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+
+.accordion-header {
+    width: 100%;
+    background-color: white; /* White background for headers */
+    color: black; /* Black text color */
+    cursor: pointer;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px 20px;
+    background-color: white; /* White background for content */
+    color: black; /* Black text color */
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+}
+
+.footer-add-icon {
+    font-size: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="ouetr-address-sec">
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-header">
+                London Office
+                <span class="footer-add-icon">−</span>
+            </button>
+            <div class="accordion-content">
+                <p>📍 30 Commercial Road, Fratton, London</p>
+                <p>✉️ london2025@gmail.com</p>
+                <p>📞 +92 (8800) - 9870 25</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">
+                Australia Office
+                <span class="footer-add-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>📍 Some Australia Address</p>
+                <p>✉️ australia@example.com</p>
+                <p>📞 +61 (1234) - 5678 90</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">
+                Canada Office
+                <span class="footer-add-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>📍 Some Canada Address</p>
+                <p>✉️ canada@example.com</p>
+                <p>📞 +1 (987) - 6543 210</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionContent = button.nextElementSibling;
+        const isOpen = accordionContent.style.display === 'block';
+        
+        document.querySelectorAll('.accordion-content').forEach(content => {
+            content.style.display = 'none';
+            content.previousElementSibling.querySelector('.footer-add-icon').textContent = '+';
+        });
+
+        if (!isOpen) {
+            accordionContent.style.display = 'block';
+            button.querySelector('.footer-add-icon').textContent = '−';
+        } else {
+            accordionContent.style.display = 'none';
+            button.querySelector('.footer-add-icon').textContent = '+';
+        }
+    });
+});
+    </script>
+</body>
+</html>

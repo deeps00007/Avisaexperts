@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface with Tabs</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans";
+        }
+
+        /* Chat Container */
+        .chat-container {
+            width: 630px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Chat Header */
+        .chat-header {
+            background-color: #ff7d3b;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .profile-details .profile-name {
+            font-weight: bold;
+        }
+
+        .chat-duration {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 5px;
+        }
+
+        .icon-button {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: white;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: none; /* Hide all sections by default */
+        }
+
+        .active-tab {
+            display: block; /* Show the active tab */
+        }
+
+        /* Chat Messages */
+        .chat-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .user-message {
+            background-color: #fff;
+            align-self: flex-start;
+        }
+
+        .response-message {
+            background-color: #fff;
+            align-self: flex-end;
+        }
+
+        /* Reconnect Bar */
+        .reconnect-bar {
+            display: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #e1e9ff;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .reconnect-button {
+            background-color: #ff7d3b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }/* Container for messages with profile image */
+
+
+/* Align profile image only for user messages */
+.user-message-container .user-profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.message-container{
+    display: flex;
+}
+/* Profile section in Call Log */
+.call-log-header {
+    display: flex;
+    align-items: center;
+    background-color: #e8fce8;
+    padding: 10px;
+}
+
+.profile-pic-large {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-status {
+    color: gray;
+    font-size: 14px;
+}
+
+/* Call Log Entries */
+.call-log {
+    padding: 10px;
+    background-color: #f5f9ff;
+}
+
+.call-entry {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.call-entry:first-child {
+    border-top: none;
+}
+
+.call-icon {
+    font-size: 24px;
+    color: green;
+    margin-right: 10px;
+}
+
+.call-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.call-duration {
+    color: gray;
+    font-size: 12px;
+}
+.profile-pic-wrapper, .chat-duration {
+    display: none;
+}
+
+.chat-tab .profile-pic-wrapper, .chat-tab .chat-duration {
+    display: inline;
+}
+.reconnect-bar {
+    display: none;
+}
+.video-tab{
+    padding: 0px;
+}
+.call-tab{
+    padding: 0px;
+}
+
+/* Adjust message alignment */
+
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="profile-info">
+                <!-- <img src="img/profile2.jpeg" alt="User Profile" class="profile-pic"> -->
+                <div class="profile-details">
+                    <span class="profile-name">Eleanor Pena</span>
+                    <span class="chat-duration">Chat Duration: 05:08</span>
+                </div>
+            </div>
+            <div class="header-icons">
+                <button class="icon-button" data-tab="chat" data-name="Eleanor Pena" data-status="Chat Duration: 05:08">💬</button>
+                <button class="icon-button" data-tab="video" data-name="Video Chat" data-status="Video Call Active">📷</button>
+                <button class="icon-button" data-tab="call" data-name="Voice Call" data-status="Call Duration: 00:45">📞</button>
+                <button class="icon-button" data-tab="end" data-name="End Session" data-status="Ending Chat">❌</button>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="content-section chat-tab active-tab">
+            <div class="chat-messages">
+                <!-- User message with profile image -->
+                <div class="message-container user-message-container">
+                    <img src="img/profile2.jpeg" alt="User Profile" class="user-profile-pic">
+                    <div class="message user-message">Hi! I have some questions about my Visa application status.</div>
+                </div>
+        
+                <!-- Response message without profile image -->
+                    <div class="message response-message">Sure! Can I have your application number, please?</div>
+
+        
+                <!-- Another user message with profile image -->
+                <div class="message-container user-message-container">
+                    <img src="img/profile2.jpeg" alt="User Profile" class="user-profile-pic">
+                    <div class="message user-message">Yes, it’s 123456.</div>
+                </div>
+        
+                <!-- More response messages and user messages -->
+                    <div class="message response-message">Thank you. Let me check... It looks like your application is still under review.</div>
+
+        
+                <div class="message-container user-message-container">
+                    <img src="img/profile2.jpeg" alt="User Profile" class="user-profile-pic">
+                    <div class="message user-message">How long does that usually take?</div>
+                </div>
+        
+                    <div class="message response-message">Typically, it can take up to 6 weeks, but we’ll notify you as soon as there’s an update.</div>
+        
+                <div class="message-container user-message-container">
+                    <img src="img/profile2.jpeg" alt="User Profile" class="user-profile-pic">
+                    <div class="message user-message">Great, thank you for the information!</div>
+                </div>
+        
+                    <div class="message response-message">You’re welcome! Let me know if you have any other questions.</div>
+            </div>
+        </div>
+        
+
+        <div class="content-section video-tab">
+            <!-- Call Log Header -->
+            <div class="call-log-header">
+                <img src="img/profile2.jpeg" alt="User Profile" class="profile-pic-large">
+                <div class="profile-details">
+                    <span class="profile-name">Eleanor Pena</span>
+                    <span class="profile-status">Vedio Call</span>
+                </div>
+            </div>
+            
+            <!-- Call Log Entries -->
+            <div class="call-log">
+                <div class="call-entry">
+                    <span class="call-icon">📞</span>
+                    <div class="call-info">
+                        <p>Call made to Eleanor Pena on 02/10/2024 at 12:35 PM.</p>
+                        <span class="call-duration">Call Duration: 05:35</span>
+                    </div>
+                </div>
+                <div class="call-entry">
+                    <span class="call-icon">📞</span>
+                    <div class="call-info">
+                        <p>Call made to Eleanor Pena on 08/09/2024 at 10:35 PM.</p>
+                        <span class="call-duration">Call Duration: 10:35</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="content-section call-tab">
+            <div class="call-log-header">
+                <img src="img/profile2.jpeg" alt="User Profile" class="profile-pic-large">
+                <div class="profile-details">
+                    <span class="profile-name">Eleanor Pena</span>
+                    <span class="profile-status">Call</span>
+                </div>
+            </div>
+            
+            <!-- Call Log Entries -->
+            <div class="call-log">
+                <div class="call-entry">
+                    <span class="call-icon">📞</span>
+                    <div class="call-info">
+                        <p>Call made to Eleanor Pena on 02/10/2024 at 12:35 PM.</p>
+                        <span class="call-duration">Call Duration: 05:35</span>
+                    </div>
+                </div>
+                <div class="call-entry">
+                    <span class="call-icon">📞</span>
+                    <div class="call-info">
+                        <p>Call made to Eleanor Pena on 08/09/2024 at 10:35 PM.</p>
+                        <span class="call-duration">Call Duration: 10:35</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section end-tab">
+            <p>Are you sure you want to end the chat?</p>
+        </div>
+
+        <!-- Reconnect Button -->
+        <div class="reconnect-bar">
+            <span>If you need to reconnect with a consultant,</span>
+            <button class="reconnect-button">tap here</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.icon-button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active-tab class from all content sections
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active-tab');
+                });
+                
+                // Get the target tab from the data-tab attribute
+                const targetTab = button.getAttribute('data-tab');
+                
+                // Add active-tab class to the matching content section
+                document.querySelector(`.${targetTab}-tab`).classList.add('active-tab');
+                
+                // Update profile details according to the selected tab
+                const profileName = button.getAttribute('data-name');
+                const profileStatus = button.getAttribute('data-status');
+                document.querySelector('.profile-name').textContent = profileName;
+                document.querySelector('.chat-duration').textContent = profileStatus;
+            });
+        });
+  
+document.querySelectorAll('.icon-button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active-tab class from all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active-tab');
+        });
+        
+        // Get the target tab from the data-tab attribute
+        const targetTab = button.getAttribute('data-tab');
+        
+        // Add active-tab class to the matching content section
+        document.querySelector(`.${targetTab}-tab`).classList.add('active-tab');
+
+        // Toggle profile info and reconnect bar visibility based on the tab
+        const isChatTab = targetTab === 'chat';
+        document.querySelector('.profile-pic-wrapper').style.display = isChatTab ? 'inline' : 'none';
+        document.querySelector('.chat-duration').style.display = isChatTab ? 'inline' : 'none';
+        document.querySelector('.reconnect-bar').style.display = isChatTab ? 'flex' : 'none';
+    });
+});
+
+    </script>
+</body>
+
+</html>

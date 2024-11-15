@@ -244,8 +244,59 @@ td img {
 input[type="checkbox"] {
   cursor: pointer;
 }
+ /* Center the container */
+ .search-country-container {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 
+/* Search bar styling */
+.search-country-bar {
+ background-color: white;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 15px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+/* Search input */
+.search-country-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Placeholder text color */
+.search-country-input::placeholder {
+  color: #aaa;
+}
+
+/* Search icon styling */
+.search-country-icon {
+  width: 18px;
+  height: 18px;
+  color: #666;
+  cursor: pointer;
+}
+@media (max-width:600px) {
+  .outer-client-sec {
+    padding-right: 0px !important;
+    padding: 10px !important;
+}
+.header-container{
+  height: auto;
+}
+.date{
+  font-size: 37px !important;
+}
+}
 
 @media screen and (min-width: 200px) and (max-width:900px) {
   .client_name{

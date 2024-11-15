@@ -143,6 +143,9 @@
     }
 }
 @media (max-width:450px) {
+    .outer-chat-bx{
+        top: 55px;
+    }
     .chat-container{
         width: 95%;
     }

@@ -117,10 +117,10 @@ const reviewsContainer = document.querySelector('.reviews-container');
       currentIndex = (currentIndex < totalReviews - 1) ? currentIndex + 1 : 0;
       updateCarousel();
     });
-    // setInterval(() => {
-    //   currentIndex = (currentIndex < totalReviews - 1) ? currentIndex + 1 : 0;
-    //   updateCarousel();
-    //   }, 3000);
+    setInterval(() => {
+      currentIndex = (currentIndex < totalReviews - 1) ? currentIndex + 1 : 0;
+      updateCarousel();
+      }, 5000);
       
 
 //Document js
@@ -173,3 +173,24 @@ document.addEventListener("DOMContentLoaded", function() {
 //   element.classList.add('active');
 // }
 
+//this js for footer address
+
+document.querySelectorAll('.accordion-header').forEach(button => {
+  button.addEventListener('click', () => {
+      const accordionContent = button.nextElementSibling;
+      const isOpen = accordionContent.style.display === 'block';
+      
+      document.querySelectorAll('.accordion-content').forEach(content => {
+          content.style.display = 'none';
+          content.previousElementSibling.querySelector('.footer-add-icon').textContent = '+';
+      });
+
+      if (!isOpen) {
+          accordionContent.style.display = 'block';
+          button.querySelector('.footer-add-icon').textContent = '−';
+      } else {
+          accordionContent.style.display = 'none';
+          button.querySelector('.footer-add-icon').textContent = '+';
+      }
+  });
+});

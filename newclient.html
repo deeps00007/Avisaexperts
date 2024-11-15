@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="clients.css">
+    <link rel="stylesheet" href="css/chatdashboard.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
@@ -33,9 +34,8 @@
                     <div class="line1"></div>
                 </div>
             </div>
-            <img class="logo"
-                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/4cfdcb5a-0137-4457-8be1-6e7bd1f29ebb"
-                alt="" />
+          
+               
                 <ul class="allmenutabs">
                   <li class="nav-item " data-tab="home">
                       <b></b>
@@ -64,7 +64,7 @@
                   <li class="nav-item" data-tab="activities">
                       <b></b>
                       <b></b>
-                      <a href="#">
+                      <a href="calldashboard.html">
                           <i class="fa fa-person-running nav-icon"></i>
                           <span class="nav-text">Calls</span>
                       </a>
@@ -88,7 +88,7 @@
                   <li class="nav-item" data-tab="schedule">
                       <b></b>
                       <b></b>
-                      <a href="#">
+                      <a href="Attandancedash.html">
                           <i class="fa fa-calendar-check nav-icon"></i>
                           <span class="nav-text">Attendance</span>
                       </a>
@@ -145,8 +145,26 @@
                             </div>
                         </div>
                     
-                        <img class="profile-img" src="img/userprofile.png" />
+                        <img class="profile-img" id="profile" src="img/userprofile.png" />
                     </div>
+                    <div class="profile-card">
+                      <!-- Profile Image -->
+                      <div class="profile-image">
+                          <img src="img/userprofile.png" alt="User Image">
+                      </div>
+                      <!-- Profile Name -->
+                      <div class="profile-name">Urvasikha Singh</div>
+                      <!-- Profile Phone -->
+                      <div class="profile-phone">+91 9709250403</div>
+                      <!-- View Profile Button -->
+                      <button class="profile-btn">View Profile</button>
+          
+                      <!-- Info Section -->
+                      <div class="info-section-consultant">
+                        
+                          <div style="text-align: center;"><a href="#">Logout</a></div>
+                      </div>
+                  </div>
                 </div>
             </div>
 
@@ -166,9 +184,19 @@
                       </div>
                       <div class="greeting">Hi Urvashi! Wishing you a wonderful day!</div>
                     </div>
-                
+                   
                     <div class="client-container">
+                      
                       <div class="table-container">
+                        <div class="search-country-container">
+                          <div class="search-country-bar">
+                            <input type="text" class="search-country-input" placeholder="Search by Name, consult ID, Phone number">
+                            <svg class="search-country-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="11" cy="11" r="8"></circle>
+                              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                          </div>
+                        </div>
                         <table>
                           <thead>
                             <tr class="for-border">
@@ -481,6 +509,7 @@
     </main>
     <script src="dashboard.js"></script>
     <script src="client.js"></script>
+    <script src="js/consultant.js"></script>
 </body>
 
 </html>

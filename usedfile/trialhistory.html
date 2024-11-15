@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call History with Animated Audio Bar</title>
+  <style>
+    .outer-audio-history {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .call-history-container {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .call-history-header {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .call-history-header .icon {
+      font-size: 1.2rem;
+    }
+
+    .call-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .call-item:last-child {
+      border-bottom: none;
+    }
+
+    .call-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .call-time {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .call-number {
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .call-number .call-icon {
+      font-size: 1rem;
+      color: green;
+    }
+
+    .call-number .call-icon.missed {
+      color: red;
+    }
+
+    .audio-info {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .animated-audio-bar {
+      display: flex;
+      gap: 2px;
+      margin-left: 5px;
+    }
+
+    .bar {
+      width: 3px;
+      background-color: #4caf50;
+      animation: pulse 0.5s infinite;
+    }
+
+    /* Individual bar animation delays to create wave effect */
+    .bar:nth-child(1) { height: 10px; animation-delay: 0.1s; }
+    .bar:nth-child(2) { height: 15px; animation-delay: 0.2s; }
+    .bar:nth-child(3) { height: 8px; animation-delay: 0.3s; }
+    .bar:nth-child(4) { height: 18px; animation-delay: 0.4s; }
+    .bar:nth-child(5) { height: 12px; animation-delay: 0.5s; }
+    .bar:nth-child(6) { height: 20px; animation-delay: 0.3s; }
+    .bar:nth-child(7) { height: 14px; animation-delay: 0.4s; }
+
+    /* Animation for the audio bars */
+    @keyframes pulse {
+      0%, 100% {
+        transform: scaleY(1);
+      }
+      50% {
+        transform: scaleY(1.5);
+      }
+    }
+
+    .audio-duration {
+      font-size: 0.8rem;
+      color: #555;
+      margin-left: 5px;
+    }
+
+    .call-status {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .call-status .status-icon {
+      color: red;
+      font-size: 1.2rem;
+    }
+
+    .call-status.outgoing {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+<div class="outer-audio-history">
+<div class="call-history-container">
+  <div class="call-history-header">
+    <span class="icon">📞</span>
+    <span>Call History</span>
+  </div>
+
+  <!-- Call Item 1 -->
+  <div class="call-item">
+    <div class="call-info">
+      <span class="call-time">1:46 PM</span>
+      <div class="call-number">
+        <span>+91 2323445664</span>
+        <span class="call-icon">📞</span>
+      </div>
+    </div>
+    <div class="audio-info">
+      <span>🔁</span>
+      <span>⏯️</span>
+      <div class="animated-audio-bar">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <span class="audio-duration">3:43</span>
+    </div>
+    <div class="call-status outgoing">
+      <span>Outgoing: 3m 43s</span>
+      <span>➔</span>
+    </div>
+  </div>
+
+  <!-- Call Item 2 (Missed Call Example) -->
+  <div class="call-item">
+    <div class="call-info">
+      <span class="call-time">1:46 PM</span>
+      <div class="call-number">
+        <span>+91 2323445664</span>
+        <span class="call-icon missed">📞</span>
+      </div>
+    </div>
+    <div class="audio-info">
+      <span>🔁</span>
+      <span>⏯️</span>
+      <div class="animated-audio-bar">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <span class="audio-duration">1:23</span>
+    </div>
+    <div class="call-status">
+      <span class="status-icon">⚠️</span>
+      <span>didn’t connect</span>
+      <span>➔</span>
+    </div>
+  </div>
+
+  <!-- Repeat more call items as needed -->
+
+</div>
+</div>
+</body>
+</html>

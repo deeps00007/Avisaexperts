@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Request Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Overlay for dimming the background */
+    .overlay {
+      display: none; /* Initially hidden */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+      z-index: 9; /* Above other content */
+    }
+
+    .outer-leave-req {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10; /* Above the overlay */
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .leave-request-container {
+      background-color: #fff;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .leave-request-container h1 {
+      font-size: 20px;
+      text-align: center;
+      color: #001E74;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #001E74;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      color: #000;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 5px;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .form-group textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .date-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .apply-btn {
+      background-color: #ff7f50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      flex: 1;
+      margin-right: 5px;
+    }
+
+    .cancel-btn {
+      background-color: #fff;
+      color: #333;
+      border: 2px solid black;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      flex: 1;
+      margin-left: 5px;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 400px) {
+      .leave-request-container {
+        padding: 15px;
+      }
+
+      .form-group label,
+      .leave-request-container h1 {
+        font-size: 16px;
+      }
+
+      .button-group button {
+        padding: 8px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Overlay for dimming the background -->
+  <div class="overlay"></div>
+
+  <!-- Button to open the Leave Request Form -->
+  <button class="leave-request-btn" style="margin: 20px;">Open Leave Request Form</button>
+
+  <!-- Leave Request Form Container -->
+  <div class="outer-leave-req">
+    <div class="leave-request-container">
+      <h1>Leave Request</h1>
+      <form>
+        <div class="form-group">
+          <label>Day Type</label>
+          <div class="radio-group">
+            <label><input type="radio" name="day-type" checked> Full Day</label>
+            <label><input type="radio" name="day-type"> First Half</label>
+            <label><input type="radio" name="day-type"> Second Half</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>I Want to Inform</label>
+          <input type="text" placeholder="Select Start Date">
+        </div>
+
+        <div class="form-group">
+          <label>From</label>
+          <div class="date-group">
+            <input type="date" placeholder="Select Start Date">
+            <input type="date" placeholder="Select End Date">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Reason of Leave</label>
+          <textarea placeholder="Type your reason here"></textarea>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="apply-btn">Apply Leave</button>
+          <button type="button" class="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const leaveRequestBtn = document.querySelector('.leave-request-btn');
+    const outerLeaveReq = document.querySelector('.outer-leave-req');
+    const overlay = document.querySelector('.overlay');
+
+    // Toggle form and overlay visibility
+    leaveRequestBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      outerLeaveReq.style.display = outerLeaveReq.style.display === 'none' || outerLeaveReq.style.display === '' ? 'flex' : 'none';
+      overlay.style.display = overlay.style.display === 'none' || overlay.style.display === '' ? 'block' : 'none';
+    });
+
+    // Hide form and overlay when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!outerLeaveReq.contains(event.target) && event.target !== leaveRequestBtn) {
+        outerLeaveReq.style.display = 'none';
+        overlay.style.display = 'none';
+      }
+    });
+
+    // Hide form and overlay when overlay is clicked
+    overlay.addEventListener('click', () => {
+      outerLeaveReq.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+  </script>
+
+</body>
+
+</html>

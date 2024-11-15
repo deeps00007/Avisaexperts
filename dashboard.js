@@ -85,7 +85,9 @@ function startTimer(seconds) {
 
             // Show all options again and reset visibility
             options.querySelectorAll('.option').forEach(o => o.style.display = 'flex');
+           setTimeout(() => {
             options.classList.remove('visible');
+           }, 5000);
             timerDisplay.textContent = '';
         }
     }, 1000);
